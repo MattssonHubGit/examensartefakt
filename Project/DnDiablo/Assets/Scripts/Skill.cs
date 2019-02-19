@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Skills : MonoBehaviour {
+public abstract class Skill : ScriptableObject {
 
     [Header("Cooldown")]
     [SerializeField] protected float cooldownMax = 0.5f;
@@ -52,5 +52,5 @@ public abstract class Skills : MonoBehaviour {
 
     }
 
-    protected abstract void Action(Vector3 targetPos, Entity caster);
+    public abstract void Action(Vector3 targetPos, Entity caster);
 }
