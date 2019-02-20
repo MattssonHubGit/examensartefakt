@@ -15,6 +15,7 @@ public abstract class Skill : ScriptableObject {
     [Header("Level")]
     public int level = 0;
 
+
     public virtual bool AttemptCast(Entity caster)
     {
         if (cooldownReady) // Is cooldown ready?
@@ -38,7 +39,7 @@ public abstract class Skill : ScriptableObject {
         return false;
     }
 
-    protected void CooldownManager()
+    public void CooldownManager()
     {
         if (cooldownCurrent <= 0)
         {

@@ -8,12 +8,37 @@ public class Player : Entity {
 
     private void Update()
     {
+        SkillCooldownManager();
+
+        SkillController();
+
         if (Input.GetKeyDown(KeyCode.Keypad8))
         {
             for (int i = 0; i < mySkills.Count; i++)
             {
                 Debug.Log(mySkills[i].name + " " + mySkills[i].level);
             }
+            
+
         }
+    }
+
+    private void SkillCooldownManager()
+    {
+        foreach (Skill skill in mySkills)
+        {
+            skill.CooldownManager();
+        }
+    }
+
+    private void SkillController()
+    {
+        /*for (int i = 0; i < mySkills.Count; i++)
+        {
+            if (Input.GetButtonDown(i.ToString()))
+            {
+                Debug.Log(i);
+            }
+        }*/
     }
 }
