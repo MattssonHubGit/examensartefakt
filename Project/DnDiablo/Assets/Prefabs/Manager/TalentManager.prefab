@@ -51,6 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7662cbc551c164143bca9073a8109197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allSkills:
-  - {fileID: 11400000, guid: b093ac5fd7ab09c47a4caa126c81a2ba, type: 2}
-  - {fileID: 11400000, guid: 1fd33c4d927186a4fb7cbf8424c6ca4b, type: 2}
+  allSkills: []
+  player: {fileID: 0}
+  nodePrefab: {fileID: 1066810381382168, guid: d9801fd63df154d4eb7f228148f29eea, type: 2}
+  skillToAffect: {fileID: 11400000, guid: b093ac5fd7ab09c47a4caa126c81a2ba, type: 2}
+  talentSunParent: {fileID: 0}
+  offSets: {x: 50, y: 50, z: 0}
+  amountOfNodes: 6
+  icon: {fileID: 0}
+  changeButtonColor: 1
+  buttonColor: {r: 0.74264705, g: 0.43157884, b: 0.098291524, a: 1}

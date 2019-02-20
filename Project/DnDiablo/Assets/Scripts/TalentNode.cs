@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TalentNode : MonoBehaviour {
-    
+public class TalentNode : MonoBehaviour
+{
+
 
     [Header("Skill data")]
     [SerializeField] private Skill skillToLevel;
@@ -14,46 +15,8 @@ public class TalentNode : MonoBehaviour {
     [SerializeField] private TalentNode previousNode;
     [SerializeField] private TalentNode nextNode;
     [SerializeField] private bool isUnlocked = false;
+    [SerializeField] private bool isFirst;
     public Button myButton;
-
-    private void Awake()
-    {
-        myButton = this.GetComponent<Button>();
-    }
-
-    public void AttemptToLevel()
-    {
-        if (previousNode.isUnlocked == true) //Check if this previous node is unlocked
-        {
-            if (isUnlocked == true) //Is this node alreade unlocked?
-            {
-                myButton.interactable = false;
-                return;
-            }
-
-
-
-            if (true) //check if talentpoints are enough
-            {
-                for (int i = 0; i < TalentManager.Instance.player.mySkills.Count; i++)
-                {
-                    if (TalentManager.Instance.player.mySkills[i].GetType() == skillToLevel.GetType())
-                    {
-                        //Remove talentpoint here
-                        isUnlocked = true;
-                        myButton.interactable = false;
-                        if (nextNode != null)
-                        {
-                            nextNode.myButton.interactable = true;
-                        }
-                        TalentManager.Instance.player.mySkills[i].level = levelToSet;
-                    }
-                }
-            }
-        }
-
-
-    }
 
     #region GetSetters
     public bool IsUnlocked
@@ -64,5 +27,125 @@ public class TalentNode : MonoBehaviour {
         }
     }
 
+    public bool IsFirst
+    {
+        get
+        {
+            return isFirst;
+        }
+
+        set
+        {
+            isFirst = value;
+        }
+    }
+
+    public Skill SkillToLevel
+    {
+        get
+        {
+            return skillToLevel;
+        }
+
+        set
+        {
+            skillToLevel = value;
+        }
+    }
+
+    public int LevelToSet
+    {
+        get
+        {
+            return levelToSet;
+        }
+
+        set
+        {
+            levelToSet = value;
+        }
+    }
+
+    public TalentNode PreviousNode
+    {
+        get
+        {
+            return previousNode;
+        }
+
+        set
+        {
+            previousNode = value;
+        }
+    }
+
+    public TalentNode NextNode
+    {
+        get
+        {
+            return nextNode;
+        }
+
+        set
+        {
+            nextNode = value;
+        }
+    }
+
     #endregion
+
+    private void Awake()
+    {
+
+    }
+
+    public void AttemptToLevel()
+    {
+        //--------------------This first node adds a skill to the player
+        if (isFirst)
+        {
+            if (true) //check if talentpoints are enough
+            {
+                //Add the skill
+                Skill _skillToAdd = Instantiate(skillToLevel);
+                _skillToAdd.level = 0;
+                _skillToAdd.name += "_player";
+                TalentManager.Instance.player.mySkills.Add(_skillToAdd);
+
+
+                //Disable this button and enable the next one
+                isUnlocked = true;
+                myButton.interactable = false;
+                if (nextNode != null)
+                {
+                    nextNode.myButton.interactable = true;
+                }
+            }
+        }
+
+
+        //-------------------All other nodes level the players skill
+        if (true) //check if talentpoints are enough
+        {
+            for (int i = 0; i < TalentManager.Instance.player.mySkills.Count; i++)
+            {
+                if (TalentManager.Instance.player.mySkills[i].GetType() == skillToLevel.GetType())
+                {
+                    //Remove talentpoint here
+                    isUnlocked = true;
+                    myButton.interactable = false;
+                    if (nextNode != null)
+                    {
+                        nextNode.myButton.interactable = true;
+                    }
+                    TalentManager.Instance.player.mySkills[i].level = levelToSet;
+                }
+            }
+        }
+    }
+
+
 }
+
+
+
