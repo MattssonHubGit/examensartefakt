@@ -14,6 +14,7 @@ public abstract class Skill : ScriptableObject {
 
     [Header("Level")]
     public int level = 0;
+    [SerializeField] public int Range;
 
 
     public virtual bool AttemptCast(Entity caster)

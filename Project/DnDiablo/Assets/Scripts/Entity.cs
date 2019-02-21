@@ -27,4 +27,6 @@ public abstract class Entity : MonoBehaviour, IDamageable {
     }
 
     protected abstract void OnDeath();
+
+    protected abstract void UseSkill(Skill skill);
 }

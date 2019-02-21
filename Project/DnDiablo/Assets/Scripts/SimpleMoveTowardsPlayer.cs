@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class SimpleMoveTowardsPlayer : MonoBehaviour {
 
-    public Transform target;
+    [SerializeField] private Transform target;
     NavMeshAgent agent;
     NavMeshObstacle obstacle;
     private float priority;
@@ -30,6 +30,19 @@ public class SimpleMoveTowardsPlayer : MonoBehaviour {
         }
     }
 
+    public float DistanceToPlayer
+    {
+        get
+        {
+            return distanceToPlayer;
+        }
+
+        set
+        {
+            distanceToPlayer = value;
+        }
+    }
+
     // Use this for initialization
     void Start () {
 
@@ -49,18 +62,17 @@ public class SimpleMoveTowardsPlayer : MonoBehaviour {
 
 
 
-        distanceToPlayer = Vector3.Distance(transform.position, target.position);
+        DistanceToPlayer = Vector3.Distance(transform.position, target.position);
         
-        if (attackDistance >= distanceToPlayer)
+        if (attackDistance >= DistanceToPlayer)
         {
 
             //agent.obstacleAvoidanceType = ObstacleAvoidanceType.GoodQualityObstacleAvoidance;
-            agent.destination = transform.position;
+            //agent.destination = transform.position;
             agent.enabled = false;
             ownCollider.enabled = false;
             obstacle.enabled = true;
             hasStopped = true;
-            Debug.Log(attackDistance + distanceToPlayer);
         }
         //else if (shouldStopForPriority)
         //{
@@ -115,10 +127,11 @@ public class SimpleMoveTowardsPlayer : MonoBehaviour {
 
         SimpleMoveTowardsPlayer _s = other.GetComponent<SimpleMoveTowardsPlayer>();
 
-        if (distanceToPlayer > _s.distanceToPlayer)
+        if (DistanceToPlayer > _s.distanceToPlayer)
         {
             shouldStopForPriority = true;
         }
+        Debug.Log(distanceToPlayer + " " + _s.distanceToPlayer);
 
         //if (_s != null)
         //{
@@ -126,7 +139,7 @@ public class SimpleMoveTowardsPlayer : MonoBehaviour {
         //    if (distanceToPlayer < _s.distanceToPlayer)
         //    {
         //        moveAway = true;
-                
+
         //    }
         //}
     }
