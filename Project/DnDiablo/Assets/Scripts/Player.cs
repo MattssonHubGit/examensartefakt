@@ -41,4 +41,9 @@ public class Player : Entity {
             }
         }*/
     }
+
+    protected override void OnDeath()
+    {
+        Debug.Log("Player::OnDeath() -- Took lethal damage, but death is not implemented yet!");
+    }
 }

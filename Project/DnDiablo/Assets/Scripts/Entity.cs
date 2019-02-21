@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Entity : MonoBehaviour {
+public abstract class Entity : MonoBehaviour, IDamageable {
 
     public Stats myStats;
 
@@ -14,4 +14,17 @@ public abstract class Entity : MonoBehaviour {
             myStats.resourceCurrent = 0;
         }
     }
+
+    public virtual void TakeDamage(float amount)
+    {
+        myStats.healthCurrent -= amount;
+
+        if (myStats.healthCurrent <= 0)
+        {
+            myStats.healthCurrent = 0;
+            OnDeath();
+        }
+    }
+
+    protected abstract void OnDeath();
 }
