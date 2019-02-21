@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class Player : Entity {
 
+    [Header("Skills")]
     public List<Skill> mySkills = new List<Skill>();
-
     private KeyCode[] skillKeys = new KeyCode[8] { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4 };
+
+    [Header("UI")]
+    [SerializeField] private FillingBar healthBar;
+    [SerializeField] private FillingBar resourceBar;
+
+    [Header("Components")]
+    public static Player Instance;
+
+    private void Awake()
+    {
+        #region SingleTon
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+        #endregion
+
+        InitializeStats();
+    }
 
     private void Update()
     {
         SkillCooldownManager();
-
         SkillInputController();
+
+        UIManager();
 
         if (Input.GetKeyDown(KeyCode.Keypad8))
         {
@@ -101,6 +125,27 @@ public class Player : Entity {
 
     public override void InitializeStats()
     {
-        myStats = Instantiate(myStatsPrefab);
+        if (myStats == null)
+        {
+            myStats = Instantiate(myStatsPrefab);
+        }
+    }
+
+    private void UIManager()
+    {
+        //Health bar
+        if (healthBar != null)
+        {
+            healthBar.hardFill.fillAmount = myStats.healthCurrent / myStats.healthMax;
+            healthBar.slowFill.fillAmount = myStats.healthCurrent / myStats.healthMax; //temp
+        }
+
+        //Resource bar
+        if (resourceBar != null)
+        {
+            resourceBar.hardFill.fillAmount = myStats.healthCurrent / myStats.healthMax;
+            resourceBar.slowFill.fillAmount = myStats.healthCurrent / myStats.healthMax; //temp
+        }
+
     }
 }
