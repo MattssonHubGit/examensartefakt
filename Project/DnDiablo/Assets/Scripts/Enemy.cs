@@ -117,4 +117,9 @@ public class Enemy : Entity {
     {
         throw new System.NotImplementedException();
     }
+
+    public override void InitializeStats()
+    {
+        throw new System.NotImplementedException();
+    }
 }

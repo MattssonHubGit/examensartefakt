@@ -4,7 +4,10 @@ using UnityEngine;
 
 public abstract class Entity : MonoBehaviour, IDamageable {
 
+    [SerializeField] protected Stats myStatsPrefab;
     public Stats myStats;
+
+    public abstract void InitializeStats();
 
     public void ReduceResource(float amount)
     {

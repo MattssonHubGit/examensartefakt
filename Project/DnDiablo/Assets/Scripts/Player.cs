@@ -52,7 +52,7 @@ public class Player : Entity {
         }
     }
 
-    protected void UseSkill(Skill skill)
+    protected override void UseSkill(Skill skill)
     {
         if (skill.AttemptCast(this))
         {
@@ -97,5 +97,10 @@ public class Player : Entity {
     protected override void OnDeath()
     {
         Debug.Log("Player::OnDeath() -- Took lethal damage, but death is not implemented yet!");
+    }
+
+    public override void InitializeStats()
+    {
+        myStats = Instantiate(myStatsPrefab);
     }
 }
