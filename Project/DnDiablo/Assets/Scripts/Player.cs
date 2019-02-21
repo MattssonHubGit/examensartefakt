@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Player : Entity {
 
@@ -14,6 +15,8 @@ public class Player : Entity {
 
     [Header("Components")]
     public static Player Instance;
+    private NavMeshAgent agent;
+
 
     private void Awake()
     {
@@ -29,6 +32,8 @@ public class Player : Entity {
         #endregion
 
         InitializeStats();
+        agent = this.GetComponent<NavMeshAgent>();
+        agent.Warp(transform.position);
     }
 
     private void Update()
@@ -37,6 +42,16 @@ public class Player : Entity {
         SkillInputController();
 
         UIManager();
+
+        if (Input.GetMouseButton(0))
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
+            {
+                agent.destination = hit.point;
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.Keypad8))
         {
