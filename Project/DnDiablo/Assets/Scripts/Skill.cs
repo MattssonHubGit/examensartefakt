@@ -14,6 +14,8 @@ public abstract class Skill : ScriptableObject {
 
     [Header("Level")]
     public int level = 0;
+
+    [Header("Range")]
     [SerializeField] public int Range;
 
 
@@ -40,8 +42,12 @@ public abstract class Skill : ScriptableObject {
         return false;
     }
 
-    public void CooldownManager()
+    public void CooldownManager(Stats myStats)
     {
+
+        float _cooldownReduction = myStats.cooldownRedCurrent;
+        Debug.Log(this);
+
         if (cooldownCurrent <= 0)
         {
             cooldownReady = true;
@@ -49,7 +55,8 @@ public abstract class Skill : ScriptableObject {
         else
         {
             cooldownReady = false;
-            cooldownCurrent -= Time.deltaTime;
+            cooldownCurrent -= Time.deltaTime * _cooldownReduction;
+            //Debug.Log(cooldownCurrent + " " + this);
         }
 
     }

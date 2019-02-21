@@ -68,7 +68,7 @@ public class Player : Entity {
     {
         foreach (Skill skill in mySkills)
         {
-            skill.CooldownManager();
+            skill.CooldownManager(myStats);
         }
     }
 

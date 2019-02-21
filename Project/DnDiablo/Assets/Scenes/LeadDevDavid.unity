@@ -423,13 +423,13 @@ GameObject:
   - component: {fileID: 349022903}
   - component: {fileID: 349022902}
   - component: {fileID: 349022901}
+  - component: {fileID: 349022898}
   - component: {fileID: 349022900}
   - component: {fileID: 349022899}
-  - component: {fileID: 349022898}
   - component: {fileID: 349022897}
   - component: {fileID: 349022904}
   m_Layer: 0
-  m_Name: Enemy (1)
+  m_Name: FastEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -458,11 +458,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 349022896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b04659370d196da45821f76beb441eb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8999b74d00e4eda489213110568af8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1357179585}
-  attackDistance: 10
+  myStatsPrefab: {fileID: 11400000, guid: 2c97f3e8802686c4881c8032e190ddb2, type: 2}
+  myStats: {fileID: 0}
+  mySkill: {fileID: 11400000, guid: 1fd33c4d927186a4fb7cbf8424c6ca4b, type: 2}
+  isTurret: 0
 --- !u!195 &349022899
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -544,7 +546,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 349022896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.8, y: 0.6, z: 2.1}
+  m_LocalPosition: {x: 18.02, y: 0.6, z: -0.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -575,9 +577,9 @@ GameObject:
   - component: {fileID: 609483159}
   - component: {fileID: 609483158}
   - component: {fileID: 609483157}
+  - component: {fileID: 609483154}
   - component: {fileID: 609483156}
   - component: {fileID: 609483155}
-  - component: {fileID: 609483154}
   - component: {fileID: 609483160}
   - component: {fileID: 609483161}
   m_Layer: 0
@@ -595,11 +597,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 609483153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b04659370d196da45821f76beb441eb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8999b74d00e4eda489213110568af8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1357179585}
-  attackDistance: 10
+  myStatsPrefab: {fileID: 11400000, guid: b3e9926f98e55a64f9731d8ed1d38c47, type: 2}
+  myStats: {fileID: 0}
+  mySkill: {fileID: 11400000, guid: b093ac5fd7ab09c47a4caa126c81a2ba, type: 2}
+  isTurret: 0
 --- !u!195 &609483155
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -727,13 +731,13 @@ GameObject:
   - component: {fileID: 662402047}
   - component: {fileID: 662402046}
   - component: {fileID: 662402045}
+  - component: {fileID: 662402042}
   - component: {fileID: 662402044}
   - component: {fileID: 662402043}
-  - component: {fileID: 662402042}
   - component: {fileID: 662402041}
   - component: {fileID: 662402048}
   m_Layer: 0
-  m_Name: Enemy (2)
+  m_Name: TurretEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -762,11 +766,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 662402040}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b04659370d196da45821f76beb441eb7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8999b74d00e4eda489213110568af8b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1357179585}
-  attackDistance: 10
+  myStatsPrefab: {fileID: 11400000, guid: b3e9926f98e55a64f9731d8ed1d38c47, type: 2}
+  myStats: {fileID: 0}
+  mySkill: {fileID: 11400000, guid: b093ac5fd7ab09c47a4caa126c81a2ba, type: 2}
+  isTurret: 1
 --- !u!195 &662402043
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1362,9 +1368,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1357179579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44392afc25862f34a98a8375d3e5584b, type: 3}
+  m_Script: {fileID: 11500000, guid: 51aef8820c4da204b86a50762d2105b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myStatsPrefab: {fileID: 11400000, guid: a2cb57a538878ad4daf9958ffcddca04, type: 2}
+  myStats: {fileID: 0}
+  mySkills: []
+  healthBar: {fileID: 0}
+  resourceBar: {fileID: 0}
 --- !u!195 &1357179581
 NavMeshAgent:
   m_ObjectHideFlags: 0

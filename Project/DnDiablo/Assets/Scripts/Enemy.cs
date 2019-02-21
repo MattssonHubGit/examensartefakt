@@ -5,18 +5,20 @@ using UnityEngine.AI;
 
 public class Enemy : Entity {
 
-    [SerializeField] private Transform target;
+    private Transform target;
     NavMeshAgent agent;
     NavMeshObstacle obstacle;
     private float priority;
     private Rigidbody rb;
     private Collider ownCollider;
     private bool moveAway = false;
-    [SerializeField] private float attackDistance;
+    private float attackDistance;
     private float distanceToPlayer;
     private bool hasStopped = false;
     private bool shouldStopForPriority = false;
     [SerializeField] private Skill mySkill;
+    private Skill skillToUse;
+    [SerializeField] private bool isTurret;
 
     public float Priority
     {
@@ -34,15 +36,27 @@ public class Enemy : Entity {
     // Use this for initialization
     void Start()
     {
-
+        if (skillToUse == null)
+        {
+            InitializeStats();
+            attackDistance = skillToUse.Range;
+        }
         agent = GetComponent<NavMeshAgent>();
         obstacle = GetComponent<NavMeshObstacle>();
         ownCollider = GetComponent<Collider>();
-        obstacle.enabled = false;
+        if (!isTurret)
+        {
+            obstacle.enabled = false;
+        }
+        else
+        {
+            agent.enabled = false;
+        }
         rb = GetComponent<Rigidbody>();
         agent.Warp(transform.position);
         Physics.IgnoreLayerCollision(0, 8);
-        
+        target = Player.Instance.transform;
+
 
     }
 
@@ -54,34 +68,42 @@ public class Enemy : Entity {
 
         distanceToPlayer = Vector3.Distance(transform.position, target.position);
 
-        mySkill.CooldownManager();
+        mySkill.CooldownManager(myStats);
 
         if (attackDistance >= distanceToPlayer)
         {
-
-            agent.destination = transform.position;
-            agent.enabled = false;
-            ownCollider.enabled = false;
-            obstacle.enabled = true;
-            hasStopped = true;
-            Debug.Log(attackDistance + distanceToPlayer);
+            if (agent.isActiveAndEnabled)
+            {
+                agent.destination = transform.position;
+            }
+            if (!isTurret)
+            {
+                agent.enabled = false;
+                ownCollider.enabled = false;
+                obstacle.enabled = true;
+                hasStopped = true;
+            }
             TryUseSkill(mySkill);
         }
         
         else
         {
-            obstacle.enabled = false;
-            ownCollider.enabled = true;
-            agent.enabled = true;
-            if (hasStopped)
+            if (!isTurret)
             {
-                agent.Warp(transform.position);
-                hasStopped = false;
+                obstacle.enabled = false;
+                ownCollider.enabled = true;
+                agent.enabled = true;
+                if (hasStopped)
+                {
+                    agent.Warp(transform.position);
+                    hasStopped = false;
+                }
             }
         }
 
         if (agent.isActiveAndEnabled)
         {
+            agent.speed = myStats.moveSpeedCurrent;
             agent.destination = target.transform.position;
         }
     }
@@ -120,6 +142,8 @@ public class Enemy : Entity {
 
     public override void InitializeStats()
     {
-        throw new System.NotImplementedException();
+        myStats = Instantiate(myStatsPrefab);
+        skillToUse = Instantiate(mySkill);
+        
     }
 }
