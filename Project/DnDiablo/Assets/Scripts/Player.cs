@@ -98,10 +98,6 @@ public class Player : Entity {
             Debug.Log("Casting skill: " + skill.name);
             skill.Action(GetPositionFromMouse(), this);
         }
-        else
-        {
-            Debug.Log("SkillToExpensive: " + skill.name);
-        }
     }
 
     private Vector3 GetPositionFromMouse()
@@ -151,15 +147,15 @@ public class Player : Entity {
         //Health bar
         if (healthBar != null)
         {
-            healthBar.hardFill.fillAmount = myStats.healthCurrent / myStats.healthMax;
-            healthBar.slowFill.fillAmount = myStats.healthCurrent / myStats.healthMax; //temp
+            healthBar.hardFill.fillAmount = (myStats.healthMax / myStats.healthCurrent);
+            healthBar.slowFill.fillAmount = (myStats.healthMax / myStats.healthCurrent); //temp
         }
 
         //Resource bar
         if (resourceBar != null)
         {
-            resourceBar.hardFill.fillAmount = myStats.healthCurrent / myStats.healthMax;
-            resourceBar.slowFill.fillAmount = myStats.healthCurrent / myStats.healthMax; //temp
+            resourceBar.hardFill.fillAmount = (myStats.resourceCurrent / myStats.resourceMax);
+            resourceBar.slowFill.fillAmount = (myStats.resourceCurrent / myStats.resourceMax); //temp
         }
 
     }
