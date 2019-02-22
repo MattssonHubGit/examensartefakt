@@ -65,7 +65,6 @@ public abstract class Skill : ScriptableObject {
     {
 
         float _cooldownReduction = myStats.cooldownRedCurrent;
-        Debug.Log(this);
 
         if (cooldownCurrent <= 0)
         {

@@ -588,7 +588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &609483154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myStatsPrefab: {fileID: 11400000, guid: b3e9926f98e55a64f9731d8ed1d38c47, type: 2}
   myStats: {fileID: 0}
-  mySkill: {fileID: 11400000, guid: b093ac5fd7ab09c47a4caa126c81a2ba, type: 2}
+  mySkill: {fileID: 11400000, guid: 37961cddb96d2f24d84ffea55c8c8cd9, type: 2}
   isTurret: 0
 --- !u!195 &609483155
 NavMeshAgent:

@@ -63,7 +63,7 @@ public class Player : Entity {
             }
         }
 
-        //Just to check if regeneration works
+        //Just to check if regeneration works, remember to remove this
         if (Input.GetKeyDown(KeyCode.L)) 
         {
             TakeDamage(20);
