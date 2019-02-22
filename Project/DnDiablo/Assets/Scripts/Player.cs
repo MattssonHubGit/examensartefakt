@@ -40,6 +40,8 @@ public class Player : Entity {
     {
         SkillCooldownManager();
         SkillInputController();
+        ManageHealth();
+        ManageResource();
 
         UIManager();
 
@@ -59,8 +61,16 @@ public class Player : Entity {
             {
                 Debug.Log(mySkills[i].name + " " + mySkills[i].level);
             }
-            
+        }
 
+        //Just to check if regeneration works
+        if (Input.GetKeyDown(KeyCode.L)) 
+        {
+            TakeDamage(20);
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Debug.Log(myStats.healthCurrent);
         }
     }
 

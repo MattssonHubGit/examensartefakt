@@ -64,7 +64,8 @@ public class Enemy : Entity {
     void Update()
     {
 
-
+        ManageHealth();
+        ManageResource();
 
         distanceToPlayer = Vector3.Distance(transform.position, target.position);
 
@@ -107,7 +108,7 @@ public class Enemy : Entity {
             agent.destination = target.transform.position;
         }
     }
-
+    
     private void TryUseSkill(Skill skill)
     {
         if (skill.AttemptCast(this))
