@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Name: Fireball
   m_EditorClassIdentifier: 
   cooldownMax: 2
-  resourceCost: 0
+  resourceCost: 5
   level: 0
   Range: 5
+  spellObectPrefab: {fileID: 1220696689697184, guid: 06d508f941e607f4ba1b0653f140f1f0,
+    type: 2}
+  moveSpeed: 5
