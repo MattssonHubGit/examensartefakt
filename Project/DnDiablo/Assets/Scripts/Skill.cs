@@ -19,6 +19,25 @@ public abstract class Skill : ScriptableObject {
     [SerializeField] public int Range;
 
 
+    #region GetSetters
+    public float CooldownCurrent
+    {
+        get
+        {
+            return cooldownCurrent;
+        }
+    }
+
+    public float CooldownMax
+    {
+        get
+        {
+            return cooldownMax;
+        }
+    }
+
+
+    #endregion
     public virtual bool AttemptCast(Entity caster)
     {
         if (cooldownReady) // Is cooldown ready?

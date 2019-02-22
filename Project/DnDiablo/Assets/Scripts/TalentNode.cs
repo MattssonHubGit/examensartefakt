@@ -112,6 +112,12 @@ public class TalentNode : MonoBehaviour
                 _skillToAdd.name += "_player";
                 TalentManager.Instance.player.mySkills.Add(_skillToAdd);
 
+                //Generate a skillbutton
+                GameObject _objButton = Instantiate(TalentManager.Instance.skillButtonPrefab, Vector3.zero, Quaternion.identity, TalentManager.Instance.skillButtonParent);
+                SkillButton _scrButton = _objButton.GetComponent<SkillButton>();
+
+                _scrButton.mySkill = _skillToAdd;
+                if(myButton.image.sprite != null) _scrButton.buttonIcon.sprite = myButton.image.sprite;
 
                 //Disable this button and enable the next one
                 isUnlocked = true;

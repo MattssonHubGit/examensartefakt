@@ -23,6 +23,10 @@ public class TalentManager : MonoBehaviour
     [SerializeField] private bool changeButtonColor = false;
     [SerializeField] private Color buttonColor = Color.white;
 
+    [Header("UI")]
+    [SerializeField] public Transform skillButtonParent;
+    [SerializeField] public GameObject skillButtonPrefab;
+
     private void Awake()
     {
         //Singleton
