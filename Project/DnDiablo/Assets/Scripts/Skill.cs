@@ -74,7 +74,7 @@ public abstract class Skill : ScriptableObject {
         else
         {
             cooldownReady = false;
-            cooldownCurrent -= Time.deltaTime * _cooldownReduction;
+            cooldownCurrent -= (Time.deltaTime * _cooldownReduction);
             //Debug.Log(cooldownCurrent + " " + this);
         }
 
