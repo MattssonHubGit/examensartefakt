@@ -155,6 +155,10 @@ public class WaveSpawner : MonoBehaviour {
 
         //Amount of Xp to gain from this wave
         xpGainFromWave = 0f;
+        xpGained = 0f;
+        progressBar.slowFill.fillAmount = 0f;
+        progressBar.hardFill.fillAmount = 0f;
+
         foreach (GameObject objEnemy in _wave.enemyPrefabs)
         {
             Enemy scrEnemy = objEnemy.GetComponent<Enemy>();
@@ -265,7 +269,7 @@ public class WaveSpawner : MonoBehaviour {
             enemyObj.GetComponent<NavMeshAgent>().Warp(_spawnPosition.position);
         }
     }
-
+    
     private void UIManager()
     {
         //Progress bar
@@ -274,9 +278,17 @@ public class WaveSpawner : MonoBehaviour {
             progressBar.hardFill.fillAmount = (xpGained / xpGainFromWave);
             if (progressBar.slowFill.fillAmount != progressBar.hardFill.fillAmount)
             {
-                progressBar.slowFill.fillAmount = Mathf.Lerp(progressBar.slowFill.fillAmount, progressBar.hardFill.fillAmount, Time.deltaTime);
+                StartCoroutine(FillSlowBar());
             }
         }
     }
 
+    private IEnumerator FillSlowBar()
+    {
+        while (progressBar.slowFill.fillAmount < progressBar.hardFill.fillAmount)
+        {
+            progressBar.slowFill.fillAmount = Mathf.MoveTowards(progressBar.slowFill.fillAmount, progressBar.hardFill.fillAmount, Time.deltaTime / 500);
+            yield return new WaitForEndOfFrame();
+        }
+    }
 }

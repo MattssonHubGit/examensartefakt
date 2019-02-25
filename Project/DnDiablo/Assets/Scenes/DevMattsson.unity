@@ -266,6 +266,16 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: -5.3857155
       objectReference: {fileID: 0}
+    - target: {fileID: 114197235416215582, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: m_FillAmount
+      value: 0.312
+      objectReference: {fileID: 0}
+    - target: {fileID: 114963250551841992, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: m_FillAmount
+      value: 0.237
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca243d3f88ab0c7479f1b4c34bdaedcf, type: 2}
   m_IsPrefabParent: 0
@@ -2392,19 +2402,3 @@ MonoBehaviour:
   - {fileID: 1321476390}
   progressBar: {fileID: 120825628}
   xpGained: 0
---- !u!1 &2132614058 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1016128078928360, guid: 54c1eecb3fc8f704294a9edc4a47f1ae,
-    type: 2}
-  m_PrefabInternal: {fileID: 1986665336}
---- !u!114 &2132614061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2132614058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aeb32b9b67a4d940adffab442cd4a58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
