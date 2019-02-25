@@ -20,6 +20,15 @@ public class Player : Entity {
     [Header("Respawn")]
     [SerializeField] private Transform spawnPoint;
 
+    #region GetSetters
+    public NavMeshAgent Agent
+    {
+        get
+        {
+            return agent;
+        }
+    }
+    #endregion
 
     private void Awake()
     {

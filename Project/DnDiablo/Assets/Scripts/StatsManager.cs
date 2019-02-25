@@ -127,6 +127,8 @@ public class StatsManager : MonoBehaviour {
 
         Player.Instance.myStats.moveSpeedDisplay++;
 
+        Player.Instance.Agent.speed = Player.Instance.myStats.moveSpeedCurrent;
+
         UpdateStatsDisplay();
     }
 }
