@@ -63,15 +63,29 @@ public class Enemy : Entity {
     // Update is called once per frame
     void Update()
     {
-
+        distanceToPlayer = Vector3.Distance(transform.position, target.position);
         ManageHealth();
         ManageResource();
-
-        distanceToPlayer = Vector3.Distance(transform.position, target.position);
-
         mySkill.CooldownManager(myStats);
+        StateHandler();
+        
+    }
 
-        if (attackDistance >= distanceToPlayer)
+    //If active, move towards target
+    private void Movehandler()
+    {
+        if (agent.isActiveAndEnabled)
+        {
+            agent.speed = myStats.moveSpeedCurrent;
+            agent.destination = target.transform.position;
+        }
+    }
+
+    //Determine if we should move or attack
+    private void StateHandler()
+    {
+
+        if (attackDistance >= distanceToPlayer) //within range, do not move, attack
         {
             if (agent.isActiveAndEnabled)
             {
@@ -86,27 +100,23 @@ public class Enemy : Entity {
             }
             TryUseSkill(mySkill);
         }
-        
-        else
+
+        else // not within range, activate and move towards player
         {
-            if (!isTurret)
+            if (!isTurret) //Don't move if turret
             {
                 obstacle.enabled = false;
                 ownCollider.enabled = true;
                 agent.enabled = true;
                 if (hasStopped)
                 {
-                    agent.Warp(transform.position);
+                    agent.Warp(transform.position); //Attempt to avoid "jump" when restarting movement
                     hasStopped = false;
                 }
             }
         }
 
-        if (agent.isActiveAndEnabled)
-        {
-            agent.speed = myStats.moveSpeedCurrent;
-            agent.destination = target.transform.position;
-        }
+        Movehandler();
     }
     
     private void TryUseSkill(Skill skill)
