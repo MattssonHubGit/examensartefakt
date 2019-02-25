@@ -8,16 +8,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 599a142d84f9c2342965be17108607d4, type: 3}
-  m_Name: HomingMissile
+  m_Script: {fileID: 11500000, guid: 69c619e1db8cd6c4abb71dff95949f86, type: 3}
+  m_Name: SelfDestruct
   m_EditorClassIdentifier: 
   cooldownMax: 0.5
-  resourceCost: 0
+  resourceCost: 20
   level: 0
-  Range: 5
+  Range: 1
   duration: 10
-  projectilePrefab: {fileID: 1899451052250166, guid: 97ea54846bf037248afa1cb95eb1ab5c,
+  damage: 50
+  explosionPrefab: {fileID: 1742931324543476, guid: 26589ddb28400f249a9d86e10135b265,
     type: 2}
-  projectileSpeed: 0.1
-  projectileDamage: 10
-  projectileDuration: 5
+  explosionDuration: 1
+  expansionRate: {x: 25, y: 25, z: 25}

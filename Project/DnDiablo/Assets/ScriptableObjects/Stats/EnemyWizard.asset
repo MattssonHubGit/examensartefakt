@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5da0a3afbd08a9d4481266405719ea09, type: 3}
-  m_Name: FastEnemy
+  m_Name: EnemyWizard
   m_EditorClassIdentifier: 
-  healthCurrent: 20
-  healthBase: 20
-  healthMax: 20
+  healthCurrent: 50
+  healthBase: 50
+  healthMax: 50
   healthRegCurrent: 1
   healthRegBase: 1
   powerCurrent: 1
@@ -25,5 +25,5 @@ MonoBehaviour:
   resourceRegBase: 1
   cooldownRedCurrent: 1
   cooldownRedBase: 1
-  moveSpeedCurrent: 10
-  moveSpeedBase: 10
+  moveSpeedCurrent: 3
+  moveSpeedBase: 3
