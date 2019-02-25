@@ -104,7 +104,7 @@ public class TalentNode : MonoBehaviour
         //--------------------This first node adds a skill to the player
         if (isFirst)
         {
-            if (true) //check if talentpoints are enough
+            if (TalentManager.Instance.spendableTalentPoints > 0) //check if talentpoints are enough
             {
                 //Add the skill
                 Skill _skillToAdd = Instantiate(skillToLevel);
@@ -119,6 +119,8 @@ public class TalentNode : MonoBehaviour
                 _scrButton.mySkill = _skillToAdd;
                 if(myButton.image.sprite != null) _scrButton.buttonIcon.sprite = myButton.image.sprite;
 
+                TalentManager.Instance.spendableTalentPoints--; //Remove a talentpoint
+
                 //Disable this button and enable the next one
                 isUnlocked = true;
                 myButton.interactable = false;
@@ -131,13 +133,15 @@ public class TalentNode : MonoBehaviour
 
 
         //-------------------All other nodes level the players skill
-        if (true) //check if talentpoints are enough
+        if (TalentManager.Instance.spendableTalentPoints > 0) //check if talentpoints are enough
         {
             for (int i = 0; i < TalentManager.Instance.player.mySkills.Count; i++)
             {
                 if (TalentManager.Instance.player.mySkills[i].GetType() == skillToLevel.GetType())
                 {
-                    //Remove talentpoint here
+                    TalentManager.Instance.spendableTalentPoints--; //Remove a talentpoint
+
+                    //Ready next button
                     isUnlocked = true;
                     myButton.interactable = false;
                     if (nextNode != null)

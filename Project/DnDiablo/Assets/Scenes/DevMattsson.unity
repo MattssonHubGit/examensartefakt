@@ -137,6 +137,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 302402908}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!114 &120825628 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114752157565173814, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 302402908}
+  m_Script: {fileID: 11500000, guid: cec8f6341b947b14298124d55106c67d, type: 3}
 --- !u!114 &195529629 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114111333229732802, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
@@ -2385,6 +2391,8 @@ MonoBehaviour:
   - {fileID: 463870902}
   - {fileID: 904185941}
   - {fileID: 1321476390}
+  progressBar: {fileID: 120825628}
+  xpGained: 0
 --- !u!1 &2132614058 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1016128078928360, guid: 54c1eecb3fc8f704294a9edc4a47f1ae,

@@ -12,6 +12,8 @@ public class TalentManager : MonoBehaviour
     public static TalentManager Instance;
     public Player player;
 
+    [HideInInspector] public int spendableTalentPoints = 5;
+
     [Header("Stem generation")]
     [SerializeField] private GameObject nodePrefab;
     [SerializeField] private Skill skillToAffect;

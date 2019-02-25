@@ -40,4 +40,6 @@ public class Stats : ScriptableObject {
 
     [Header("XP Gain On Kill")]
     public float experienceForKill = 50f;
+
+
 }

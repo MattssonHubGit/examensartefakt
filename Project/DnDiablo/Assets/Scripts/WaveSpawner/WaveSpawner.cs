@@ -47,6 +47,21 @@ public class WaveSpawner : MonoBehaviour {
 
     #endregion
 
+    #region Singleton
+    public static WaveSpawner Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    #endregion
+
     private void Start()
     {
         waveCountdown = timeBetweenWaves;
@@ -57,9 +72,9 @@ public class WaveSpawner : MonoBehaviour {
         if (currentState == SpawnStateWave.WAITING)
         {
             //Debug.Log("WAITING");
-            if (!EnemyIsAliveRandom())
+            if (!EnemyIsAlive())
             {
-                WaveCompletedRandom();
+                WaveCompleted();
             }
             else
             {
@@ -88,7 +103,7 @@ public class WaveSpawner : MonoBehaviour {
 
 
     //When a wave is completed, change to the next wave - if all waves are completed currently debug "complete victory"
-    private void WaveCompletedRandom()
+    private void WaveCompleted()
     {
         Debug.Log("Wave completed");
 
@@ -98,6 +113,11 @@ public class WaveSpawner : MonoBehaviour {
         if (nextWave + 1 > waves.Length - 1) //Change the code in here for when all waves of a level is completed
         {
             Debug.Log("All waves complete - Complete Victory!");
+            //Give level up benefits
+            TalentManager.Instance.spendableTalentPoints++;
+            StatsManager.Instance.spendableStatPoints++;
+
+
             //Finish level here
 
         }
@@ -108,7 +128,7 @@ public class WaveSpawner : MonoBehaviour {
     }
 
     //Check once every 5s if there are enemies still alive
-    private bool EnemyIsAliveRandom()
+    private bool EnemyIsAlive()
     {
         Debug.LogError("WaveSpawner::EnemyIsAliveRandom() -- Function is using || if(GameObject.FindGameObjectWithTag('enemy') == null) || This has to change!");
 
@@ -241,6 +261,19 @@ public class WaveSpawner : MonoBehaviour {
         if (enemyObj.GetComponent<NavMeshAgent>() != null)
         {
             enemyObj.GetComponent<NavMeshAgent>().Warp(_spawnPosition.position);
+        }
+    }
+
+    private void UIManager()
+    {
+        //Progress bar
+        if (progressBar != null)
+        {
+            progressBar.hardFill.fillAmount = (xpGained / xpGainFromWave);
+            if (progressBar.slowFill.fillAmount != progressBar.hardFill.fillAmount)
+            {
+                progressBar.slowFill.fillAmount = Mathf.Lerp(progressBar.slowFill.fillAmount, progressBar.hardFill.fillAmount, Time.deltaTime);
+            }
         }
     }
 

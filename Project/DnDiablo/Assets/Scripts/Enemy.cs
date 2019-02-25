@@ -135,6 +135,7 @@ public class Enemy : Entity {
         {
             EnemyUI.Instance.Hide();
         }
+        WaveSpawner.Instance.xpGained += myStats.experienceForKill;
         Destroy(gameObject);
     }
 
