@@ -17,6 +17,9 @@ public class Player : Entity {
     public static Player Instance;
     private NavMeshAgent agent;
 
+    [Header("Respawn")]
+    [SerializeField] private Transform spawnPoint;
+
 
     private void Awake()
     {
@@ -34,6 +37,8 @@ public class Player : Entity {
         InitializeStats();
         agent = this.GetComponent<NavMeshAgent>();
         agent.Warp(transform.position);
+
+        StartCoroutine(FindSpawnPoint());
     }
 
     private void Update()
@@ -46,9 +51,6 @@ public class Player : Entity {
         ManageResource();
 
         UIManager();
-
-
-
     }
 
     private void MovementController()
@@ -131,7 +133,19 @@ public class Player : Entity {
 
     protected override void OnDeath()
     {
-        Debug.Log("Player::OnDeath() -- Took lethal damage, but death is not implemented yet!");
+        Debug.Log("Before Death! Health: " + myStats.healthCurrent + " Resources: " + myStats.resourceCurrent);
+        myStats.healthCurrent = myStats.healthMax;
+        myStats.resourceCurrent = myStats.resourceMax;
+        foreach(Skill skill in mySkills)
+        {
+            skill.ResetCooldown();
+        }
+        agent.destination = spawnPoint.position;
+        agent.Warp(spawnPoint.position);
+
+        Debug.Log("Player::OnDeath() -- Took lethal damage, returning to spawn and resetting skills");
+        Debug.Log("After Death! Health: " + myStats.healthCurrent + " Resources: " + myStats.resourceCurrent);
+
     }
 
     public override void InitializeStats()
@@ -157,6 +171,14 @@ public class Player : Entity {
             resourceBar.hardFill.fillAmount = (myStats.resourceCurrent / myStats.resourceMax);
             resourceBar.slowFill.fillAmount = (myStats.resourceCurrent / myStats.resourceMax); //temp
         }
+    }
+
+    private IEnumerator FindSpawnPoint()
+    {
+
+        yield return new WaitForEndOfFrame();
+
+        spawnPoint = SpawnPoint.Instance.GetComponent<Transform>();
 
     }
 }

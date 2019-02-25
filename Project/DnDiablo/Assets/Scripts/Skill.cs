@@ -66,9 +66,7 @@ public abstract class Skill : ScriptableObject {
             {
                 Debug.LogError("Skills::AttemptCast -- Caster is missing Stats reference");
             }
-
         }
-
         return false;
     }
 
@@ -85,9 +83,11 @@ public abstract class Skill : ScriptableObject {
         {
             cooldownReady = false;
             cooldownCurrent -= (Time.deltaTime * _cooldownReduction);
-            //Debug.Log(cooldownCurrent + " " + this);
         }
-
+    }
+    public void ResetCooldown()
+    {
+        cooldownCurrent = 0;
     }
 
     public abstract void Action(Vector3 targetPos, Entity caster);

@@ -325,8 +325,9 @@ GameObject:
   - component: {fileID: 286510430}
   - component: {fileID: 286510429}
   - component: {fileID: 286510428}
+  - component: {fileID: 286510433}
   m_Layer: 8
-  m_Name: Cube (1)
+  m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -413,6 +414,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &286510433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286510427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7ebb50b6a6f3644a81b949b6df05d7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &349022896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,6 +1388,7 @@ MonoBehaviour:
   mySkills: []
   healthBar: {fileID: 0}
   resourceBar: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!195 &1357179581
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2191,6 +2204,5 @@ MonoBehaviour:
   trackingTarget: {fileID: 1357179585}
   trackingSpeed: 0.05
   cameraStand: {fileID: 1618583516}
-  shakeTimer: 3
-  shakeAmount: 1
-  decreaseAmount: 1
+  maxShake: 3
+  severity: 1
