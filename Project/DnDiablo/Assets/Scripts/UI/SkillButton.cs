@@ -25,7 +25,7 @@ public class SkillButton : MonoBehaviour {
             cooldownOverLay.fillAmount = (mySkill.CooldownCurrent / mySkill.CooldownMax);
             if (Mathf.CeilToInt(mySkill.CooldownCurrent) != 0)
             {
-                coolDownText.text = Mathf.CeilToInt(mySkill.CooldownCurrent).ToString();
+                coolDownText.text = Mathf.CeilToInt(mySkill.CooldownCurrent/Player.Instance.myStats.cooldownRedCurrent).ToString();
             }
             else
             {
