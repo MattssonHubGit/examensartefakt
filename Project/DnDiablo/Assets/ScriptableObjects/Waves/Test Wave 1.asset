@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Name: Test Wave 1
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 1815942290696962, guid: 960de7c98cee65043aef2e8a5bc9e06a, type: 2}
-  - {fileID: 1815942290696962, guid: 960de7c98cee65043aef2e8a5bc9e06a, type: 2}
-  - {fileID: 1526149219657496, guid: 36f99be724b25d447b37825716ba7d44, type: 2}
-  - {fileID: 1526149219657496, guid: 36f99be724b25d447b37825716ba7d44, type: 2}
-  - {fileID: 1815942290696962, guid: 960de7c98cee65043aef2e8a5bc9e06a, type: 2}
+  - {fileID: 1358783578316962, guid: 8c7ffc663b870424fa240aa9ce3243c0, type: 2}
+  - {fileID: 1358783578316962, guid: 8c7ffc663b870424fa240aa9ce3243c0, type: 2}
+  - {fileID: 1358783578316962, guid: 8c7ffc663b870424fa240aa9ce3243c0, type: 2}
   areasToSpawnIn: 0000000001000000
   spawnAfterSecondsFromLatestMin: 1
   spawnAfterSecondsFromLatestMax: 2

@@ -2346,7 +2346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2125840114
 Transform:
   m_ObjectHideFlags: 0
@@ -2373,8 +2373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: 7dfceb478d509014cb17b2ceffc8f6e8, type: 2}
-  - {fileID: 11400000, guid: 592a176f6e624484abea214c7e5d4742, type: 2}
-  timeBetweenWaves: 1
+  timeBetweenWaves: 5
   northSpawnPoints:
   - {fileID: 579918833}
   - {fileID: 949469649}

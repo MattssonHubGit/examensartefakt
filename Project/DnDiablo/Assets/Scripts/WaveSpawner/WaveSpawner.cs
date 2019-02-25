@@ -69,6 +69,8 @@ public class WaveSpawner : MonoBehaviour {
 
     private void Update()
     {
+        UIManager();
+
         if (currentState == SpawnStateWave.WAITING)
         {
             //Debug.Log("WAITING");
@@ -159,13 +161,13 @@ public class WaveSpawner : MonoBehaviour {
 
             if (scrEnemy != null)
             {
-                if (scrEnemy.myStats != null)
+                if (scrEnemy.MyStatsPrefab != null)
                 {
-                    xpGainFromWave += scrEnemy.myStats.experienceForKill;
+                    xpGainFromWave += scrEnemy.MyStatsPrefab.experienceForKill;
                 }
                 else
                 {
-                    Debug.LogError("WaveSpawner::IEnumerator SpawnWave(WaveLoadout _wave) -- Enemy in spawn list without stats");
+                    Debug.LogError("WaveSpawner::IEnumerator SpawnWave(WaveLoadout _wave) -- Enemy in spawn list without a stats prefab");
                 }
             }
             else

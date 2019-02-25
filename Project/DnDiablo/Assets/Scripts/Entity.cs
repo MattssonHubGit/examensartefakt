@@ -7,6 +7,16 @@ public abstract class Entity : MonoBehaviour, IDamageable {
     [SerializeField] protected Stats myStatsPrefab;
     [HideInInspector] public Stats myStats;
 
+    #region GetSetters
+    public Stats MyStatsPrefab
+    {
+        get
+        {
+            return myStatsPrefab;
+        }
+    }
+    #endregion
+
     public abstract void InitializeStats();
 
     public void ReduceResource(float amount)
