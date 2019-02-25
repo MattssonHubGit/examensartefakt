@@ -37,4 +37,7 @@ public class Stats : ScriptableObject {
     public float moveSpeedCurrent = 1;
     public float moveSpeedBase = 1;
     public int moveSpeedDisplay = 5;
+
+    [Header("XP Gain On Kill")]
+    public float experienceForKill = 50f;
 }

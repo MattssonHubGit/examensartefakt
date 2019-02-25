@@ -25,18 +25,34 @@ public class StatsManager : MonoBehaviour {
     [SerializeField] private Text resourceTxt;
     [SerializeField] private Text cooldownTxt;
     [SerializeField] private Text speedTxt;
+    [Space]
+    [SerializeField] private Text pointsTxt;
+
+    [Header("Buttons")]
+    [SerializeField] private Button healthBtn;
+    [SerializeField] private Button powerBtn;
+    [SerializeField] private Button resourceBtn;
+    [SerializeField] private Button cooldownBtn;
+    [SerializeField] private Button speedBtn;
 
     [Header("Other")]
     [SerializeField] private GameObject statsUpgradeParent;
     [SerializeField] private KeyCode toggleKey = KeyCode.C;
 
+    public int spendableStatPoints = 0;
+    
+
+
     #region Singleton
     public static StatsManager Instance;
+
+
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
@@ -68,6 +84,25 @@ public class StatsManager : MonoBehaviour {
         resourceTxt.text = Player.Instance.myStats.resourceDisplay.ToString();
         cooldownTxt.text = Player.Instance.myStats.cooldownRedDisplay.ToString();
         speedTxt.text = Player.Instance.myStats.moveSpeedDisplay.ToString();
+
+        if (spendableStatPoints > 0)
+        {
+            healthBtn.interactable = true;
+            powerBtn.interactable = true;
+            resourceBtn.interactable = true;
+            cooldownBtn.interactable = true;
+            speedBtn.interactable = true;
+        }
+        else
+        {
+            healthBtn.interactable = false;
+            powerBtn.interactable = false;
+            resourceBtn.interactable = false;
+            cooldownBtn.interactable = false;
+            speedBtn.interactable = false;
+        }
+
+        pointsTxt.text = spendableStatPoints.ToString();
     }
 
     public void UpgradeHealth()
@@ -80,7 +115,7 @@ public class StatsManager : MonoBehaviour {
         Player.Instance.myStats.healthRegBase += healthRegIncreasePerLevel;
 
         Player.Instance.myStats.healthDisplay++;
-
+        spendableStatPoints--;
 
         UpdateStatsDisplay();
     }
@@ -91,6 +126,7 @@ public class StatsManager : MonoBehaviour {
         Player.Instance.myStats.powerCurrent += powerIncreasePerLevel;
 
         Player.Instance.myStats.powerDisplay++;
+        spendableStatPoints--;
 
 
         UpdateStatsDisplay();
@@ -106,6 +142,7 @@ public class StatsManager : MonoBehaviour {
         Player.Instance.myStats.resourceRegCurrent += resourceRegIncreasePerLevel;
 
         Player.Instance.myStats.resourceDisplay++;
+        spendableStatPoints--;
 
         UpdateStatsDisplay();
     }
@@ -116,6 +153,7 @@ public class StatsManager : MonoBehaviour {
         Player.Instance.myStats.cooldownRedCurrent += cooldownRedIncreasePerLevel;
 
         Player.Instance.myStats.cooldownRedDisplay++;
+        spendableStatPoints--;
 
         UpdateStatsDisplay();
     }
@@ -128,6 +166,7 @@ public class StatsManager : MonoBehaviour {
         Player.Instance.myStats.moveSpeedDisplay++;
 
         Player.Instance.Agent.speed = Player.Instance.myStats.moveSpeedCurrent;
+        spendableStatPoints--;
 
         UpdateStatsDisplay();
     }

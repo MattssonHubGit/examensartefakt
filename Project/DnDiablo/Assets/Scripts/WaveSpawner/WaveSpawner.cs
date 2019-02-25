@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour {
 
-
     public enum SpawnStateWave { SPAWNING, WAITING, COUNTING };
 
     [Header("Waves")]
@@ -24,14 +23,19 @@ public class WaveSpawner : MonoBehaviour {
     [SerializeField] private Transform[] southSpawnPoints;
     [SerializeField] private Transform[] westSpawnPoints;
 
-    private int enemiesToSpawnCount;
-    
+    [Header("UI")]
+    [SerializeField] private FillingBar progressBar;
+    private float xpGainFromWave = 0;
+    [HideInInspector] public float xpGained = 0;
+
     private float scanFrequency = 0.5f;
     private float waveTimeToSpawn;
     private float waveTimeToSpawnTimeStamp;
     private SpawnStateWave currentState = SpawnStateWave.COUNTING;
     
     [HideInInspector] private int currentWaveCounter = 0;
+
+    #region GetSetters
 
     public int CurrentWaveItteration
     {
@@ -40,6 +44,8 @@ public class WaveSpawner : MonoBehaviour {
             return currentWaveCounter;
         }
     }
+
+    #endregion
 
     private void Start()
     {
@@ -124,6 +130,29 @@ public class WaveSpawner : MonoBehaviour {
     {
         currentState = SpawnStateWave.SPAWNING;
         float nextSpawn = Random.Range(_wave.spawnAfterSecondsFromLatestMin, _wave.spawnAfterSecondsFromLatestMax);
+
+        //Amount of Xp to gain from this wave
+        xpGainFromWave = 0f;
+        foreach (GameObject objEnemy in _wave.enemyPrefabs)
+        {
+            Enemy scrEnemy = objEnemy.GetComponent<Enemy>();
+
+            if (scrEnemy != null)
+            {
+                if (scrEnemy.myStats != null)
+                {
+                    xpGainFromWave += scrEnemy.myStats.experienceForKill;
+                }
+                else
+                {
+                    Debug.LogError("WaveSpawner::IEnumerator SpawnWave(WaveLoadout _wave) -- Enemy in spawn list without stats");
+                }
+            }
+            else
+            {
+                Debug.LogError("WaveSpawner::IEnumerator SpawnWave(WaveLoadout _wave) -- Enemy in spawn list without enemy script");
+            }
+        }
 
         for (int i = 0; i < _wave.enemyPrefabs.Length; i++)
         {

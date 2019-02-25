@@ -10,9 +10,9 @@ public class StatUpgradeButton : MonoBehaviour {
 
     public void AttemptToUpgrade()
     {
-        if (true) //Check if upgradepoints are available
+        if (StatsManager.Instance.spendableStatPoints > 0) //Check if upgradepoints are available
         {
-            switch (statToUpgrade)
+            switch (statToUpgrade) //What to upgrade?
             {
                 case Stats.HEALTH:
                     {
