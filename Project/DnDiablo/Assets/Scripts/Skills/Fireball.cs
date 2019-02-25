@@ -9,17 +9,26 @@ public class Fireball : Skill {
     [SerializeField] private GameObject spellObectPrefab;
     [SerializeField] private float moveSpeed;
 
+    [SerializeField] private List<float> explosionDamageByLevel = new List<float>();
+    [SerializeField] private List<float> explosionRadiusByLevel = new List<float>();
 
     public override void Action(Vector3 targetPos, Entity caster)
     {
-        //Debug.Log("Fireball::Action -- Skill logic not implemented");
-
         GameObject _objBall = Instantiate(spellObectPrefab, caster.transform.position, Quaternion.identity);
-        Projectile _projectile = _objBall.GetComponent<Projectile>();
+        FireballBehaviour _fireball = _objBall.GetComponent<FireballBehaviour>();
 
+
+        //Movement
         Vector3 _dir = targetPos - caster.transform.position;
         _dir.Normalize();
-        _projectile.direction = _dir;
-        _projectile.speed = moveSpeed;
+        _fireball.direction = _dir;
+        _fireball.speed = moveSpeed;
+
+        //Stats
+        _fireball.damage = (explosionDamageByLevel[level] * caster.myStats.powerCurrent);
+        _fireball.areaRadius = explosionRadiusByLevel[level];
+
+        //Destroy object after duration is up
+        Destroy(_objBall, duration);
     }
 }

@@ -38,6 +38,8 @@ public class Player : Entity {
 
     private void Update()
     {
+        MovementController();
+
         SkillCooldownManager();
         SkillInputController();
         ManageHealth();
@@ -45,6 +47,12 @@ public class Player : Entity {
 
         UIManager();
 
+
+
+    }
+
+    private void MovementController()
+    {
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
@@ -53,24 +61,6 @@ public class Player : Entity {
             {
                 agent.destination = hit.point;
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.Keypad8))
-        {
-            for (int i = 0; i < mySkills.Count; i++)
-            {
-                Debug.Log(mySkills[i].name + " " + mySkills[i].level);
-            }
-        }
-
-        //Just to check if regeneration works, remember to remove this
-        if (Input.GetKeyDown(KeyCode.L)) 
-        {
-            TakeDamage(20);
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            Debug.Log(myStats.healthCurrent);
         }
     }
 

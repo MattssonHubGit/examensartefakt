@@ -3,13 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour {
-
-    [Header("Base Projectile")]
-    [SerializeField] public float speed;
-    [SerializeField] public Vector3 direction = new Vector3();
-
-    private void Update()
+    
+    public static void Movement(Transform projectile, Vector3 direction, float speed)
     {
-        transform.position += direction * speed * Time.deltaTime;
+        projectile.position += direction * speed * Time.deltaTime;
     }
 }

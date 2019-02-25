@@ -18,6 +18,9 @@ public abstract class Skill : ScriptableObject {
     [Header("Range")]
     [SerializeField] public int Range;
 
+    [Header("Duration")]
+    [SerializeField] protected float duration = 10f;
+
 
     #region GetSetters
     public float CooldownCurrent
@@ -33,6 +36,14 @@ public abstract class Skill : ScriptableObject {
         get
         {
             return cooldownMax;
+        }
+    }
+
+    public float Duration
+    {
+        get
+        {
+            return duration;
         }
     }
 
