@@ -16,7 +16,7 @@ MonoBehaviour:
   level: 0
   Range: 1
   duration: 10
-  damage: 50
+  damage: 35
   explosionPrefab: {fileID: 1742931324543476, guid: 26589ddb28400f249a9d86e10135b265,
     type: 2}
   explosionDuration: 1

@@ -100,6 +100,7 @@ public class Enemy : Entity {
                 obstacle.enabled = true;
                 hasStopped = true;
             }
+            transform.LookAt(target);
             TryUseSkill(mySkill);
         }
 
@@ -117,7 +118,7 @@ public class Enemy : Entity {
                 }
             }
         }
-
+        
         Movehandler();
     }
     
@@ -135,7 +136,11 @@ public class Enemy : Entity {
         {
             EnemyUI.Instance.Hide();
         }
-        WaveSpawner.Instance.xpGained += myStats.experienceForKill;
+        if (WaveSpawner.Instance != null)
+        {
+            WaveSpawner.Instance.xpGained += myStats.experienceForKill;
+
+        }
         Destroy(gameObject);
     }
 

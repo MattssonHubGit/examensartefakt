@@ -42,6 +42,8 @@ public class HomingMissileBehaviour : MonoBehaviour
             {
                 _damagable.TakeDamage(damage);
             }
+
+            CameraController.Instance.AddShake(0.1f);
             Destroy(this.gameObject);
         }
     }

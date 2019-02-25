@@ -34,7 +34,8 @@ public class SelfDestructBehaviour : MonoBehaviour {
         {
             _damagable.TakeDamage(damage);
         }
-        
+
+        CameraController.Instance.AddShake(damage);
         
     }
 }

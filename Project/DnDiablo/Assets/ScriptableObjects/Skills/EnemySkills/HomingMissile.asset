@@ -20,4 +20,4 @@ MonoBehaviour:
     type: 2}
   projectileSpeed: 0.1
   projectileDamage: 10
-  projectileDuration: 5
+  projectileDuration: 1
