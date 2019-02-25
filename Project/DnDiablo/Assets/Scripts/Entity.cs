@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Entity : MonoBehaviour, IDamageable {
 
     [SerializeField] protected Stats myStatsPrefab;
-    [HideInInspector] public Stats myStats;
+    [SerializeField] public Stats myStats;
 
     public abstract void InitializeStats();
 

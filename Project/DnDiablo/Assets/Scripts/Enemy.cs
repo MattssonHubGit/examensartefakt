@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System;
 
 public class Enemy : Entity {
 
@@ -19,6 +20,7 @@ public class Enemy : Entity {
     [SerializeField] private Skill mySkill;
     private Skill skillToUse;
     [SerializeField] private bool isTurret;
+    private bool myStatInUI;
 
     public float Priority
     {
@@ -94,7 +96,7 @@ public class Enemy : Entity {
             if (!isTurret)
             {
                 agent.enabled = false;
-                ownCollider.enabled = false;
+                //ownCollider.enabled = false;
                 obstacle.enabled = true;
                 hasStopped = true;
             }
@@ -106,7 +108,7 @@ public class Enemy : Entity {
             if (!isTurret) //Don't move if turret
             {
                 obstacle.enabled = false;
-                ownCollider.enabled = true;
+                //ownCollider.enabled = true;
                 agent.enabled = true;
                 if (hasStopped)
                 {
@@ -126,24 +128,28 @@ public class Enemy : Entity {
             skill.Action(target.position, this);
         }
     }
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-    }
-
+    
     protected override void OnDeath()
     {
+        if (myStatInUI)
+        {
+            EnemyUI.Instance.Hide();
+        }
         Destroy(gameObject);
+    }
+
+    private void OnMouseEnter()
+    {
+        EnemyUI.Instance.SetUpUnit(myStats);
+        myStatInUI = true;
+
+    }
+
+    private void OnMouseExit()
+    {
+        EnemyUI.Instance.Hide();
+        myStatInUI = false;
+
     }
 
     protected override void UseSkill(Skill skill)

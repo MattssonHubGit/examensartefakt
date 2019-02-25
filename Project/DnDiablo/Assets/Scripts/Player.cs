@@ -161,8 +161,8 @@ public class Player : Entity {
         //Health bar
         if (healthBar != null)
         {
-            healthBar.hardFill.fillAmount = (myStats.healthMax / myStats.healthCurrent);
-            healthBar.slowFill.fillAmount = (myStats.healthMax / myStats.healthCurrent); //temp
+            healthBar.hardFill.fillAmount = (myStats.healthCurrent / myStats.healthMax);
+            healthBar.slowFill.fillAmount = (myStats.healthCurrent / myStats.healthMax); //temp
         }
 
         //Resource bar
