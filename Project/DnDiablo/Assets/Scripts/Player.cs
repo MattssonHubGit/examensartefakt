@@ -16,6 +16,7 @@ public class Player : Entity {
     [Header("Components")]
     public static Player Instance;
     private NavMeshAgent agent;
+    [SerializeField] private Transform groundPoint;
 
     [Header("Respawn")]
     [SerializeField] private Transform spawnPoint;
@@ -106,14 +107,23 @@ public class Player : Entity {
         if (skill.AttemptCast(this))
         {
             Debug.Log("Casting skill: " + skill.name);
-            skill.Action(GetPositionFromMouse(), this);
+            skill.Action(GetPositionFromMouse(skill.TargetGround), this);
         }
     }
 
-    private Vector3 GetPositionFromMouse()
+    private Vector3 GetPositionFromMouse(bool getFromGround)
     {
         // Generate a plane that intersects the transform's position with an upwards normal.
-        Plane playerPlane = new Plane(Vector3.up, transform.position);
+        //It will either cut through the player center, or from the ground.
+        Plane playerPlane;
+        if (getFromGround)
+        {
+            playerPlane = new Plane(Vector3.up, groundPoint.position);
+        }
+        else
+        {
+            playerPlane = new Plane(Vector3.up, transform.position);
+        }
 
         // Generate a ray from the cursor position
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

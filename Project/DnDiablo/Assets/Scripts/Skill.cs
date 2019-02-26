@@ -15,8 +15,9 @@ public abstract class Skill : ScriptableObject {
     [Header("Level")]
     public int level = 0;
 
-    [Header("Range")]
+    [Header("Targetting")]
     [SerializeField] protected List<float> range = new List<float>();
+    [SerializeField] protected bool targetGround = false;
 
     [Header("Duration")]
     [SerializeField] protected List<float> duration = new List<float>();
@@ -52,6 +53,14 @@ public abstract class Skill : ScriptableObject {
         get
         {
             return range;
+        }
+    }
+
+    public bool TargetGround
+    {
+        get
+        {
+            return targetGround;
         }
     }
 
