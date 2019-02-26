@@ -60,7 +60,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1777afc2105826f4baa2adc20c444d73, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myStatsPrefab: {fileID: 11400000, guid: 2c97f3e8802686c4881c8032e190ddb2, type: 2}
   myStats: {fileID: 0}
+  auraList: []
   mySkill: {fileID: 11400000, guid: 215c794ec89c97b4691bf9df348c6be7, type: 2}
   isTurret: 0
 --- !u!135 &135960781993796238

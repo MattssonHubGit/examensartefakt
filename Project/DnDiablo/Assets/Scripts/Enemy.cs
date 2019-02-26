@@ -6,12 +6,12 @@ using System;
 
 public class Enemy : Entity {
 
-    private Transform target;
+    [SerializeField] private Transform target;
     private NavMeshAgent agent;
     private NavMeshObstacle obstacle;
-    private float priority;
     private Rigidbody rb;
     private Collider ownCollider;
+    private Vector3 stopPos;
     private bool moveAway = false;
     private float attackDistance;
     private float distanceToPlayer;
@@ -21,22 +21,15 @@ public class Enemy : Entity {
     private Skill skillToUse;
     [SerializeField] private bool isTurret;
     private bool myStatInUI;
+    [SerializeField] private float timeBeforeAttack;
+    [SerializeField] private float timeAfterAttack;
+    private float beforeAttackTimeOrigin;
+    private float afterAttackTimeOrigin;
 
-    public float Priority
-    {
-        get
-        {
-            return priority;
-        }
 
-        set
-        {
-            priority = value;
-        }
-    }
 
     // Use this for initialization
-    void Awake()
+    void Start()
     {
         if (skillToUse == null)
         {
@@ -58,7 +51,9 @@ public class Enemy : Entity {
         agent.Warp(transform.position);
         Physics.IgnoreLayerCollision(0, 8);
         target = Player.Instance.transform;
-        
+        beforeAttackTimeOrigin = timeBeforeAttack;
+        afterAttackTimeOrigin = timeAfterAttack;
+        timeAfterAttack = 0;
     }
 
     // Update is called once per frame
@@ -85,8 +80,12 @@ public class Enemy : Entity {
     private void StateHandler()
     {
 
+        timeAfterAttack -= Time.deltaTime;
+
         if (attackDistance >= distanceToPlayer) //within range, do not move, attack
         {
+
+            stopPos = transform.position;
             if (agent.isActiveAndEnabled)
             {
                 agent.destination = transform.position;
@@ -94,24 +93,25 @@ public class Enemy : Entity {
             if (!isTurret)
             {
                 agent.enabled = false;
-                //ownCollider.enabled = false;
                 obstacle.enabled = true;
                 hasStopped = true;
             }
             transform.LookAt(target);
+
+            timeBeforeAttack -= Time.deltaTime;
             TryUseSkill(mySkill);
         }
 
         else // not within range, activate and move towards player
         {
-            if (!isTurret) //Don't move if turret
+            timeBeforeAttack = beforeAttackTimeOrigin;
+            if (!isTurret && timeAfterAttack <= 0) //Don't move if turret
             {
                 obstacle.enabled = false;
-                //ownCollider.enabled = true;
                 agent.enabled = true;
                 if (hasStopped)
                 {
-                    agent.Warp(transform.position); //Attempt to avoid "jump" when restarting movement
+                    agent.Warp(stopPos); //Attempt to avoid "jump" when restarting movement
                     hasStopped = false;
                 }
             }
@@ -122,9 +122,13 @@ public class Enemy : Entity {
     
     private void TryUseSkill(Skill skill)
     {
-        if (skill.AttemptCast(this))
+        if (timeBeforeAttack <= 0)
         {
-            skill.Action(target.position, this);
+            if (skill.AttemptCast(this))
+            {
+                skill.Action(target.position, this);
+                timeAfterAttack = skill.Duration[0] + afterAttackTimeOrigin;
+            }
         }
     }
     
