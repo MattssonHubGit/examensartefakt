@@ -6,7 +6,7 @@ public abstract class Entity : MonoBehaviour, IDamageable {
 
     [SerializeField] protected Stats myStatsPrefab;
     [HideInInspector] public Stats myStats;
-    [SerializeField] private List<Aura> auraList = new List<Aura>();
+    [SerializeField] protected List<Aura> auraList = new List<Aura>();
 
     #region GetSetters
     public Stats MyStatsPrefab
@@ -45,23 +45,23 @@ public abstract class Entity : MonoBehaviour, IDamageable {
         Aurahandler();
         ManageHealth();
         ManageResource();
-
     }
 
     protected virtual void Aurahandler()
     {
-
         for (int i = 0; i < auraList.Count; i++)
         {
             auraList[i].OnTick();
+        }
+
+        for (int i = 0; i < auraList.Count; i++)
+        {
             auraList[i].Duration -= Time.deltaTime;
             if (auraList[i].Duration <= 0)
             {
                 RemoveAura(auraList[i]);
-
             }
         }
-        
     }
 
     protected abstract void OnDeath();
@@ -108,14 +108,11 @@ public abstract class Entity : MonoBehaviour, IDamageable {
         auraList.Add(aura);
         aura.target = this;
         aura.OnApply();
-
     }
 
     public virtual void RemoveAura(Aura aura)
     {
-        Debug.Log("hejsan");
         aura.OnExpire();
         auraList.Remove(aura);
-        
     }
 }

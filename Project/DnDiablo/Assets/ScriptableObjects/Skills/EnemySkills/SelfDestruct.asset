@@ -11,11 +11,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c619e1db8cd6c4abb71dff95949f86, type: 3}
   m_Name: SelfDestruct
   m_EditorClassIdentifier: 
-  cooldownMax: 0.5
-  resourceCost: 20
+  cooldownMax:
+  - 0
+  resourceCost:
+  - 0
   level: 0
-  Range: 1
-  duration: 10
+  range:
+  - 1
+  targetGround: 0
+  duration:
+  - 0
   damage: 35
   explosionPrefab: {fileID: 1742931324543476, guid: 26589ddb28400f249a9d86e10135b265,
     type: 2}

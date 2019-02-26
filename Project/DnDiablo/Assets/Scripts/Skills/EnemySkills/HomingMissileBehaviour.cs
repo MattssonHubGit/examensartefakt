@@ -12,7 +12,7 @@ public class HomingMissileBehaviour : MonoBehaviour
     [HideInInspector] public Transform target;
     [HideInInspector] public Collider casterCollider;
     [HideInInspector] public float maxDuration;
-    [HideInInspector] public Aura slowAura;
+    [HideInInspector] public Aura aura;
 
 
     // Use this for initialization
@@ -45,7 +45,7 @@ public class HomingMissileBehaviour : MonoBehaviour
             {
                 _damagable.TakeDamage(damage);
             }
-            targetEntity.AddAura(slowAura);
+            targetEntity.AddAura(aura);
 
             CameraController.Instance.AddShake(0.1f);
             Destroy(this.gameObject);

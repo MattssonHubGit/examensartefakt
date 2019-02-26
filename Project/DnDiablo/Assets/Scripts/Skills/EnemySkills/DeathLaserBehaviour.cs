@@ -47,8 +47,7 @@ public class DeathLaserBehaviour : MonoBehaviour {
             {
                 _damagable.TakeDamage(damage*Time.deltaTime);
             }
-
-            CameraController.Instance.AddShake(0.1f*Time.deltaTime);
+            CameraController.Instance.AddShake(1.6f*Time.deltaTime);
             
         }
     }

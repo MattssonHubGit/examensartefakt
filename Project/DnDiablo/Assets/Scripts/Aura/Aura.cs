@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Aura : ScriptableObject {
 
     [SerializeField] private float duration;
-    [SerializeField] public Entity target;
+    [HideInInspector] public Entity target;
     #region Getsetter
     public float Duration
     {
@@ -25,4 +25,5 @@ public abstract class Aura : ScriptableObject {
     public abstract void OnTick();
     
     public abstract void OnExpire();
+    
 }

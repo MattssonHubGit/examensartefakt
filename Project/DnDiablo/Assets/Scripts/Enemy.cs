@@ -7,8 +7,8 @@ using System;
 public class Enemy : Entity {
 
     private Transform target;
-    NavMeshAgent agent;
-    NavMeshObstacle obstacle;
+    private NavMeshAgent agent;
+    private NavMeshObstacle obstacle;
     private float priority;
     private Rigidbody rb;
     private Collider ownCollider;
@@ -36,7 +36,7 @@ public class Enemy : Entity {
     }
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         if (skillToUse == null)
         {

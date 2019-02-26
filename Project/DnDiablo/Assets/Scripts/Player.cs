@@ -156,7 +156,7 @@ public class Player : Entity {
 
     protected override void OnDeath()
     {
-        Debug.Log("Before Death! Health: " + myStats.healthCurrent + " Resources: " + myStats.resourceCurrent);
+        auraList.Clear();
         myStats.healthCurrent = myStats.healthMax;
         myStats.resourceCurrent = myStats.resourceMax;
         foreach(Skill skill in mySkills)
@@ -165,10 +165,6 @@ public class Player : Entity {
         }
         agent.destination = spawnPoint.position;
         agent.Warp(spawnPoint.position);
-
-        Debug.Log("Player::OnDeath() -- Took lethal damage, returning to spawn and resetting skills");
-        Debug.Log("After Death! Health: " + myStats.healthCurrent + " Resources: " + myStats.resourceCurrent);
-
     }
 
     public override void InitializeStats()

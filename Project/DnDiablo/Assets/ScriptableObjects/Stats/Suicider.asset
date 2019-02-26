@@ -9,21 +9,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5da0a3afbd08a9d4481266405719ea09, type: 3}
-  m_Name: EnemyWizard
+  m_Name: Suicider
   m_EditorClassIdentifier: 
-  healthCurrent: 50
-  healthBase: 50
-  healthMax: 50
-  healthRegCurrent: 1
-  healthRegBase: 1
+  healthCurrent: 20
+  healthBase: 20
+  healthMax: 20
+  healthRegCurrent: 0
+  healthRegBase: 0
+  healthDisplay: 5
   powerCurrent: 1
   powerBase: 1
+  powerDisplay: 5
   resourceCurrent: 100
   resourceBase: 100
   resourceMax: 100
-  resourceRegCurrent: 1
-  resourceRegBase: 1
+  resourceRegCurrent: 0
+  resourceRegBase: 0
+  resourceDisplay: 5
   cooldownRedCurrent: 1
   cooldownRedBase: 1
-  moveSpeedCurrent: 3
-  moveSpeedBase: 3
+  cooldownRedDisplay: 5
+  moveSpeedCurrent: 8
+  moveSpeedBase: 8
+  moveSpeedDisplay: 5
+  experienceForKill: 20

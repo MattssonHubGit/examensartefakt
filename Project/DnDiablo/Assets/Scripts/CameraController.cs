@@ -34,6 +34,7 @@ public class CameraController : MonoBehaviour {
             Destroy(this.gameObject);
         }
         #endregion
+        trackingTarget = Player.Instance.transform;
 
         originalPos = transform.position;
 	}
