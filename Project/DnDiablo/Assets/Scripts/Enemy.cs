@@ -41,7 +41,7 @@ public class Enemy : Entity {
         if (skillToUse == null)
         {
             InitializeStats();
-            attackDistance = skillToUse.Range;
+            attackDistance = skillToUse.Range[skillToUse.level];
         }
         agent = GetComponent<NavMeshAgent>();
         obstacle = GetComponent<NavMeshObstacle>();

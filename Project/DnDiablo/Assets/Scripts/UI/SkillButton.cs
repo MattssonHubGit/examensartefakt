@@ -22,7 +22,7 @@ public class SkillButton : MonoBehaviour {
     {
         if (mySkill != null) //Can't do anything without a skill
         {
-            cooldownOverLay.fillAmount = (mySkill.CooldownCurrent / mySkill.CooldownMax);
+            cooldownOverLay.fillAmount = (mySkill.CooldownCurrent / mySkill.CooldownMax[mySkill.level]);
             if (Mathf.CeilToInt(mySkill.CooldownCurrent) != 0)
             {
                 coolDownText.text = Mathf.CeilToInt(mySkill.CooldownCurrent/Player.Instance.myStats.cooldownRedCurrent).ToString();
