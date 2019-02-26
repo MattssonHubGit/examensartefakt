@@ -17,7 +17,7 @@ public class DeathLaser : Skill {
     public override void Action(Vector3 targetPos, Entity caster)
     {
 
-        GameObject _laserPointer = Instantiate(laserObject, caster.transform.position, Quaternion.identity);
+        GameObject _laserPointer = Instantiate(laserObject, caster.transform.position, caster.transform.rotation);
         DeathLaserBehaviour _laserBehaviour = _laserPointer.GetComponentInChildren<DeathLaserBehaviour>();
 
         _laserBehaviour.damage = damagePerSecond;
