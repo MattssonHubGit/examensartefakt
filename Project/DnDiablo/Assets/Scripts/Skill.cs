@@ -5,21 +5,21 @@ using UnityEngine;
 public abstract class Skill : ScriptableObject {
 
     [Header("Cooldown")]
-    [SerializeField] protected float cooldownMax = 0.5f;
+    [SerializeField] protected List<float> cooldownMax = new List<float>();
     protected float cooldownCurrent = 0;
     protected bool cooldownReady = true;
 
     [Header("Cost")]
-    [SerializeField] protected float resourceCost = 20f;
+    [SerializeField] protected List<float> resourceCost = new List<float>();
 
     [Header("Level")]
     public int level = 0;
 
     [Header("Range")]
-    [SerializeField] public int Range;
+    [SerializeField] protected List<float> range = new List<float>();
 
     [Header("Duration")]
-    [SerializeField] protected float duration = 10f;
+    [SerializeField] protected List<float> duration = new List<float>();
 
 
     #region GetSetters
@@ -31,7 +31,7 @@ public abstract class Skill : ScriptableObject {
         }
     }
 
-    public float CooldownMax
+    public List<float> CooldownMax
     {
         get
         {
@@ -39,11 +39,19 @@ public abstract class Skill : ScriptableObject {
         }
     }
 
-    public float Duration
+    public List<float> Duration
     {
         get
         {
             return duration;
+        }
+    }
+
+    public List<float> Range
+    {
+        get
+        {
+            return range;
         }
     }
 
@@ -55,10 +63,10 @@ public abstract class Skill : ScriptableObject {
         {
             if (caster.myStats != null)
             {
-                if (caster.myStats.resourceCurrent >= resourceCost)
+                if (caster.myStats.resourceCurrent >= resourceCost[level])
                 {
-                    caster.ReduceResource(resourceCost);
-                    cooldownCurrent = cooldownMax;
+                    caster.ReduceResource(resourceCost[level]);
+                    cooldownCurrent = cooldownMax[level];
                     return true;
                 }
             }

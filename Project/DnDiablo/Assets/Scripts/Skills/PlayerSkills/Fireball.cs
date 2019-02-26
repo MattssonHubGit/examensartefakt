@@ -29,6 +29,6 @@ public class Fireball : Skill {
         _fireball.areaRadius = explosionRadiusByLevel[level];
 
         //Destroy object after duration is up
-        Destroy(_objBall, duration);
+        Destroy(_objBall, duration[level]);
     }
 }
