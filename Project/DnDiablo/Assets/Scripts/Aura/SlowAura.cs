@@ -6,7 +6,7 @@ using UnityEngine.AI;
 [CreateAssetMenu]
 public class SlowAura : Aura {
 
-    [SerializeField] private float slowPercentage;
+    [SerializeField] public float slowPercentage;
     [HideInInspector] private float slowAmount;
 
     public override void OnApply()
