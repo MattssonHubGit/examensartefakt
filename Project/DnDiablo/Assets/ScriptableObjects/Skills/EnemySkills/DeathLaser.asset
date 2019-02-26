@@ -11,11 +11,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a7ff35a3df48846bd146627315be38, type: 3}
   m_Name: DeathLaser
   m_EditorClassIdentifier: 
-  cooldownMax: 10
-  resourceCost: 20
+  cooldownMax:
+  - 10
+  resourceCost:
+  - 0
   level: 0
-  Range: 10
-  duration: 10
+  range:
+  - 50
+  duration:
+  - 0
   damagePerSecond: 20
   firingDelay: 3
   firingDuration: 3

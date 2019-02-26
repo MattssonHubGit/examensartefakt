@@ -16,14 +16,20 @@ MonoBehaviour:
   healthMax: 100
   healthRegCurrent: 1
   healthRegBase: 1
+  healthDisplay: 5
   powerCurrent: 1
   powerBase: 1
+  powerDisplay: 5
   resourceCurrent: 100
   resourceBase: 100
   resourceMax: 100
   resourceRegCurrent: 1
   resourceRegBase: 1
+  resourceDisplay: 5
   cooldownRedCurrent: 1
   cooldownRedBase: 1
-  moveSpeedCurrent: 1
-  moveSpeedBase: 1
+  cooldownRedDisplay: 5
+  moveSpeedCurrent: 10
+  moveSpeedBase: 10
+  moveSpeedDisplay: 5
+  experienceForKill: 50

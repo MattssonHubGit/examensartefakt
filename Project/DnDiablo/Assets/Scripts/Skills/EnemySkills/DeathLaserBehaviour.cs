@@ -12,7 +12,6 @@ public class DeathLaserBehaviour : MonoBehaviour {
     private Collider ownCollider;
     public Collider casterCollider;
     public Vector3 targetPosition;
-    private Transform parentTransform;
 
 
 	// Use this for initialization
@@ -33,6 +32,7 @@ public class DeathLaserBehaviour : MonoBehaviour {
         }
         if (duration < 0)
         {
+            Destroy(transform.parent.gameObject);
             Destroy(this.gameObject);
         }
 	}
@@ -52,5 +52,4 @@ public class DeathLaserBehaviour : MonoBehaviour {
             
         }
     }
-
 }

@@ -11,13 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599a142d84f9c2342965be17108607d4, type: 3}
   m_Name: HomingMissile
   m_EditorClassIdentifier: 
-  cooldownMax: 0.5
-  resourceCost: 0
+  cooldownMax:
+  - 2
+  resourceCost:
+  - 0
   level: 0
-  Range: 5
-  duration: 10
+  range:
+  - 5
+  duration: []
   projectilePrefab: {fileID: 1899451052250166, guid: 97ea54846bf037248afa1cb95eb1ab5c,
     type: 2}
   projectileSpeed: 0.1
   projectileDamage: 10
   projectileDuration: 1
+  slowAura: {fileID: 11400000, guid: 57cd1e4c8d5c35c47bcb4d65e7a05214, type: 2}

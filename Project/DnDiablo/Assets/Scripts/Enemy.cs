@@ -58,16 +58,14 @@ public class Enemy : Entity {
         agent.Warp(transform.position);
         Physics.IgnoreLayerCollision(0, 8);
         target = Player.Instance.transform;
-
-
+        
     }
 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
+        base.Update();
         distanceToPlayer = Vector3.Distance(transform.position, target.position);
-        ManageHealth();
-        ManageResource();
         mySkill.CooldownManager(myStats);
         StateHandler();
         

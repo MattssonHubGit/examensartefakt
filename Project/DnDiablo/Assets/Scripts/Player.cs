@@ -50,15 +50,14 @@ public class Player : Entity {
         StartCoroutine(FindSpawnPoint());
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         MovementController();
 
         SkillCooldownManager();
         SkillInputController();
-        ManageHealth();
-        ManageResource();
-
+        
         UIManager();
     }
 
@@ -67,7 +66,7 @@ public class Player : Entity {
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
-
+            agent.speed = myStats.moveSpeedCurrent;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
             {
                 agent.destination = hit.point;
