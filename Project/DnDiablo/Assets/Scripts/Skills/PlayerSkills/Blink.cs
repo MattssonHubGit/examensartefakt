@@ -7,13 +7,8 @@ using UnityEngine.AI;
 public class Blink : Skill
 {
 
-    //[Header("Skill Specific")]
-
     public override void Action(Vector3 targetPos, Entity caster)
     {
-        Debug.Log("Blink::Action -- Skill logic not implemented");
-
-
         //If targetPos is within range, just go there
         float dist = Vector3.Distance(caster.transform.position, targetPos);
         if (dist <= range[level])
