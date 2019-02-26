@@ -11,8 +11,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17cb353545418db43a3f322703e2fbde, type: 3}
   m_Name: Blink
   m_EditorClassIdentifier: 
-  cooldownMax: 2
-  resourceCost: 0
+  cooldownMax:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  resourceCost:
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
   level: 0
-  Range: 5
-  duration: 10
+  range:
+  - 2
+  - 4
+  - 6
+  - 8
+  - 10
+  - 12
+  targetGround: 0
+  duration:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
