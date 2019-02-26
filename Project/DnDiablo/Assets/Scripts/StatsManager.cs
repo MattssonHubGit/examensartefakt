@@ -109,7 +109,7 @@ public class StatsManager : MonoBehaviour {
     {
         Player.Instance.myStats.healthMax += healthIncreasePerLevel;
         Player.Instance.myStats.healthBase += healthIncreasePerLevel;
-        Player.Instance.myStats.healthCurrent += healthRegIncreasePerLevel;
+        Player.Instance.myStats.healthCurrent += healthIncreasePerLevel;
 
         Player.Instance.myStats.healthRegCurrent += healthRegIncreasePerLevel;
         Player.Instance.myStats.healthRegBase += healthRegIncreasePerLevel;
