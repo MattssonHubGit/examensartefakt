@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1739539418308148}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.5, y: 0.6, z: 4.6}
+  m_LocalPosition: {x: 13.5, y: 1, z: 4.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -116,8 +116,11 @@ MonoBehaviour:
   myStatsPrefab: {fileID: 11400000, guid: b3e9926f98e55a64f9731d8ed1d38c47, type: 2}
   myStats: {fileID: 0}
   auraList: []
+  target: {fileID: 0}
   mySkill: {fileID: 11400000, guid: 65d8a2551a77a7644b85237fe0156cbf, type: 2}
   isTurret: 1
+  timeBeforeAttack: 0
+  timeAfterAttack: 0
 --- !u!135 &135134922493594046
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -23,4 +23,4 @@ MonoBehaviour:
   - 2
   swordGO: {fileID: 1809319637200184, guid: 9becc8826fc665f4e94a42dd741edcca, type: 2}
   damage: 50
-  swingSpeed: 180
+  swingSpeed: 90

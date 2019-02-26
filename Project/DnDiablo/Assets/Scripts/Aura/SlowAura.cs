@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [CreateAssetMenu]
 public class SlowAura : Aura {
@@ -12,7 +13,7 @@ public class SlowAura : Aura {
     {
         Stats targetStats = target.myStats;
         slowAmount = (target.myStats.moveSpeedCurrent * slowPercentage);
-
+        
         target.myStats.moveSpeedCurrent -= slowAmount;
     }
 

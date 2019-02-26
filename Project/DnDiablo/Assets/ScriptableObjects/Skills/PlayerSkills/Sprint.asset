@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d38f9bc399cfe8e4bb2fb0b0196294e4, type: 3}
+  m_Name: Sprint
+  m_EditorClassIdentifier: 
+  cooldownMax:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  resourceCost:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  level: 0
+  range:
+  - 0
+  targetGround: 0
+  duration:
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  speedBonusPercentage:
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  sprintAura: {fileID: 11400000, guid: cb1dbae6c0677424184b3a44137fb7f7, type: 2}
