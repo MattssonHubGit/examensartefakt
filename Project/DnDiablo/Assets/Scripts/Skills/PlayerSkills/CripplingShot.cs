@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //[CreateAssetMenu()]
-public class Shot : Skill
+public class CripplingShot : Skill
 {
     [Header("Spell Specific")]
     [SerializeField] private GameObject arrowPrefab;
-    [Space]
+    [Header("Movement")]
     [SerializeField] private List<float> speedByLevel = new List<float>();
-    [SerializeField] private List<bool> penetrateByLevel = new List<bool>();
-    [Space]
+    [Header("Slow")]
+    [SerializeField] private List<bool> slowByLevel = new List<bool>();
+    [SerializeField] [Range(0f, 3f)] private List<float> slowPercantageByLevel = new List<float>();
+    [SerializeField] private List<float> slowDurationByLevel = new List<float>();
+    [Header("Damage")]
     [SerializeField] private List<float> damageByLevel = new List<float>();
 
     public override void Action(Vector3 targetPos, Entity caster)
     {
         GameObject _objArrow = Instantiate(arrowPrefab, caster.transform.position, Quaternion.identity);
-        ShotBehaviour _scrArrow = _objArrow.GetComponent<ShotBehaviour>();
+        CripplingShotBehaviour _scrArrow = _objArrow.GetComponent<CripplingShotBehaviour>();
 
 
         //Movement
@@ -24,12 +27,14 @@ public class Shot : Skill
         _dir.Normalize();
         _scrArrow.direction = _dir;
         _scrArrow.speed = speedByLevel[level];
-        _scrArrow.penetrate = penetrateByLevel[level];
         _objArrow.transform.rotation = Quaternion.LookRotation(_dir);
-
 
         //Stats
         _scrArrow.damage = (damageByLevel[level] * caster.myStats.powerCurrent);
+        _scrArrow.slow = slowByLevel[level];
+        _scrArrow.slowDuration = slowDurationByLevel[level];
+        _scrArrow.slowPercentage = slowPercantageByLevel[level];
+
 
         //Destroy object after duration is up
         Destroy(_objArrow, duration[level]);
