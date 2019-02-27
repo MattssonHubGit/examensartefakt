@@ -5,6 +5,7 @@ using UnityEngine;
 public class SimpleDamageOnTriggerEnter : MonoBehaviour {
 
     [SerializeField] public float damageAmount = 0f;
+    [SerializeField] public Entity caster;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,7 +14,7 @@ public class SimpleDamageOnTriggerEnter : MonoBehaviour {
 
         if (_damagable != null)
         {
-            _damagable.TakeDamage(damageAmount);
+            _damagable.TakeDamage(damageAmount, caster);
         }
     }
 }

@@ -27,6 +27,7 @@ public class DeathLaser : Skill {
         _laserBehaviour.fireSize = firingSize;
         _laserBehaviour.casterCollider = caster.GetComponent<Collider>();
         _laserBehaviour.targetPosition = targetPos;
+        _laserBehaviour.caster = caster;
 
     }
     

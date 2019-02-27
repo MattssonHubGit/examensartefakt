@@ -16,6 +16,6 @@ public class PhaseOut : Skill
 
         _aura.Duration = duration[level];
 
-        caster.AddAura(_aura);
+        caster.AddAura(_aura, caster);
     }
 }

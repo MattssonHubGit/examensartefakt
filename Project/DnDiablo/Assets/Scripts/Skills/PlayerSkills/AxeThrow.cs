@@ -18,7 +18,7 @@ public class AxeThrow : Skill
     {
         GameObject _objAxe = Instantiate(axePrefab, caster.transform.position, Quaternion.identity);
         AxeThrowBehaviour _scrAxe = _objAxe.GetComponent<AxeThrowBehaviour>();
-
+        _scrAxe.caster = caster;
 
         //Movement
         Vector3 _dir = targetPos - caster.transform.position;

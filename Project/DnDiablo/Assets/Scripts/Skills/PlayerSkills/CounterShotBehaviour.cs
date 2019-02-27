@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AxeThrowBehaviour : SpellBehaviour
+public class CounterShotBehaviour : SpellBehaviour
 {
 
     [Header("Movement")]
     [HideInInspector] public float speed;
-    [HideInInspector] public Vector3 direction;
-    [HideInInspector] public bool penetrate = false;
     [SerializeField] private float rotateSpeed;
+    [HideInInspector] public Entity target;
 
     [Header("Stats")]
     [HideInInspector] public float damage;
@@ -17,15 +16,17 @@ public class AxeThrowBehaviour : SpellBehaviour
     [Header("Components")]
     [SerializeField] private GameObject gfxParent;
 
+
     private void Update()
     {
-        Projectile.Movement(this.transform, direction, speed);
+        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
         RotationController();
     }
 
     private void RotationController()
     {
-        gfxParent.transform.RotateAround(gfxParent.transform.position, transform.right, rotateSpeed *Time.deltaTime);
+        transform.rotation.SetLookRotation(target.transform.position);
+        gfxParent.transform.RotateAround(gfxParent.transform.position, transform.up, rotateSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,18 +35,17 @@ public class AxeThrowBehaviour : SpellBehaviour
         IDamageable _toDamage = other.gameObject.GetComponent<IDamageable>();
         if (_toDamage != null)
         {
-            _toDamage.TakeDamage(damage, caster);
-            if (!penetrate) //Keep going if penetrating enemies
+            Entity _entTarget = other.GetComponent<Entity>();
+            if(_entTarget != null)
             {
-                Destroy(this.gameObject);
+                if (_entTarget == target)
+                {
+                    _entTarget.TakeDamage(damage, caster);
+                    Destroy(this.gameObject);
+                }
             }
         }
-        else //Will not penetrate walls
-        {
-            Destroy(this.gameObject);
-        }
-        
+
 
     }
-
 }

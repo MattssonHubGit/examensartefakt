@@ -28,6 +28,7 @@ public class ArcaneSphere : Skill
         //Create Object
         GameObject _objSphere = Instantiate(spherePrefab, _trueTargetPos, Quaternion.identity);
         ArcaneSphereBehaviour _scrSphere = _objSphere.GetComponent<ArcaneSphereBehaviour>();
+        _scrSphere.caster = caster;
 
         //Size
         _objSphere.transform.localScale *= radiusPercantageByLevel[level];

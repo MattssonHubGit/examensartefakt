@@ -9,6 +9,7 @@ public abstract class Entity : MonoBehaviour, IDamageable {
     [HideInInspector] public Stats myStats;
     [SerializeField] protected List<Aura> auraList = new List<Aura>();
 
+    [HideInInspector] public bool lookingToCounter = false;
 
     [HideInInspector] public bool canMove = true;
     [HideInInspector] public bool canCast = true;
@@ -35,8 +36,15 @@ public abstract class Entity : MonoBehaviour, IDamageable {
         }
     }
 
-    public virtual void TakeDamage(float amount)
+    public virtual void TakeDamage(float amount, Entity damageDealer)
     {
+        if (lookingToCounter)
+        {
+            Counter(damageDealer, amount);
+            lookingToCounter = false;
+            return;
+        }
+
         myStats.healthCurrent -= amount;
 
         if (myStats.healthCurrent <= 0)
@@ -44,6 +52,11 @@ public abstract class Entity : MonoBehaviour, IDamageable {
             myStats.healthCurrent = 0;
             OnDeath();
         }
+    }
+
+    protected virtual void Counter(Entity enemyToTarget, float amount)
+    {
+        Debug.Log("Entity::Counter() -- Base virtual function called, damage avoided: " + amount);
     }
 
     protected virtual void Update()
@@ -117,10 +130,11 @@ public abstract class Entity : MonoBehaviour, IDamageable {
     {
     }
 
-    public virtual void AddAura(Aura aura)
+    public virtual void AddAura(Aura aura, Entity applier)
     {
         auraList.Add(aura);
         aura.target = this;
+        aura.applier = applier;
         aura.OnApply();
     }
 

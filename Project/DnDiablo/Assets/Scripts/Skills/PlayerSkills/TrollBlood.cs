@@ -18,7 +18,7 @@ public class TrollBlood : Skill {
         _tbAura.slowPercentage = slowPercentage;
         _tbAura.Duration = duration[level];
 
-        caster.AddAura(_tbAura);
+        caster.AddAura(_tbAura, caster);
 
 
     }

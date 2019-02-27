@@ -10,6 +10,6 @@ public class Heal : Skill
 
     public override void Action(Vector3 targetPos, Entity caster)
     {
-        caster.TakeDamage(-1f * (healByLevel[level] * caster.myStats.powerCurrent));
+        caster.TakeDamage(-1f * (healByLevel[level] * caster.myStats.powerCurrent), caster);
     }
 }

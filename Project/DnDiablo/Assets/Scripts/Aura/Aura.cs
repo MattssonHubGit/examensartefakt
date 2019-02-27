@@ -6,6 +6,7 @@ public abstract class Aura : ScriptableObject {
 
     [SerializeField] private float duration;
     [HideInInspector] public Entity target;
+    [HideInInspector] public Entity applier;
     #region Getsetter
     public float Duration
     {

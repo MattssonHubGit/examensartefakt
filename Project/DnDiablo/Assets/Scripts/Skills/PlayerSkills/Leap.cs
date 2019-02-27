@@ -19,7 +19,7 @@ public class Leap : Skill
         _aura.endPos = targetPos;
         _aura.trajectoryHeight = trajectoryHeight;
         
-        caster.AddAura(_aura);
+        caster.AddAura(_aura, caster);
         
     }
 }

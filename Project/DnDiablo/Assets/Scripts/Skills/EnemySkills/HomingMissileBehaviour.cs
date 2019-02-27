@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HomingMissileBehaviour : MonoBehaviour
+public class HomingMissileBehaviour : SpellBehaviour
 {
 
     [Header("Base Projectile")]
@@ -43,9 +43,9 @@ public class HomingMissileBehaviour : MonoBehaviour
 
             if (_damagable != null)
             {
-                _damagable.TakeDamage(damage);
+                _damagable.TakeDamage(damage, caster);
             }
-            targetEntity.AddAura(aura);
+            targetEntity.AddAura(aura, caster);
 
             CameraController.Instance.AddShake(0.1f);
             Destroy(this.gameObject);

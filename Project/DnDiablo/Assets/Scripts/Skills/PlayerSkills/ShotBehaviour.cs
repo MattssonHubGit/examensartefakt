@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShotBehaviour : MonoBehaviour {
+public class ShotBehaviour : SpellBehaviour
+{
 
     [Header("Movement")]
     [HideInInspector] public float speed;
@@ -37,7 +38,7 @@ public class ShotBehaviour : MonoBehaviour {
         {
 
             Debug.Log("_toDamage != null");
-            _toDamage.TakeDamage(damage);
+            _toDamage.TakeDamage(damage, caster);
             if (!penetrate) //Keep going if penetrating enemies
             {
 

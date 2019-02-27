@@ -21,8 +21,9 @@ public class SelfDestruct : Skill {
         _explosionBehaviour.damage = damage;
         _explosionBehaviour.duration = explosionDuration;
         _explosionBehaviour.expansionRate = expansionRate;
+        _explosionBehaviour.caster = caster;
 
-        caster.TakeDamage(caster.myStats.healthCurrent);
+        caster.TakeDamage(caster.myStats.healthCurrent, caster);
 
 
     }

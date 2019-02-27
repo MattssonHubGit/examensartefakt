@@ -19,6 +19,7 @@ public class Slash : Skill
         _slash.damage = damage;
         _slash.duration = Duration[0];
         _slash.rotationsSpeed = swingSpeed;
+        _slash.caster = caster;
         
     }
 }

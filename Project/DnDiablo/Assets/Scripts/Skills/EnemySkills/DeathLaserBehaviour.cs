@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathLaserBehaviour : MonoBehaviour {
+public class DeathLaserBehaviour : SpellBehaviour {
 
     public float damage;
     public float delay;
@@ -45,7 +45,7 @@ public class DeathLaserBehaviour : MonoBehaviour {
 
             if (_damagable != null)
             {
-                _damagable.TakeDamage(damage*Time.deltaTime);
+                _damagable.TakeDamage(damage*Time.deltaTime, caster);
             }
             CameraController.Instance.AddShake(1.6f*Time.deltaTime);
             

@@ -17,6 +17,7 @@ public class Fireball : Skill {
         GameObject _objBall = Instantiate(spellObectPrefab, caster.transform.position, Quaternion.identity);
         FireballBehaviour _fireball = _objBall.GetComponent<FireballBehaviour>();
 
+        _fireball.caster = caster;
 
         //Movement
         Vector3 _dir = targetPos - caster.transform.position;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CripplingShotBehaviour : MonoBehaviour
+public class CripplingShotBehaviour : SpellBehaviour
 {
 
     [Header("Movement")]
@@ -41,7 +41,7 @@ public class CripplingShotBehaviour : MonoBehaviour
         if (_toDamage != null)
         {
             //Apply effects
-            _toDamage.TakeDamage(damage);
+            _toDamage.TakeDamage(damage, caster);
 
             SlowAura _slow = Instantiate(slowPrefab);
             _slow.Duration = slowDuration;
@@ -50,7 +50,7 @@ public class CripplingShotBehaviour : MonoBehaviour
             Entity _target = other.GetComponent<Entity>();
             if (_target != null)
             {
-                _target.AddAura(_slow);
+                _target.AddAura(_slow, caster);
             }
 
         }

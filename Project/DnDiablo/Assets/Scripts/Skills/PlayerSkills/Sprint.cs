@@ -17,6 +17,6 @@ public class Sprint : Skill
         SprintAura _aura = Instantiate(sprintAura);
         _aura.speedBonusPercentage = speedBonusPercentage[level];
         _aura.Duration = duration[level];
-        caster.AddAura(_aura);
+        caster.AddAura(_aura, caster);
     }
 }

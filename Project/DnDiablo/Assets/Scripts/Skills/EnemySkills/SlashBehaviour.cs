@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlashBehaviour : MonoBehaviour {
+public class SlashBehaviour : SpellBehaviour
+{
 
     public float damage;
     public float rotationsSpeed;
@@ -25,7 +26,7 @@ public class SlashBehaviour : MonoBehaviour {
         IDamageable _toDamage = other.gameObject.GetComponent<IDamageable>();
         if (_toDamage != null)
         {
-            _toDamage.TakeDamage(damage);
+            _toDamage.TakeDamage(damage, caster);
         }
     }
 }

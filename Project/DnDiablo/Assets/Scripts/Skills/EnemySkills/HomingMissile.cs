@@ -23,5 +23,6 @@ public class HomingMissile : Skill {
         _missileBehaviour.maxDuration = projectileDuration;
         _missileBehaviour.aura = _aura;
         _missileBehaviour.casterCollider = caster.GetComponent<Collider>();
+        _missileBehaviour.caster = caster;
     }
 }

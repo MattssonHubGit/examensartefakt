@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArrowSprayBehaviour : MonoBehaviour {
+public class ArrowSprayBehaviour : SpellBehaviour
+{
 
     [Header("Movement")]
     [HideInInspector] public float speed;
@@ -51,7 +52,7 @@ public class ArrowSprayBehaviour : MonoBehaviour {
         IDamageable _toDamage = other.gameObject.GetComponent<IDamageable>();
         if (_toDamage != null)
         {
-            _toDamage.TakeDamage(damage);
+            _toDamage.TakeDamage(damage, caster);
             Destroy(this.gameObject);
         }
         else //Will not penetrate walls

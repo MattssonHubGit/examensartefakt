@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IceLanceBehaviour : MonoBehaviour {
+public class IceLanceBehaviour : SpellBehaviour
+{
 
     [Header("Movement")]
     [HideInInspector] public float speed;
@@ -33,7 +34,7 @@ public class IceLanceBehaviour : MonoBehaviour {
         if (_toDamage != null)
         {
             //Apply effects
-            _toDamage.TakeDamage(damage);
+            _toDamage.TakeDamage(damage, caster);
 
             SlowAura _slow = Instantiate(slowPrefab);
             _slow.Duration = slowDuration;
@@ -42,7 +43,7 @@ public class IceLanceBehaviour : MonoBehaviour {
             Entity _target = other.GetComponent<Entity>();
             if (_target != null)
             {
-                _target.AddAura(_slow);
+                _target.AddAura(_slow, caster);
             }
 
 

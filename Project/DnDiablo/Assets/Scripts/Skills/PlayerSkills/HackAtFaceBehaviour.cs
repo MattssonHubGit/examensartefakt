@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HackAtFaceBehaviour : MonoBehaviour {
+public class HackAtFaceBehaviour : SpellBehaviour
+{
 
     public float damage;
     public float rotationsSpeed;
@@ -30,7 +31,7 @@ public class HackAtFaceBehaviour : MonoBehaviour {
         IDamageable _toDamage = other.gameObject.GetComponent<IDamageable>();
         if (_toDamage != null)
         {
-            _toDamage.TakeDamage(damage);
+            _toDamage.TakeDamage(damage, caster);
         }
     }
 }

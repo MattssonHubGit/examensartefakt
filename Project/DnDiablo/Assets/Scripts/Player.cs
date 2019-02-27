@@ -77,7 +77,7 @@ public class Player : Entity {
 
         if (Input.GetKeyDown(KeyCode.Keypad6))
         {
-            TakeDamage(50f);
+            TakeDamage(50f, this);
         }
     }
 
@@ -246,6 +246,25 @@ public class Player : Entity {
     {
 
         return Agent;
+    }
+    protected override void Counter(Entity enemyToTarget, float amount)
+    {
+        //Is it in fact a heal?
+        if (amount < 0)
+        {
+            //Recieve the heal and reengage the counter
+            TakeDamage(amount, enemyToTarget);
+            lookingToCounter = true;
+            return;
+        }
 
+        for (int i = 0; i < auraList.Count; i++)
+        {
+            if (auraList[i].GetType() == typeof(CounterAura))
+            {
+                CounterAura _counter = auraList[i] as CounterAura;
+                _counter.Counter(this, enemyToTarget, amount);
+            }
+        }
     }
 }

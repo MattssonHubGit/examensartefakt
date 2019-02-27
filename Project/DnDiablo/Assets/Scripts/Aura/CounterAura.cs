@@ -2,23 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//[CreateAssetMenu]
-public class DOTAura : Aura {
-
-    [SerializeField] private float damagePerSecond;
-
+public abstract class CounterAura : Aura
+{
     public override void OnApply()
     {
-        
+        target.lookingToCounter = true;
     }
 
     public override void OnExpire()
     {
-
+        target.lookingToCounter = false;
     }
 
     public override void OnTick()
     {
-        target.TakeDamage(damagePerSecond*Time.deltaTime, applier);
+
     }
+
+    public abstract void Counter(Entity caster, Entity target, float damageTaken);
 }

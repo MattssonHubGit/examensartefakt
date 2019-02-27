@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArcaneSphereBehaviour : MonoBehaviour {
+public class ArcaneSphereBehaviour : SpellBehaviour
+{
 
     [HideInInspector] public float damagePerSec;
 
@@ -13,7 +14,7 @@ public class ArcaneSphereBehaviour : MonoBehaviour {
         if (_toDamage != null)
         {
             //Deal damage
-            _toDamage.TakeDamage(damagePerSec * Time.deltaTime);
+            _toDamage.TakeDamage(damagePerSec * Time.deltaTime, caster);
 
         }
     }

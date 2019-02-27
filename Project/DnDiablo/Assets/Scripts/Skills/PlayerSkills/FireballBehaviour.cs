@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireballBehaviour : MonoBehaviour
+public class FireballBehaviour : SpellBehaviour
 {
 
     [Header("Base Projectile")]
@@ -29,6 +29,7 @@ public class FireballBehaviour : MonoBehaviour
         SimpleDamageOnTriggerEnter _scrExplosion = _objExplosion.GetComponent<SimpleDamageOnTriggerEnter>();
 
         _scrExplosion.damageAmount = damage;
+        _scrExplosion.caster = caster;
         _objExplosion.transform.localScale = new Vector3(areaRadius, areaRadius, areaRadius);
 
         //Destroy self and explosion

@@ -22,6 +22,6 @@ public class Whirlwind : Skill {
         _whirlwind.damage = damage;
         _whirlwind.duration = Duration[0];
         _whirlwind.rotationsSpeed = _fullSwings;
-
+        _whirlwind.caster = caster;
     }
 }

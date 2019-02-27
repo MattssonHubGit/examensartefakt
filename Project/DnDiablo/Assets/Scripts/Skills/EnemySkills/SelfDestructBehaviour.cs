@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelfDestructBehaviour : MonoBehaviour {
+public class SelfDestructBehaviour : SpellBehaviour
+{
 
     public float damage;
     public float duration;
@@ -32,7 +33,7 @@ public class SelfDestructBehaviour : MonoBehaviour {
 
         if (_damagable != null)
         {
-            _damagable.TakeDamage(damage);
+            _damagable.TakeDamage(damage, caster);
         }
 
         CameraController.Instance.AddShake(damage);

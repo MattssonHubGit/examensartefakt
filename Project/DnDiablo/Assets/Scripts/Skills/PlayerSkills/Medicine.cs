@@ -18,6 +18,6 @@ public class Medicine : Skill  {
         _aura.healthRegen = healthRegen[level];
         _aura.Duration = duration[level];
 
-        caster.AddAura(_aura);
+        caster.AddAura(_aura, caster);
     }
 }

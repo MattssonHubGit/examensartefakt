@@ -17,7 +17,7 @@ public class Shot : Skill
     {
         GameObject _objArrow = Instantiate(arrowPrefab, caster.transform.position, Quaternion.identity);
         ShotBehaviour _scrArrow = _objArrow.GetComponent<ShotBehaviour>();
-
+        _scrArrow.caster = caster;
 
         //Movement
         Vector3 _dir = targetPos - caster.transform.position;

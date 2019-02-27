@@ -32,6 +32,7 @@ public class ArrowSpray : Skill
             {
                 GameObject _objArrow = Instantiate(arrowPrefab, caster.transform.position, Quaternion.identity);
                 ArrowSprayBehaviour _scrArrow = _objArrow.GetComponent<ArrowSprayBehaviour>();
+                _scrArrow.caster = caster;
 
                 //Movement
                 Vector3 _dir = targetPos - caster.transform.position;

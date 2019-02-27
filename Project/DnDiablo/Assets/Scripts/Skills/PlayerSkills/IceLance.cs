@@ -21,6 +21,7 @@ public class IceLance : Skill
     {
         GameObject _objLance = Instantiate(lancePrefab, caster.transform.position, Quaternion.identity);
         IceLanceBehaviour _scrLance = _objLance.GetComponent<IceLanceBehaviour>();
+        _scrLance.caster = caster;
 
 
         //Movement
