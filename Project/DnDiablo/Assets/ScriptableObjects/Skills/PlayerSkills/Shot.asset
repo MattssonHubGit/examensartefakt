@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44da69126c67d12469d24c240ef9c8ec, type: 3}
+  m_Name: Shot
+  m_EditorClassIdentifier: 
+  cooldownMax:
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  resourceCost:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  level: 0
+  range:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  targetGround: 0
+  duration:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  arrowPrefab: {fileID: 1596414327869794, guid: 465733fa492bae74fb82ddf0ee36ab4d,
+    type: 2}
+  speedByLevel:
+  - 40
+  - 40
+  - 40
+  - 40
+  - 40
+  - 40
+  penetrateByLevel: 000001010101
+  damageByLevel:
+  - 10
+  - 10
+  - 20
+  - 20
+  - 40
+  - 40
