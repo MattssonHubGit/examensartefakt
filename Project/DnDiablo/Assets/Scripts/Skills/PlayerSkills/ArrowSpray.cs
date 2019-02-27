@@ -10,48 +10,48 @@ public class ArrowSpray : Skill
     [SerializeField] private GameObject arrowPrefab;
     [Header("Movement")]
     [SerializeField] private List<float> speedByLevel = new List<float>();
-    [SerializeField] [Range(3, 10)] private List<int> arrowsByLevel = new List<int>();
-    [SerializeField] private float fireIntervalls;
-    [SerializeField] private List<float> maxSpread = new List<float>();
+    [SerializeField] private List<int> arrowsByLevel = new List<int>();
+    [SerializeField] private List<float> intervalSpeed = new List<float>();
+    [SerializeField] private int intervals;
+    [SerializeField] [Range(0, 1)] private List<float> maxSpread = new List<float>();
     [Space]
     [SerializeField] private List<float> damageByLevel = new List<float>();
     
 
     public override void Action(Vector3 targetPos, Entity caster)
     {
-        bool isEvenAmount = (arrowsByLevel[level] % 2 == 0); //Do we have a even amount of arrows?
-        float angleOffSet = (arrowsByLevel[level] / maxSpread[level]); //Angle for arrows
-        
+        caster.StartCoroutine(FireInterval(targetPos, caster));      
+    }
 
-        for (int i = 0; i < arrowsByLevel[level]; i++)
+    private IEnumerator FireInterval(Vector3 targetPos, Entity caster)
+    {
+        caster.DisableMovement();
+        for (int i = 0; i < intervals; i++)
         {
-            bool currentIsEven = (i % 2 == 0);
-
-            //Calculate arrow angle offset based on amount of arrows, max spread, and current arrow created
-            if (isEvenAmount)
+            for (int j = 0; j < arrowsByLevel[level]; j++)
             {
+                GameObject _objArrow = Instantiate(arrowPrefab, caster.transform.position, Quaternion.identity);
+                ArrowSprayBehaviour _scrArrow = _objArrow.GetComponent<ArrowSprayBehaviour>();
 
+                //Movement
+                Vector3 _dir = targetPos - caster.transform.position;
+                _dir.Normalize();
+
+                _dir = _dir + Random.insideUnitSphere * maxSpread[level];
+                _dir.Normalize();
+                _scrArrow.direction = _dir;
+
+                _objArrow.transform.rotation = Quaternion.LookRotation(_dir);
+
+                //Stats
+                _scrArrow.damage = (damageByLevel[level] * caster.myStats.powerCurrent);
+                _scrArrow.speed = speedByLevel[level];
+
+                //Destroy object after duration is up
+                Destroy(_objArrow, duration[level]);
             }
-            else
-            {
-
-            }
-
-            GameObject _objArrow = Instantiate(arrowPrefab, caster.transform.position, Quaternion.identity);
-            ArrowSprayBehaviour _scrArrow = _objArrow.GetComponent<ArrowSprayBehaviour>();
-
-            //Movement
-            Vector3 _dir = targetPos - caster.transform.position;
-            _dir.Normalize();
-            _scrArrow.direction = _dir;
-            _scrArrow.speed = speedByLevel[level];
-            _objArrow.transform.rotation = Quaternion.LookRotation(_dir);
-
-            //Stats
-            _scrArrow.damage = (damageByLevel[level] * caster.myStats.powerCurrent);
-
-            //Destroy object after duration is up
-            Destroy(_objArrow, duration[level]);
+            yield return new WaitForSeconds(intervalSpeed[level]);
         }
+        caster.EnableMovement();
     }
 }

@@ -16,6 +16,11 @@ public class ArrowSprayBehaviour : MonoBehaviour {
     [Header("Components")]
     [SerializeField] private GameObject gfxParent;
 
+    private void Awake()
+    {
+        RandomizeRotation();
+    }
+
     private void Update()
     {
         Projectile.Movement(this.transform, direction, speed);
@@ -27,6 +32,19 @@ public class ArrowSprayBehaviour : MonoBehaviour {
         gfxParent.transform.RotateAround(gfxParent.transform.position, transform.forward, rotateSpeed * Time.deltaTime);
     }
 
+    private void RandomizeRotation()
+    {
+        int rand = Random.Range(0, 1);
+        if (rand == 0)
+        {
+            rotateSpeed *= -1f;
+        }
+        else if (rand != 1)
+        {
+            Debug.LogError("ArrowSprayBehaviour::RandomizeRotation() -- Random.Range(0, 1) returned something other than 1 or 0");
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         //Did I hit something damagable?
@@ -34,10 +52,14 @@ public class ArrowSprayBehaviour : MonoBehaviour {
         if (_toDamage != null)
         {
             _toDamage.TakeDamage(damage);
+            Destroy(this.gameObject);
         }
         else //Will not penetrate walls
         {
-            Destroy(this.gameObject);
+            if (other.GetComponent<ArrowSprayBehaviour>() == null) //Also does not hit self
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
