@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[CreateAssetMenu]
+//[CreateAssetMenu]
 public class SlowAura : Aura {
 
     [SerializeField] public float slowPercentage;

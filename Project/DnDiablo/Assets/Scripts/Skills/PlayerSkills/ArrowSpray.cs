@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu()]
+//[CreateAssetMenu()]
 public class ArrowSpray : Skill
 {
 
@@ -37,11 +37,23 @@ public class ArrowSpray : Skill
                 Vector3 _dir = targetPos - caster.transform.position;
                 _dir.Normalize();
 
-                _dir = _dir + Random.insideUnitSphere * maxSpread[level];
+                _dir = _dir + Random.insideUnitSphere * maxSpread[level]; //Random divergence for _dir
                 _dir.Normalize();
                 _scrArrow.direction = _dir;
 
                 _objArrow.transform.rotation = Quaternion.LookRotation(_dir);
+                caster.transform.rotation = Quaternion.LookRotation(_dir);
+
+                //Useless animation
+                if (caster.GetType() == typeof(Player))
+                {
+                    Player player = caster as Player;
+
+                    if (player.MyAni != null)
+                    {
+                        player.MyAni.Play("Breath_Fw");
+                    }
+                }
 
                 //Stats
                 _scrArrow.damage = (damageByLevel[level] * caster.myStats.powerCurrent);

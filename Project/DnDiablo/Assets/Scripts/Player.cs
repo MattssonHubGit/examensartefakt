@@ -34,6 +34,14 @@ public class Player : Entity {
             return agent;
         }
     }
+
+    public Animator MyAni
+    {
+        get
+        {
+            return myAni;
+        }
+    }
     #endregion
 
     private void Awake()
