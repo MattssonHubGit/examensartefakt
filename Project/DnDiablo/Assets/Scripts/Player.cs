@@ -94,7 +94,10 @@ public class Player : Entity {
             agent.speed = myStats.moveSpeedCurrent;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
             {
-                agent.destination = hit.point;
+                if (agent.isActiveAndEnabled)
+                {
+                    agent.destination = hit.point;
+                }
             }
         }
     }
@@ -237,5 +240,12 @@ public class Player : Entity {
     public override void EnableMovement()
     {
         agent.isStopped = false;
+    }
+
+    public override NavMeshAgent GetAgent()
+    {
+
+        return Agent;
+
     }
 }

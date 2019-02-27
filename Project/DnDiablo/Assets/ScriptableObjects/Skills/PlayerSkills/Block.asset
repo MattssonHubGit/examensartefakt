@@ -11,10 +11,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c496b60c796349d4498ee134ca732273, type: 3}
   m_Name: Block
   m_EditorClassIdentifier: 
-  cooldownMax: []
-  resourceCost: []
+  cooldownMax:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  resourceCost:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   level: 0
-  range: []
+  range:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   targetGround: 0
-  duration: []
-  auraPrefab: {fileID: 0}
+  duration:
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  auraPrefab: {fileID: 11400000, guid: 7db0fe7e6a1d6b24bb74b9e8b480fc16, type: 2}
