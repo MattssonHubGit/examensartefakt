@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+//[CreateAssetMenu]
 public class IceLance : Skill
 {
     [Header("Spell Specific")]
@@ -28,6 +28,7 @@ public class IceLance : Skill
         _dir.Normalize();
         _scrLance.direction = _dir;
         _scrLance.speed = speedByLevel[level];
+        _scrLance.penetrate = penetrateByLevel[level];
         _objLance.transform.rotation = Quaternion.LookRotation(_dir);
 
         //Stats

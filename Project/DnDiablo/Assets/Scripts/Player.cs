@@ -10,6 +10,9 @@ public class Player : Entity {
     public List<Skill> mySkills = new List<Skill>();
     private KeyCode[] skillKeys = new KeyCode[8] { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4 };
 
+    [Header("Movement")]
+    [HideInInspector] public bool canMove = true;
+
     [Header("UI")]
     [SerializeField] private FillingBar healthBar;
     [SerializeField] private FillingBar resourceBar;
@@ -72,6 +75,11 @@ public class Player : Entity {
 
     private void MovementController()
     {
+        //If rooted/casting/whatever, can't move.
+        if (!canMove)
+            return;
+
+        //Click to move
         if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
@@ -103,7 +111,7 @@ public class Player : Entity {
             }
 
             //Attempt to use the skill corresponding to the button pressed button
-            if (Input.GetKeyDown(skillKeys[i]))
+            if (Input.GetKey(skillKeys[i]))
             {
                 UseSkill(mySkills[i]);
             }
