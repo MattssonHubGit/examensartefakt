@@ -9,10 +9,7 @@ public class Player : Entity {
     [Header("Skills")]
     public List<Skill> mySkills = new List<Skill>();
     private KeyCode[] skillKeys = new KeyCode[8] { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4 };
-
-    [Header("Movement")]
-    [HideInInspector] public bool canMove = true;
-
+    
     [Header("UI")]
     [SerializeField] private FillingBar healthBar;
     [SerializeField] private FillingBar resourceBar;
@@ -25,6 +22,9 @@ public class Player : Entity {
 
     [Header("Respawn")]
     [SerializeField] private Transform spawnPoint;
+
+
+    [HideInInspector] private Vector3 savedPosition;
 
     #region GetSetters
     public NavMeshAgent Agent
@@ -111,7 +111,7 @@ public class Player : Entity {
             }
 
             //Attempt to use the skill corresponding to the button pressed button
-            if (Input.GetKey(skillKeys[i]))
+            if (Input.GetKey(skillKeys[i]) && canCast)
             {
                 UseSkill(mySkills[i]);
             }
@@ -218,5 +218,16 @@ public class Player : Entity {
 
         spawnPoint = SpawnPoint.Instance.GetComponent<Transform>();
 
+    }
+
+    public override void DisableMovement()
+    {
+        agent.isStopped = true;
+        
+    }
+
+    public override void EnableMovement()
+    {
+        agent.isStopped = false;
     }
 }

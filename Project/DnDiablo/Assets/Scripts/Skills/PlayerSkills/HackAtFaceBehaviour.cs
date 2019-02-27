@@ -2,22 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlashBehaviour : MonoBehaviour {
+public class HackAtFaceBehaviour : MonoBehaviour {
 
     public float damage;
     public float rotationsSpeed;
     public float duration;
+    public Entity caster;
 
-	// Update is called once per frame
-	void Update () {
-        transform.RotateAround(transform.position, transform.up, rotationsSpeed * Time.deltaTime);
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.RotateAround(transform.position, transform.right, rotationsSpeed * Time.deltaTime);
 
         duration -= Time.deltaTime;
         if (duration <= 0)
         {
+            caster.EnableMovement();
             Destroy(gameObject);
+            
         }
-	}
+    }
 
     private void OnTriggerEnter(Collider other)
     {

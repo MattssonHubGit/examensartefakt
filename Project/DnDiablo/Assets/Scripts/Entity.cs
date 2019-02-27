@@ -8,6 +8,11 @@ public abstract class Entity : MonoBehaviour, IDamageable {
     [HideInInspector] public Stats myStats;
     [SerializeField] protected List<Aura> auraList = new List<Aura>();
 
+
+    [HideInInspector] public bool canMove = true;
+    [HideInInspector] public bool canCast = true;
+
+
     #region GetSetters
     public Stats MyStatsPrefab
     {
@@ -101,6 +106,14 @@ public abstract class Entity : MonoBehaviour, IDamageable {
         {
             myStats.resourceCurrent = myStats.resourceMax;
         }
+    }
+
+    public virtual void DisableMovement()
+    {
+    }
+
+    public virtual void EnableMovement()
+    {
     }
 
     public virtual void AddAura(Aura aura)
