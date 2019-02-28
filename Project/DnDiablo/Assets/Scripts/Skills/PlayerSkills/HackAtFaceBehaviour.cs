@@ -8,9 +8,7 @@ public class HackAtFaceBehaviour : SpellBehaviour
     public float damage;
     public float rotationsSpeed;
     public float duration;
-    public Entity caster;
-
-
+    
     // Update is called once per frame
     void Update()
     {

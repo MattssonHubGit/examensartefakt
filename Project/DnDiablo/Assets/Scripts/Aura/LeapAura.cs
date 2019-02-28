@@ -15,7 +15,7 @@ public class LeapAura : Aura
 
     public override void OnApply()
     {
-        agent = caster.GetAgent();
+        agent = caster.GetComponent<NavMeshAgent>();
         agent.enabled = false;
         incrementor = 0;
 

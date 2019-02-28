@@ -11,9 +11,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac59eba76404ab548b124f5968f6b73b, type: 3}
   m_Name: Leap
   m_EditorClassIdentifier: 
-  cooldownMax: []
-  resourceCost: []
+  cooldownMax:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  resourceCost:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   level: 0
-  range: []
+  range:
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
   targetGround: 0
-  duration: []
+  duration:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  leapAura: {fileID: 11400000, guid: 5ca10cb6d4e0a984f955020737170fee, type: 2}
+  trajectoryHeight: 5

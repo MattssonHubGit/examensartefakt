@@ -241,12 +241,7 @@ public class Player : Entity {
     {
         agent.isStopped = false;
     }
-
-    public override NavMeshAgent GetAgent()
-    {
-
-        return Agent;
-    }
+    
     protected override void Counter(Entity enemyToTarget, float amount)
     {
         //Is it in fact a heal?

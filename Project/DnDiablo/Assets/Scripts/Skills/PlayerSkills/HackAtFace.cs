@@ -15,7 +15,6 @@ public class HackAtFace : Skill {
 
         GameObject _axe = Instantiate(axeGO, caster.transform.position, (caster.transform.rotation *= Quaternion.Euler(0, 0, 0)));
         HackAtFaceBehaviour _hack = _axe.GetComponent<HackAtFaceBehaviour>();
-        _hack.caster = caster;
 
         caster.DisableMovement();
 

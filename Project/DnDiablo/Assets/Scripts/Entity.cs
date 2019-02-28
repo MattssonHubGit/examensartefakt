@@ -143,10 +143,5 @@ public abstract class Entity : MonoBehaviour, IDamageable {
         aura.OnExpire();
         auraList.Remove(aura);
     }
-
-    public virtual NavMeshAgent GetAgent()
-    {
-        return null;
-    }
-
+    
 }
