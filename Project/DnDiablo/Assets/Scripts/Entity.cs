@@ -40,8 +40,8 @@ public abstract class Entity : MonoBehaviour, IDamageable {
     {
         if (lookingToCounter)
         {
-            Counter(damageDealer, amount);
             lookingToCounter = false;
+            Counter(damageDealer, amount);
             return;
         }
 

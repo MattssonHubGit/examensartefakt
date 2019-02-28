@@ -5,10 +5,10 @@ using UnityEngine;
 //[CreateAssetMenu]
 public class HomingMissile : Skill {
 
+    [Header("Skill specific")]
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float projectileSpeed;
     [SerializeField] private float projectileDamage;
-    [SerializeField] private float projectileDuration;
     [SerializeField] private Aura aura;
 
     public override void Action(Vector3 targetPos, Entity caster)
@@ -20,7 +20,7 @@ public class HomingMissile : Skill {
         //Movement
         _missileBehaviour.speed = projectileSpeed;
         _missileBehaviour.damage = projectileDamage;
-        _missileBehaviour.maxDuration = projectileDuration;
+        _missileBehaviour.maxDuration = duration[level];
         _missileBehaviour.aura = _aura;
         _missileBehaviour.casterCollider = caster.GetComponent<Collider>();
         _missileBehaviour.caster = caster;

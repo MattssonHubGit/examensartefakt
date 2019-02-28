@@ -37,18 +37,44 @@ public class HomingMissileBehaviour : SpellBehaviour
     {
         if (other != casterCollider)
         {
-            Entity targetEntity = other.GetComponent<Entity>();
-            
+            //Did I hit something damagable?
             IDamageable _damagable = other.gameObject.GetComponent<IDamageable>();
-
             if (_damagable != null)
             {
-                _damagable.TakeDamage(damage, caster);
+                if (caster != null)
+                {
+                    _damagable.TakeDamage(damage, caster);
+                }
+                else
+                {
+                    _damagable.TakeDamage(damage, null);
+                }
+                CameraController.Instance.AddShake(0.1f);
             }
-            targetEntity.AddAura(aura, caster);
 
-            CameraController.Instance.AddShake(0.1f);
-            Destroy(this.gameObject);
+            //Did I hit an enitity (these can have auras)?
+            Entity targetEntity = other.GetComponent<Entity>();
+            if (targetEntity != null)
+            {
+                //Is the caster still alive?
+                if (caster != null)
+                {
+
+                    targetEntity.AddAura(aura, caster);
+                }
+                else
+                {
+
+                    targetEntity.AddAura(aura, null);
+                }
+            }
+
+
+            //Destroy self if colliding with non-spellbehaviour objects
+            if (other.GetComponent<SpellBehaviour>() == null)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

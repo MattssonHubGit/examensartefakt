@@ -240,7 +240,7 @@ public class Player : Entity {
     {
         agent.isStopped = false;
     }
-    
+
     protected override void Counter(Entity enemyToTarget, float amount)
     {
 
@@ -259,6 +259,7 @@ public class Player : Entity {
             {
                 CounterAura _counter = auraList[i] as CounterAura;
                 _counter.Counter(this, enemyToTarget, amount);
+                break;
             }
         }
     }

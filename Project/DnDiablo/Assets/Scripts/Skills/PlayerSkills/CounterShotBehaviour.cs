@@ -16,6 +16,15 @@ public class CounterShotBehaviour : SpellBehaviour
     [Header("Components")]
     [SerializeField] private GameObject gfxParent;
 
+    private void Start()
+    {
+        if (target == null)
+            return;
+
+        Vector3 _dir = target.transform.position - caster.transform.position;
+        _dir.Normalize();
+        transform.rotation = Quaternion.LookRotation(_dir);
+    }
 
     private void Update()
     {
@@ -29,8 +38,7 @@ public class CounterShotBehaviour : SpellBehaviour
 
     private void RotationController()
     {
-        transform.rotation.SetLookRotation(target.transform.position);
-        gfxParent.transform.RotateAround(gfxParent.transform.position, transform.up, rotateSpeed * Time.deltaTime);
+        gfxParent.transform.RotateAround(gfxParent.transform.position, transform.forward, rotateSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
