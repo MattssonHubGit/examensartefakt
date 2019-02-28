@@ -23,8 +23,12 @@ public class LeapAura : Aura
 
     public override void OnExpire()
     {
-        caster.transform.position = endPos;
+        NavMeshHit _navMeshHit;
+        NavMesh.SamplePosition(endPos, out _navMeshHit, 100f, NavMesh.AllAreas);
+
+        caster.transform.position = _navMeshHit.position;
         agent.enabled = true;
+        
         agent.Warp(caster.transform.position);
     }
 
