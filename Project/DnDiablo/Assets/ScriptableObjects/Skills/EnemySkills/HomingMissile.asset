@@ -19,7 +19,13 @@ MonoBehaviour:
   range:
   - 5
   targetGround: 0
-  duration: []
+  duration:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
   projectilePrefab: {fileID: 1899451052250166, guid: 97ea54846bf037248afa1cb95eb1ab5c,
     type: 2}
   projectileSpeed: 0.1

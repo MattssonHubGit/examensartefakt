@@ -74,7 +74,6 @@ public class Player : Entity {
         SkillInputController();
         
         UIManager();
-
         if (Input.GetKeyDown(KeyCode.Keypad6))
         {
             TakeDamage(50f, this);
@@ -244,9 +243,12 @@ public class Player : Entity {
     
     protected override void Counter(Entity enemyToTarget, float amount)
     {
+        Debug.Log("Counter entered");
+
         //Is it in fact a heal?
         if (amount < 0)
         {
+            Debug.Log("amount < 0");
             //Recieve the heal and reengage the counter
             TakeDamage(amount, enemyToTarget);
             lookingToCounter = true;
@@ -255,10 +257,13 @@ public class Player : Entity {
 
         for (int i = 0; i < auraList.Count; i++)
         {
-            if (auraList[i].GetType() == typeof(CounterAura))
+            Debug.Log("i < auraList.Count");
+            if (auraList[i].GetType().IsSubclassOf(typeof(CounterAura)))
             {
+                Debug.Log("BLERG!");
                 CounterAura _counter = auraList[i] as CounterAura;
                 _counter.Counter(this, enemyToTarget, amount);
+                Debug.Log("_counter: " + _counter.name);
             }
         }
     }
