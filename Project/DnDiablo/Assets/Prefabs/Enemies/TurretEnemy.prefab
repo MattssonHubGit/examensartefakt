@@ -26,9 +26,9 @@ GameObject:
   - component: {fileID: 195242717999375368}
   - component: {fileID: 54276173543232570}
   - component: {fileID: 208690868870602472}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: TurretEnemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,6 +116,9 @@ MonoBehaviour:
   myStatsPrefab: {fileID: 11400000, guid: b3e9926f98e55a64f9731d8ed1d38c47, type: 2}
   myStats: {fileID: 0}
   auraList: []
+  lookingToCounter: 0
+  canMove: 1
+  canCast: 1
   target: {fileID: 0}
   mySkill: {fileID: 11400000, guid: 65d8a2551a77a7644b85237fe0156cbf, type: 2}
   isTurret: 1

@@ -132,7 +132,7 @@ public class WaveSpawner : MonoBehaviour {
     //Check once every 5s if there are enemies still alive
     private bool EnemyIsAlive()
     {
-        Debug.LogError("WaveSpawner::EnemyIsAliveRandom() -- Function is using || if(GameObject.FindGameObjectWithTag('enemy') == null) || This has to change!");
+        //Debug.LogError("WaveSpawner::EnemyIsAliveRandom() -- Function is using || if(GameObject.FindGameObjectWithTag('enemy') == null) || This has to change!");
 
         scanFrequency -= Time.deltaTime;
         if (scanFrequency <= 0f)

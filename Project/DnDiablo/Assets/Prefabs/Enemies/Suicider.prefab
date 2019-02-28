@@ -26,9 +26,9 @@ GameObject:
   - component: {fileID: 195450432551174594}
   - component: {fileID: 54852913390996638}
   - component: {fileID: 208524511066332080}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Suicider
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,8 +116,14 @@ MonoBehaviour:
   myStatsPrefab: {fileID: 11400000, guid: 2c97f3e8802686c4881c8032e190ddb2, type: 2}
   myStats: {fileID: 0}
   auraList: []
+  lookingToCounter: 0
+  canMove: 1
+  canCast: 1
+  target: {fileID: 0}
   mySkill: {fileID: 11400000, guid: 215c794ec89c97b4691bf9df348c6be7, type: 2}
   isTurret: 0
+  timeBeforeAttack: 0
+  timeAfterAttack: 0
 --- !u!135 &135960781993796238
 SphereCollider:
   m_ObjectHideFlags: 1
