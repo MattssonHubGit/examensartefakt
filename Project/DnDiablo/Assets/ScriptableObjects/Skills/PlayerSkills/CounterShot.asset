@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d5854fa9a56f8449afa89a5f13c6a1, type: 3}
+  m_Name: CounterShot
+  m_EditorClassIdentifier: 
+  cooldownMax:
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  resourceCost:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  level: 0
+  range:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  targetGround: 0
+  duration:
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  auraPrefab: {fileID: 11400000, guid: cdb629858eafc1943a25557db5c6568f, type: 2}
+  arrowPrefab: {fileID: 1967720493659070, guid: ae368833535d84b4ba5703c92fdf955e,
+    type: 2}
+  speed: 25
+  damageMultiplierByLevel:
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2

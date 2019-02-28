@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 208837180592694962}
   m_Layer: 11
   m_Name: SoldierEnemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,6 +262,9 @@ MonoBehaviour:
   myStatsPrefab: {fileID: 11400000, guid: 0f0e1560209b42c419fbb6da89feb016, type: 2}
   myStats: {fileID: 0}
   auraList: []
+  lookingToCounter: 0
+  canMove: 1
+  canCast: 1
   target: {fileID: 0}
   mySkill: {fileID: 11400000, guid: 345bf376cade8914b8f1e28d0da6f62b, type: 2}
   isTurret: 0

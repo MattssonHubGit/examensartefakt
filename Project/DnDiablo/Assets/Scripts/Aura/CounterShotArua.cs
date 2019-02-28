@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu()]
 public class CounterShotArua : CounterAura
 {
     [HideInInspector] public GameObject arrowPrefab;
@@ -12,7 +13,6 @@ public class CounterShotArua : CounterAura
 
     [Header("Stats")]
     [HideInInspector] public float damageMultiplier;
-    [HideInInspector] public float duration;
 
     public override void Counter(Entity caster, Entity target, float damageTaken)
     {
@@ -33,7 +33,7 @@ public class CounterShotArua : CounterAura
 
 
         //Destroy object after duration is up              
-        Destroy(_objArrow, duration);
+        Destroy(_objArrow, Duration);
     }
 
 }

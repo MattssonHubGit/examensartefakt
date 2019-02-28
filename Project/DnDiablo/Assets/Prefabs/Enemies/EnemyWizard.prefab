@@ -26,9 +26,9 @@ GameObject:
   - component: {fileID: 195811714512158490}
   - component: {fileID: 54564867757780610}
   - component: {fileID: 208881568612151124}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyWizard
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,8 +116,14 @@ MonoBehaviour:
   myStatsPrefab: {fileID: 11400000, guid: 7b4651b787bdac24da587b4109e80de3, type: 2}
   myStats: {fileID: 0}
   auraList: []
+  lookingToCounter: 0
+  canMove: 1
+  canCast: 1
+  target: {fileID: 0}
   mySkill: {fileID: 11400000, guid: 094ad84daae38444e938b4b912cfee83, type: 2}
   isTurret: 0
+  timeBeforeAttack: 0
+  timeAfterAttack: 0
 --- !u!135 &135981600769022580
 SphereCollider:
   m_ObjectHideFlags: 1
