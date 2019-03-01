@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: SoldierSlash
   m_EditorClassIdentifier: 
   cooldownMax:
-  - 5
+  - 3
   resourceCost:
   - 0
   level: 0
@@ -20,6 +20,8 @@ MonoBehaviour:
   - 2
   targetGround: 0
   duration:
+  - 2
+  enemyWindDown:
   - 2
   swordGO: {fileID: 1809319637200184, guid: 9becc8826fc665f4e94a42dd741edcca, type: 2}
   damage: 50

@@ -21,6 +21,7 @@ public abstract class Skill : ScriptableObject {
 
     [Header("Duration")]
     [SerializeField] protected List<float> duration = new List<float>();
+    [SerializeField] protected List<float> enemyWindDown = new List<float>();
 
 
     #region GetSetters
@@ -61,6 +62,19 @@ public abstract class Skill : ScriptableObject {
         get
         {
             return targetGround;
+        }
+    }
+
+    public List<float> EnemyWindDown
+    {
+        get
+        {
+            return enemyWindDown;
+        }
+
+        set
+        {
+            enemyWindDown = value;
         }
     }
 

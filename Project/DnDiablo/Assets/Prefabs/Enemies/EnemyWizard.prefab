@@ -119,11 +119,8 @@ MonoBehaviour:
   lookingToCounter: 0
   canMove: 1
   canCast: 1
-  target: {fileID: 0}
-  mySkill: {fileID: 11400000, guid: 094ad84daae38444e938b4b912cfee83, type: 2}
-  isTurret: 0
-  timeBeforeAttack: 0
-  timeAfterAttack: 0
+  mySkills:
+  - {fileID: 11400000, guid: 094ad84daae38444e938b4b912cfee83, type: 2}
 --- !u!135 &135981600769022580
 SphereCollider:
   m_ObjectHideFlags: 1

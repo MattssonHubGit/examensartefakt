@@ -18,8 +18,11 @@ MonoBehaviour:
   level: 0
   range:
   - 50
+  targetGround: 0
   duration:
   - 0
+  enemyWindDown:
+  - 6
   damagePerSecond: 20
   firingDelay: 3
   firingDuration: 3

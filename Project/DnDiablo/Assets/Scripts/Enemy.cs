@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Collections;
 using System;
 
 public class Enemy : Entity {
@@ -10,8 +11,8 @@ public class Enemy : Entity {
     protected NavMeshAgent agent;
     protected NavMeshObstacle obstacle;
     protected Collider ownCollider;
-    protected Transform target;
-    [SerializeField] protected Skill mySkill;
+    [SerializeField] protected Transform target;
+    [SerializeField] protected List<Skill> mySkills = new List<Skill>();
     protected Skill skillToUse;
 
     [Header("floats")]
@@ -19,16 +20,13 @@ public class Enemy : Entity {
     protected float distanceToPlayer;
     protected float timeBeforeAttack;
     protected float timeAfterAttack;
-    protected float beforeAttackTimeOrigin;
-    protected float afterAttackTimeOrigin;
 
     [Header("Bools")]
     protected bool hasStopped = false;
     protected bool myStatInUI;
     
-
     // Use this for initialization
-    void Start()
+    protected virtual void Start()
     {
         if (skillToUse == null)
         {
@@ -41,23 +39,31 @@ public class Enemy : Entity {
         agent.Warp(transform.position);
 
         Physics.IgnoreLayerCollision(0, 8);//Ignore collisions with the ground
-        
     }
 
     // Update is called once per frame
     protected override void Update()
     {
+        //Do whateverEntity needs us to do
         base.Update();
+
+        //Determine the distance to the player
         distanceToPlayer = Vector3.Distance(transform.position, target.position);
-        mySkill.CooldownManager(myStats);
+
+        //Make sure our cooldown goes down
+        skillToUse.CooldownManager(myStats);
+
+        //Determine whether we should be moving towards the player of if we should try to use our skill
         StateHandler();
+        
+        //Move us, if we should move
         Movehandler();
     }
 
     //If active, move towards target
-    private void Movehandler()
+    protected virtual void Movehandler()
     {
-        if (agent.isActiveAndEnabled)
+        if (agent.isActiveAndEnabled) //Only move if our agent is active
         {
             agent.speed = myStats.moveSpeedCurrent;
             agent.destination = target.transform.position;
@@ -65,47 +71,63 @@ public class Enemy : Entity {
     }
 
     //Determine if we should move or attack
-    private void StateHandler()
+    protected virtual void StateHandler()
     {
         timeAfterAttack -= Time.deltaTime;
-
-        if (attackDistance >= distanceToPlayer) //within range, do not move, attack
+        
+        if (timeAfterAttack <= 0) //after an attack, do nothing untill we should act again
         {
-            if (agent.isActiveAndEnabled)
-            {
-                agent.destination = transform.position;
-            }
-            
-            agent.enabled = false;
-            obstacle.enabled = true;
-            hasStopped = true;
-            
-            transform.LookAt(target);
 
-            timeBeforeAttack -= Time.deltaTime;
-            UseSkill(mySkill);
-        }
-        else // not within range, activate and move towards player
-        {
-            timeBeforeAttack = beforeAttackTimeOrigin;
-            if (timeAfterAttack <= 0) 
+            if (attackDistance >= distanceToPlayer) //within range, do not move, attack
             {
-                obstacle.enabled = false;
-                agent.enabled = true;
-                if (hasStopped)
+                if (agent.isActiveAndEnabled) //The first time this happens, make sure we don't move
                 {
-                    NavMeshHit _navMeshHit;
-                    NavMesh.SamplePosition(transform.position, out _navMeshHit, 100f, NavMesh.AllAreas);
+                    agent.destination = transform.position;
 
-                    transform.position = _navMeshHit.position; //Attempt to avoid "jump" when restarting movement
-                    hasStopped = false;
+                    agent.enabled = false;
+                    obstacle.enabled = true;
+                    hasStopped = true;
+                }
+                
+                transform.LookAt(target);
+
+                //Determine if we have been in range for long enough
+                timeBeforeAttack -= Time.deltaTime;
+                if (timeBeforeAttack <= 0)
+                {
+                    UseSkill(skillToUse);
                 }
             }
+            else // not within range, activate and move towards player
+            {
+                timeBeforeAttack = myStats.timeBeforeAttack; //reset this timer
+                
+                if (timeAfterAttack <= 0) //Have we waited long enough since last attack?
+                {
+                    //Make us able to move again if we couldn't
+                    if (!agent.isActiveAndEnabled)
+                    {
+                        obstacle.enabled = false;
+                        agent.enabled = true;
+                    }
+
+                    //Attempt to avoid "jump" when restarting movement, doesn't seem to work that good
+                    if (hasStopped)
+                    {
+                        NavMeshHit _navMeshHit;
+                        NavMesh.SamplePosition(transform.position, out _navMeshHit, 100f, NavMesh.AllAreas);
+
+                        transform.position = _navMeshHit.position; 
+                        hasStopped = false;
+                    }
+                }
+            } 
         }
     }
     
     protected override void OnDeath()
     {
+        //If my stats are open, close them
         if (myStatInUI)
         {
             EnemyUI.Instance.Hide();
@@ -114,16 +136,18 @@ public class Enemy : Entity {
         {
             WaveSpawner.Instance.xpGained += myStats.experienceForKill;
         }
+
+        //REMOVE ME!!
         Destroy(gameObject);
     }
 
-    private void OnMouseEnter()
+    protected virtual void OnMouseEnter()
     {
         EnemyUI.Instance.SetUpUnit(myStats);
         myStatInUI = true;
     }
 
-    private void OnMouseExit()
+    protected virtual void OnMouseExit()
     {
         EnemyUI.Instance.Hide();
         myStatInUI = false;
@@ -131,30 +155,49 @@ public class Enemy : Entity {
 
     protected override void UseSkill(Skill skill)
     {
-        if (timeBeforeAttack <= 0)
+        //Can I use this skill?
+        if (skill.AttemptCast(this))
         {
-            if (skill.AttemptCast(this))
-            {
-                skill.Action(target.position, this);
-                timeAfterAttack = skill.Duration[0] + afterAttackTimeOrigin;
-            }
+            //Use my skill
+            skill.Action(target.position, this);
+            timeAfterAttack = skillToUse.EnemyWindDown[0] + myStats.timeAfterAttack;
+
+            //Give me a new skill. If I only have one it will always be the same
+            skillToUse = null;
+            skillToUse = Instantiate(SelectSkillToUse());
+            attackDistance = skillToUse.Range[skillToUse.level];
         }
     }
 
     public override void InitializeStats()
     {
         myStats = Instantiate(myStatsPrefab);
-        skillToUse = Instantiate(mySkill);
+        skillToUse = Instantiate(SelectSkillToUse());
+    }
+
+    //Return a random skill from our available ones
+    protected virtual Skill SelectSkillToUse(){
+
+        int _randomSkill = UnityEngine.Random.Range(0, mySkills.Count);
+
+        return mySkills[_randomSkill];
     }
 
     protected virtual void InitializeVariables()
     {
+        //Get ALL of the components!
         agent = GetComponent<NavMeshAgent>();
         obstacle = GetComponent<NavMeshObstacle>();
         ownCollider = GetComponent<Collider>();
+
+        //Try to find our player
         target = Player.Instance.transform;
-        beforeAttackTimeOrigin = timeBeforeAttack;
-        afterAttackTimeOrigin = timeAfterAttack;
+
+        //Set attack timers to our stats
+        timeBeforeAttack = myStats.timeBeforeAttack;
+        timeAfterAttack = myStats.timeAfterAttack;
+        
+        //Don't have windDown when it starts
         timeAfterAttack = 0;
     }
 }

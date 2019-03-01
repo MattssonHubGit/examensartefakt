@@ -37,12 +37,18 @@ public class CameraController : MonoBehaviour {
 
         if (trackingTarget == null)
         {
-            trackingTarget = Player.Instance.transform;
+            StartCoroutine(FindPlayer());
         }
 
         originalPos = transform.position;
 	}
 	
+    IEnumerator FindPlayer()
+    {
+        yield return new WaitForEndOfFrame();
+        trackingTarget = Player.Instance.transform;
+    }
+
 	// Update is called once per frame
 	void Update () {
         FollowTarget();
@@ -51,7 +57,10 @@ public class CameraController : MonoBehaviour {
 
     private void FollowTarget()
     {
-        cameraStand.transform.position = Vector3.Lerp(cameraStand.transform.position, trackingTarget.position, trackingSpeed);
+        if (trackingTarget != null)
+        {
+            cameraStand.transform.position = Vector3.Lerp(cameraStand.transform.position, trackingTarget.position, trackingSpeed);
+        }
 
     }
 

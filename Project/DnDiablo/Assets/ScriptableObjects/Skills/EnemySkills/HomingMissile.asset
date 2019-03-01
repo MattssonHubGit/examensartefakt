@@ -20,19 +20,21 @@ MonoBehaviour:
   - 10
   targetGround: 0
   duration:
-<<<<<<< HEAD
-  - 0
-=======
   - 10
   - 10
   - 10
   - 10
   - 10
   - 10
->>>>>>> ec3a0b010ef9cf1a4e70ba9edbb917d299e36b77
+  enemyWindDown:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   projectilePrefab: {fileID: 1899451052250166, guid: 97ea54846bf037248afa1cb95eb1ab5c,
     type: 2}
   projectileSpeed: 0.1
   projectileDamage: 10
-  projectileDuration: 10
   aura: {fileID: 11400000, guid: c494a0eb2669a6247ada373985384b08, type: 2}

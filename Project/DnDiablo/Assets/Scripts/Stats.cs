@@ -38,6 +38,10 @@ public class Stats : ScriptableObject {
     public float moveSpeedBase = 1;
     public int moveSpeedDisplay = 5;
 
+    [Header("Enemy Specifics")]
+    public float timeBeforeAttack = 0;
+    public float timeAfterAttack = 0;
+
     [Header("XP Gain On Kill")]
     public float experienceForKill = 50f;
 
