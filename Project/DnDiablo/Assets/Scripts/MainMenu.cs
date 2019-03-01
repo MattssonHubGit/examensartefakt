@@ -1,0 +1,29 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+
+public class MainMenu : MonoBehaviour
+{
+
+    [Header("Main Menu")]
+    [SerializeField] private Button playButton;
+    [SerializeField] private Button exitButton;
+
+    [Space]
+    public Text debug;
+
+    private void Start()
+    {
+        playButton.onClick.AddListener(delegate { LevelManager.Instance.LoadNextLevel(); });
+        exitButton.onClick.AddListener(delegate { LevelManager.Instance.ExitGame(); });
+
+    }
+
+    void Update()
+    {
+        debug.text = SceneManager.sceneCountInBuildSettings.ToString();
+    }
+}

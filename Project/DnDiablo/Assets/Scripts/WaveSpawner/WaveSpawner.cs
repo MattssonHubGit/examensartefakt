@@ -28,10 +28,16 @@ public class WaveSpawner : MonoBehaviour {
     private float xpGainFromWave = 0;
     [HideInInspector] public float xpGained = 0;
 
+    [Header("Debug")]
+    [SerializeField] private bool debugMode = true;
+
+    [Header("Misc")]
     private float scanFrequency = 0.5f;
     private float waveTimeToSpawn;
     private float waveTimeToSpawnTimeStamp;
     private SpawnStateWave currentState = SpawnStateWave.COUNTING;
+
+
     
     [HideInInspector] private int currentWaveCounter = 0;
 
@@ -119,8 +125,8 @@ public class WaveSpawner : MonoBehaviour {
             TalentManager.Instance.spendableTalentPoints++;
             StatsManager.Instance.spendableStatPoints++;
 
-
-            //Finish level here
+            //Load next level
+            LevelManager.Instance.LoadNextLevel();
 
         }
         else
