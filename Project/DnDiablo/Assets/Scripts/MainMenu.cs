@@ -12,8 +12,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button playButton;
     [SerializeField] private Button exitButton;
 
-    [Space]
-    public Text debug;
 
     private void Start()
     {
@@ -24,6 +22,5 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-        debug.text = SceneManager.sceneCountInBuildSettings.ToString();
     }
 }

@@ -423,6 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playButton: {fileID: 1990261067}
   exitButton: {fileID: 1045705927}
+  debug: {fileID: 0}
 --- !u!1 &1488640404
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +558,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114624461970538942, guid: d7265e4e537bb234198364166f84d34e,
+        type: 2}
+      propertyPath: allLevelScenes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4682548501784044, guid: d7265e4e537bb234198364166f84d34e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -589,6 +595,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114624461970538942, guid: d7265e4e537bb234198364166f84d34e,
+        type: 2}
+      propertyPath: allLevelScenes.Array.data[0]
+      value: 
+      objectReference: {fileID: 102900000, guid: 0627cd08036bc734c8407b3519f0402a,
+        type: 3}
+    - target: {fileID: 114624461970538942, guid: d7265e4e537bb234198364166f84d34e,
+        type: 2}
+      propertyPath: allLevelScenes.Array.data[1]
+      value: 
+      objectReference: {fileID: 102900000, guid: b8e0dff5bf595884e95e04ff01ab0f2e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7265e4e537bb234198364166f84d34e, type: 2}
   m_IsPrefabParent: 0
