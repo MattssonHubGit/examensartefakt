@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 54276173543232570}
   - component: {fileID: 208690868870602472}
   m_Layer: 11
-  m_Name: TurretEnemy
+  m_Name: LaserEnemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,10 +120,8 @@ MonoBehaviour:
   canMove: 1
   canCast: 1
   target: {fileID: 0}
-  mySkill: {fileID: 11400000, guid: 65d8a2551a77a7644b85237fe0156cbf, type: 2}
-  isTurret: 1
-  timeBeforeAttack: 0
-  timeAfterAttack: 0
+  mySkills:
+  - {fileID: 11400000, guid: 65d8a2551a77a7644b85237fe0156cbf, type: 2}
 --- !u!135 &135134922493594046
 SphereCollider:
   m_ObjectHideFlags: 1
