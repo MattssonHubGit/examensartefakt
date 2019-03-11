@@ -9,11 +9,11 @@ public class Enemy : Entity {
 
     [Header("initialization")]
     protected NavMeshAgent agent;
-    protected NavMeshObstacle obstacle;
     protected Collider ownCollider;
     [SerializeField] protected Transform target;
     [SerializeField] protected List<Skill> mySkills = new List<Skill>();
-    protected Skill skillToUse;
+    protected List<Skill> skillsToUse = new List<Skill>();
+    protected int currentSkillIndex = 0;
 
     [Header("floats")]
     protected float attackDistance;
@@ -28,13 +28,11 @@ public class Enemy : Entity {
     // Use this for initialization
     protected virtual void Start()
     {
-        if (skillToUse == null)
-        {
-            InitializeStats();
-            attackDistance = skillToUse.Range[skillToUse.level];
-        }
-
+        InitializeStats();
+        
         InitializeVariables();
+
+        attackDistance = skillsToUse[currentSkillIndex].Range[skillsToUse[currentSkillIndex].level];
 
         agent.Warp(transform.position);
 
@@ -51,7 +49,7 @@ public class Enemy : Entity {
         distanceToPlayer = Vector3.Distance(transform.position, target.position);
 
         //Make sure our cooldown goes down
-        skillToUse.CooldownManager(myStats);
+        skillsToUse[currentSkillIndex].CooldownManager(myStats);
 
         //Determine whether we should be moving towards the player of if we should try to use our skill
         StateHandler();
@@ -63,7 +61,7 @@ public class Enemy : Entity {
     //If active, move towards target
     protected virtual void Movehandler()
     {
-        if (agent.isActiveAndEnabled) //Only move if our agent is active
+        if (!hasStopped) //Only move if our agent is active
         {
             agent.speed = myStats.moveSpeedCurrent;
             agent.destination = target.transform.position;
@@ -74,7 +72,6 @@ public class Enemy : Entity {
     protected virtual void StateHandler()
     {
         timeAfterAttack -= Time.deltaTime;
-        
         if (timeAfterAttack <= 0) //after an attack, do nothing untill we should act again
         {
 
@@ -83,8 +80,6 @@ public class Enemy : Entity {
                 if (agent.isActiveAndEnabled) //The first time this happens, make sure we don't move
                 {
                     agent.destination = transform.position;
-
-                    DisableMovement();
                     hasStopped = true;
                 }
                 
@@ -94,46 +89,27 @@ public class Enemy : Entity {
                 timeBeforeAttack -= Time.deltaTime;
                 if (timeBeforeAttack <= 0)
                 {
-                    UseSkill(skillToUse);
+                    UseSkill(skillsToUse[currentSkillIndex]);
                 }
             }
             else // not within range, activate and move towards player
             {
                 timeBeforeAttack = myStats.timeBeforeAttack; //reset this timer
                 
-                if (timeAfterAttack <= 0) //Have we waited long enough since last attack?
+                //Attempt to avoid "jump" when restarting movement, doesn't seem to work that good
+                if (hasStopped)
                 {
-                    //Make us able to move again if we couldn't
-                    if (!agent.isActiveAndEnabled)
-                    {
-                        EnableMovement();
-                    }
+                    NavMeshHit _navMeshHit;
+                    NavMesh.SamplePosition(transform.position, out _navMeshHit, 100f, NavMesh.AllAreas);
 
-                    //Attempt to avoid "jump" when restarting movement, doesn't seem to work that good
-                    if (hasStopped)
-                    {
-                        NavMeshHit _navMeshHit;
-                        NavMesh.SamplePosition(transform.position, out _navMeshHit, 100f, NavMesh.AllAreas);
-
-                        transform.position = _navMeshHit.position; 
-                        hasStopped = false;
-                    }
+                    transform.position = _navMeshHit.position; 
+                    hasStopped = false;
                 }
-            } 
+                
+            }
         }
     }
-
-    public override void DisableMovement()
-    {
-        agent.enabled = false;
-        obstacle.enabled = true;
-    }
-
-    public override void EnableMovement()
-    {
-        obstacle.enabled = false;
-        agent.enabled = true;
-    }
+    
 
     protected override void OnDeath()
     {
@@ -170,35 +146,39 @@ public class Enemy : Entity {
         {
             //Use my skill
             skill.Action(target.position, this);
-            timeAfterAttack = skillToUse.EnemyWindDown[0] + myStats.timeAfterAttack;
+            timeAfterAttack = skillsToUse[currentSkillIndex].EnemyWindDown[0] + myStats.timeAfterAttack;
 
             //Give me a new skill. If I only have one it will always be the same
-            skillToUse = null;
-            skillToUse = Instantiate(SelectSkillToUse());
-            attackDistance = skillToUse.Range[skillToUse.level];
+            SelectSkillToUse();
+            attackDistance = skillsToUse[currentSkillIndex].Range[skillsToUse[currentSkillIndex].level];
         }
     }
 
     public override void InitializeStats()
     {
         myStats = Instantiate(myStatsPrefab);
-        skillToUse = Instantiate(SelectSkillToUse());
+        for (int i = 0; i < mySkills.Count; i++)
+        {
+            skillsToUse.Add(Instantiate(mySkills[i]));
+        }
+        
     }
 
     //Return a random skill from our available ones
-    protected virtual Skill SelectSkillToUse(){
+    protected virtual void SelectSkillToUse(){
 
-        int _randomSkill = UnityEngine.Random.Range(0, mySkills.Count);
-
-        return mySkills[_randomSkill];
+        currentSkillIndex = UnityEngine.Random.Range(0, skillsToUse.Count);
+        
     }
 
     protected virtual void InitializeVariables()
     {
         //Get ALL of the components!
         agent = GetComponent<NavMeshAgent>();
-        obstacle = GetComponent<NavMeshObstacle>();
         ownCollider = GetComponent<Collider>();
+
+        //If, for some reason, we have anything other than Low avoidance quality, change it to Low
+        agent.obstacleAvoidanceType = ObstacleAvoidanceType.LowQualityObstacleAvoidance;
 
         //Try to find our player
         target = Player.Instance.transform;

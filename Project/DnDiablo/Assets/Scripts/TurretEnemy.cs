@@ -11,7 +11,6 @@ public class TurretEnemy : Enemy {
         base.Start();
         attackDistance = maxAttackrange;
         agent.enabled = false;
-        obstacle.enabled = true;
 
     }
 
@@ -29,7 +28,7 @@ public class TurretEnemy : Enemy {
                 timeBeforeAttack -= Time.deltaTime;
                 if (timeBeforeAttack <= 0)
                 {
-                    UseSkill(skillToUse);
+                    UseSkill(skillsToUse[currentSkillIndex]);
                 }
             }
             else // not within range, reset timeBeforeAttack timer

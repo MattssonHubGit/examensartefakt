@@ -7,7 +7,6 @@ public class SimpleMoveTowardsPlayer : MonoBehaviour {
 
     [SerializeField] private Transform target;
     NavMeshAgent agent;
-    NavMeshObstacle obstacle;
     private float priority;
     private Rigidbody rb;
     private Collider ownCollider;
@@ -47,9 +46,7 @@ public class SimpleMoveTowardsPlayer : MonoBehaviour {
     void Start () {
 
         agent = GetComponent<NavMeshAgent>();
-        obstacle = GetComponent<NavMeshObstacle>();
         ownCollider = GetComponent<Collider>();
-        obstacle.enabled = false;
         rb = GetComponent<Rigidbody>();
         agent.Warp(transform.position);
         //priority = Random.Range(0, 10);
@@ -71,7 +68,6 @@ public class SimpleMoveTowardsPlayer : MonoBehaviour {
             //agent.destination = transform.position;
             agent.enabled = false;
             ownCollider.enabled = false;
-            obstacle.enabled = true;
             hasStopped = true;
         }
         //else if (shouldStopForPriority)
@@ -86,7 +82,6 @@ public class SimpleMoveTowardsPlayer : MonoBehaviour {
         else
         {
             //agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
-            obstacle.enabled = false;
             ownCollider.enabled = true;
             agent.enabled = true;
             if (hasStopped)

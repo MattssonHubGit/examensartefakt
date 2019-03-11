@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class EnemyCharge : Skill {
 
+    [Header("Skill Specifics")]
     [SerializeField] private float chargeSpeed;
     [SerializeField] private float chargeRange;
     [SerializeField] private float damage;

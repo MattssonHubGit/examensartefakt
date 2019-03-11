@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23644960168246190}
   - component: {fileID: 114269747891943714}
   - component: {fileID: 54691252443322736}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HomingMissile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191adfa260d9828469e0ad984d79181e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  caster: {fileID: 0}
   speed: 0
   direction: {x: 0, y: 0, z: 0}
   damage: 0

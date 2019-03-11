@@ -179,13 +179,20 @@ public class Player : Entity {
 
     protected override void OnDeath()
     {
-        auraList.Clear();
+        //Remove all auras
+        auraList.RemoveRange(0, auraList.Count);
+
+        //Reset health and resources
         myStats.healthCurrent = myStats.healthMax;
         myStats.resourceCurrent = myStats.resourceMax;
+
+        //Reset all cooldowns
         foreach(Skill skill in mySkills)
         {
             skill.ResetCooldown();
         }
+
+        //Move to spawnPoint
         agent.destination = spawnPoint.position;
         agent.Warp(spawnPoint.position);
     }

@@ -11,14 +11,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edbb267ab5293a849be9065aff59ba05, type: 3}
   m_Name: EnemyCharge
   m_EditorClassIdentifier: 
-  cooldownMax: []
-  resourceCost: []
+  cooldownMax:
+  - 5
+  resourceCost:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   level: 0
-  range: []
+  range:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
   targetGround: 0
-  duration: []
-  enemyWindDown: []
-  chargeSpeed: 0
-  chargeRange: 0
-  damage: 0
-  chargeAura: {fileID: 0}
+  duration:
+  - 2
+  enemyWindDown:
+  - 2
+  chargeSpeed: 10
+  chargeRange: 20
+  damage: 10
+  chargeAura: {fileID: 11400000, guid: 9c53e74f7df8d5d4aa3adf31c24e5844, type: 2}

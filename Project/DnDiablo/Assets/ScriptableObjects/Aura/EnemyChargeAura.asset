@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0108d2c38af911c4eae958ae904add0b, type: 3}
   m_Name: EnemyChargeAura
   m_EditorClassIdentifier: 
-  duration: 0
+  duration: 3
   target: {fileID: 0}
   applier: {fileID: 0}
   caster: {fileID: 0}
   endPos: {x: 0, y: 0, z: 0}
   chargeSpeed: 0
   damage: 0
-  chargeGO: {fileID: 0}
+  chargeGO: {fileID: 1438094872348438, guid: cb1fd94a3ee36b64b930c0a22a2247ef, type: 2}

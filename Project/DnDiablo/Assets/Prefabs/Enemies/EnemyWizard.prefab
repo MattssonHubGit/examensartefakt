@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 23415508392089654}
   - component: {fileID: 195811714512158490}
   - component: {fileID: 54564867757780610}
-  - component: {fileID: 208881568612151124}
   m_Layer: 11
   m_Name: EnemyWizard
   m_TagString: enemy
@@ -155,18 +154,3 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
---- !u!208 &208881568612151124
-NavMeshObstacle:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1011340445392878}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 0
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0
-  m_Carve: 1
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0
