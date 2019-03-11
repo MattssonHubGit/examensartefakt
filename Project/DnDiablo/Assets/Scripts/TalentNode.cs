@@ -18,6 +18,10 @@ public class TalentNode : MonoBehaviour
     [SerializeField] private bool isFirst;
     public Button myButton;
 
+    [Header("Images")]
+    public Image icon;
+    public Image frame;
+
     #region GetSetters
     public bool IsUnlocked
     {
@@ -127,7 +131,9 @@ public class TalentNode : MonoBehaviour
                 if (nextNode != null)
                 {
                     nextNode.myButton.interactable = true;
+                    nextNode.icon.color = new Color(1, 1, 1, 1);
                 }
+                icon.color = new Color(1, 1, 1, 0.3f);
             }
         }
 
@@ -147,7 +153,9 @@ public class TalentNode : MonoBehaviour
                     if (nextNode != null)
                     {
                         nextNode.myButton.interactable = true;
+                        nextNode.icon.color = new Color(1, 1, 1, 1);
                     }
+                    icon.color = new Color(1, 1, 1, 0.3f);
                     TalentManager.Instance.player.mySkills[i].level = levelToSet;
                 }
             }

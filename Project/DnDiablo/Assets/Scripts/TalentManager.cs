@@ -24,6 +24,11 @@ public class TalentManager : MonoBehaviour
     [SerializeField] private Sprite icon;
     [SerializeField] private bool changeButtonColor = false;
     [SerializeField] private Color buttonColor = Color.white;
+    [Space]
+    [SerializeField] private List<int> specialLevels = new List<int>();
+    [SerializeField] private Sprite defaultFrame;
+    [SerializeField] private Sprite specialFrame;
+
 
     [Header("UI")]
     [SerializeField] public Transform skillButtonParent;
@@ -80,8 +85,20 @@ public class TalentManager : MonoBehaviour
             _scrNode.SkillToLevel = skillToAffect;
             _scrNode.LevelToSet = i;
             _scrNode.myButton = _objNode.GetComponent<Button>();
-            if(icon != null) _scrNode.myButton.image.sprite = icon;
+            if(icon != null) _scrNode.icon.sprite = icon;
+            _scrNode.frame.sprite = defaultFrame;
             _scrNode.myButton.interactable = false;
+            _scrNode.icon.color = new Color(1, 1, 1, 0.3f);
+            
+            //Special frame?
+            for (int j = 0; j < specialLevels.Count; j++)
+            {
+                if (i == specialLevels[j])
+                {
+                    _scrNode.frame.sprite = specialFrame;
+                }
+            }
+
 
             //Color
             if (changeButtonColor)
@@ -94,6 +111,7 @@ public class TalentManager : MonoBehaviour
             {
                 _scrNode.IsFirst = true;
                 _scrNode.myButton.interactable = true;
+                _scrNode.icon.color = new Color(1, 1, 1, 1);
 
             }
 
