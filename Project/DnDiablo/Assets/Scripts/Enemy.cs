@@ -84,8 +84,7 @@ public class Enemy : Entity {
                 {
                     agent.destination = transform.position;
 
-                    agent.enabled = false;
-                    obstacle.enabled = true;
+                    DisableMovement();
                     hasStopped = true;
                 }
                 
@@ -107,8 +106,7 @@ public class Enemy : Entity {
                     //Make us able to move again if we couldn't
                     if (!agent.isActiveAndEnabled)
                     {
-                        obstacle.enabled = false;
-                        agent.enabled = true;
+                        EnableMovement();
                     }
 
                     //Attempt to avoid "jump" when restarting movement, doesn't seem to work that good
@@ -124,7 +122,19 @@ public class Enemy : Entity {
             } 
         }
     }
-    
+
+    public override void DisableMovement()
+    {
+        agent.enabled = false;
+        obstacle.enabled = true;
+    }
+
+    public override void EnableMovement()
+    {
+        obstacle.enabled = false;
+        agent.enabled = true;
+    }
+
     protected override void OnDeath()
     {
         //If my stats are open, close them
