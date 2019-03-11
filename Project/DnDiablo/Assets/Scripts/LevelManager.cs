@@ -8,9 +8,9 @@ public class LevelManager : MonoBehaviour {
     
 
     [Header("Settings")]
-    private int currentLevel = 0;
-    private List<Scene> allLevelScenes = new List<Scene>();
-
+    private int currentLevel = -1; //Negative 1 is before the game starts.
+    private List<string> allLevelScenes = new List<string>();
+    [SerializeField] private int amountOfLevels = 2;
 
     [Header("Debug")]
     [SerializeField] private string sceneName = "";
@@ -26,18 +26,15 @@ public class LevelManager : MonoBehaviour {
         {
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
-            
 
-            //Get all level scenes and put them in a list
-            for (int i = 0; i < SceneManager.sceneCountInBuildSettings - 1; i++)
+            //Set up list with levels
+            allLevelScenes.Clear();
+            int indexer = 1;
+            for (int i = 0; i < amountOfLevels; i++)
             {
-                Debug.Log(i);
-                if (SceneManager.GetSceneByBuildIndex(i).name.Contains("Level_"))
-                {
-                    allLevelScenes.Add(SceneManager.GetSceneByBuildIndex(i));
-                }
+                allLevelScenes.Add("Level_" + indexer);
+                indexer++;
             }
-
         }
         else
         {
@@ -54,15 +51,16 @@ public class LevelManager : MonoBehaviour {
     public void LoadNextLevel()
     {
         currentLevel++;
-        string _nextLevelName = "Level_" + currentLevel;
-
-        if (currentLevel > allLevelScenes.Count)
+       
+        //Is there not another level to load?
+        if (currentLevel >= allLevelScenes.Count)
         {
-            currentLevel = 0;
+            currentLevel = -1;
             SceneManager.LoadScene("MainMenu");
             return;
         }
 
+        string _nextLevelName = allLevelScenes[currentLevel];
         SceneManager.LoadScene(_nextLevelName);
 
     }
@@ -71,13 +69,15 @@ public class LevelManager : MonoBehaviour {
     {
         if (Input.GetKeyDown(key))
         {
-            SceneManager.LoadScene(sceneName);
+            //SceneManager.LoadScene(sceneName);
+            LoadNextLevel();
         }
     }
 
     public void ExitGame()
     {
         Debug.Log("Application.Quit()");
+        currentLevel = -1;
         Application.Quit();
     }
 
