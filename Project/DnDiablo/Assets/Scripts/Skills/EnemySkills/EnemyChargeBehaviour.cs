@@ -6,12 +6,7 @@ public class EnemyChargeBehaviour : SpellBehaviour {
 
     public float damage;
     public EnemyChargeAura auraToRemove;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+    
     private void OnTriggerEnter(Collider other)
     {
         //Did I hit something damagable?
