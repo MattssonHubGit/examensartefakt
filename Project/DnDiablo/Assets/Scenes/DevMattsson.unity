@@ -655,21 +655,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 224050267940513550, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224050267940513550, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224050267940513550, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: -5.3857155
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca243d3f88ab0c7479f1b4c34bdaedcf, type: 2}
   m_IsPrefabParent: 0
@@ -1795,6 +1780,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 709235417}
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &1922322981 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1512705983407108, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+    type: 2}
+  m_PrefabInternal: {fileID: 709235417}
 --- !u!1001 &1959035387
 Prefab:
   m_ObjectHideFlags: 0
@@ -1899,6 +1889,11 @@ Prefab:
       propertyPath: spendableStatPoints
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
+        type: 2}
+      propertyPath: iconParent
+      value: 
+      objectReference: {fileID: 1922322981}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a021c9d25d24dd141ad0252d91c31906, type: 2}
   m_IsPrefabParent: 0
