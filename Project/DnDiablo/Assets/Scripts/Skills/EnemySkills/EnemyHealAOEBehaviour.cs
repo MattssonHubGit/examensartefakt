@@ -20,7 +20,7 @@ public class EnemyHealAOEBehaviour : SpellBehaviour {
     private void OnTriggerStay(Collider other)
     {
         IDamageable _damagable = other.gameObject.GetComponent<IDamageable>();
-
+        Debug.Log(other.gameObject);
         if (_damagable != null)
         {
             _damagable.TakeDamage(-healAmount * Time.deltaTime, caster);

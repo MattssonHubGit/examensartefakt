@@ -89,9 +89,10 @@ public class Player : Entity {
         //Click to move
         if (Input.GetMouseButton(0))
         {
+            int layerMask = 1 << 8;
             RaycastHit hit;
             agent.speed = myStats.moveSpeedCurrent;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100, layerMask))
             {
                 if (agent.isActiveAndEnabled)
                 {

@@ -11,8 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0022288b2a8b748a8b000d5aa1b961, type: 3}
   m_Name: EnemyHealAOE
   m_EditorClassIdentifier: 
+  skillName: 
+  descriptionByLevel: []
   cooldownMax:
-  - 5
+  - 8
   resourceCost:
   - 0
   level: 0
@@ -22,6 +24,6 @@ MonoBehaviour:
   duration:
   - 2
   enemyWindDown:
-  - 2
+  - 0
   healAmount: 20
   healGO: {fileID: 1291876112147080, guid: 31d11d7faac4dde428581d7ebc8a35f8, type: 2}

@@ -61,10 +61,13 @@ public class Enemy : Entity {
     //If active, move towards target
     protected virtual void Movehandler()
     {
-        if (!hasStopped) //Only move if our agent is active
+        if (agent.isActiveAndEnabled)
         {
-            agent.speed = myStats.moveSpeedCurrent;
-            agent.destination = target.transform.position;
+            if (!hasStopped && timeAfterAttack <= 0) //Only move if our agent is active
+            {
+                agent.speed = myStats.moveSpeedCurrent;
+                agent.destination = target.transform.position;
+            }
         }
     }
 

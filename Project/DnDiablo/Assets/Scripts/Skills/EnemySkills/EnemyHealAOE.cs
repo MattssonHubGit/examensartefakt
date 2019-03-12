@@ -12,7 +12,7 @@ public class EnemyHealAOE : Skill {
 
     public override void Action(Vector3 targetPos, Entity caster)
     {
-        GameObject _heal = Instantiate(healGO, caster.transform);
+        GameObject _heal = Instantiate(healGO, caster.transform.position, Quaternion.identity);
         EnemyHealAOEBehaviour _EHB = _heal.GetComponent<EnemyHealAOEBehaviour>();
         _EHB.healAmount = healAmount;
         _EHB.duration = duration[0];

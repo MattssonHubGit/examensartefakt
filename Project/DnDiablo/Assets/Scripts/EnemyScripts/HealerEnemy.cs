@@ -42,4 +42,21 @@ public class HealerEnemy : Enemy {
             
         }
     }
+    protected override void UseSkill(Skill skill)
+    {
+        //Can I use this skill?
+        if (skill.AttemptCast(this))
+        {
+            //Use my skill
+            skill.Action(target.position, this);
+            timeAfterAttack = skillsToUse[currentSkillIndex].EnemyWindDown[0] + myStats.timeAfterAttack;
+
+            //Give me a new skill. If I only have one it will always be the same
+            SelectSkillToUse();
+            attackDistance = skillsToUse[currentSkillIndex].Range[skillsToUse[currentSkillIndex].level];
+
+            //We need this since the healer can use it's skill even while not in range of the player
+            agent.destination = transform.position;
+        }
+    }
 }
