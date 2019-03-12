@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class TalentNode : MonoBehaviour
+public class TalentNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
 
@@ -98,10 +99,6 @@ public class TalentNode : MonoBehaviour
 
     #endregion
 
-    private void Awake()
-    {
-
-    }
 
     public void AttemptToLevel()
     {
@@ -162,7 +159,15 @@ public class TalentNode : MonoBehaviour
         }
     }
 
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        OnHovoerUI.Instance.DisplayOnHover(skillToLevel.skillName, skillToLevel.descriptionByLevel[levelToSet]);
+    }
 
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        OnHovoerUI.Instance.StopDisplayOnHover();
+    }
 }
 
 

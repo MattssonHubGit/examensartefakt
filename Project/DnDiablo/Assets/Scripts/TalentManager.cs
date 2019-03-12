@@ -138,6 +138,7 @@ public class TalentManager : MonoBehaviour
     public void ToggleTalentSun()
     {
         talentSunParent.SetActive(!talentSunParent.active);
+        OnHovoerUI.Instance.StopDisplayOnHover();
     }
 
 }

@@ -11,6 +11,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d734b96def8a544914ab59f41f9059, type: 3}
   m_Name: TrollBlood
   m_EditorClassIdentifier: 
+  skillName: Troll Blood
+  descriptionByLevel:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   cooldownMax:
   - 20
   - 20
@@ -57,6 +65,7 @@ MonoBehaviour:
   - 3
   - 3
   - 3
+  enemyWindDown: []
   bonusHealthRegen: 20
   slowPercentage: 0.75
   trollBloodAura: {fileID: 11400000, guid: 5e7d258d07c7e084a991ed20d81e73c1, type: 2}

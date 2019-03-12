@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class SkillButton : MonoBehaviour {
+public class SkillButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
 
     [Header("Appearence")]
     [SerializeField] public Image buttonIcon;
@@ -12,6 +13,16 @@ public class SkillButton : MonoBehaviour {
 
     [Header("Data")]
     [HideInInspector] public Skill mySkill;
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        OnHovoerUI.Instance.DisplayOnHover(mySkill.skillName, mySkill.descriptionByLevel[mySkill.level]);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        OnHovoerUI.Instance.StopDisplayOnHover();
+    }
 
     private void Update()
     {

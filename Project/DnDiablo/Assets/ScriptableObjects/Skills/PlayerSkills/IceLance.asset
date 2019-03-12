@@ -11,6 +11,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dd7413028467c34f8f12105f3a73680, type: 3}
   m_Name: IceLance
   m_EditorClassIdentifier: 
+  skillName: Ice Lance
+  descriptionByLevel:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   cooldownMax:
   - 0.5
   - 0.5
@@ -41,6 +49,7 @@ MonoBehaviour:
   - 10
   - 10
   - 10
+  enemyWindDown: []
   lancePrefab: {fileID: 1718255711474218, guid: 8790cf7a9e59cca489dd9b43de4ad4c0,
     type: 2}
   speedByLevel:
