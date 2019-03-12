@@ -34,6 +34,8 @@ public class StatsManager : MonoBehaviour {
     [SerializeField] private Button resourceBtn;
     [SerializeField] private Button cooldownBtn;
     [SerializeField] private Button speedBtn;
+    [Space]
+    [SerializeField] private GameObject iconParent;
 
     [Header("Other")]
     [SerializeField] private GameObject statsUpgradeParent;
@@ -92,6 +94,9 @@ public class StatsManager : MonoBehaviour {
             resourceBtn.interactable = true;
             cooldownBtn.interactable = true;
             speedBtn.interactable = true;
+
+            iconParent.SetActive(true);
+
         }
         else
         {
@@ -100,6 +105,8 @@ public class StatsManager : MonoBehaviour {
             resourceBtn.interactable = false;
             cooldownBtn.interactable = false;
             speedBtn.interactable = false;
+
+            iconParent.SetActive(false);
         }
 
         pointsTxt.text = spendableStatPoints.ToString();
