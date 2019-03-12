@@ -121,7 +121,7 @@ public class TalentNode : MonoBehaviour
                 SkillButton _scrButton = _objButton.GetComponent<SkillButton>();
 
                 _scrButton.mySkill = _skillToAdd;
-                if(myButton.image.sprite != null) _scrButton.buttonIcon.sprite = myButton.image.sprite;
+                if(myButton.image.sprite != null) _scrButton.buttonIcon.sprite = icon.sprite;
 
                 TalentManager.Instance.spendableTalentPoints--; //Remove a talentpoint
 
