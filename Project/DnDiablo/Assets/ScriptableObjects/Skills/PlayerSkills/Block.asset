@@ -11,6 +11,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c496b60c796349d4498ee134ca732273, type: 3}
   m_Name: Block
   m_EditorClassIdentifier: 
+  skillName: Stalwart
+  descriptionByLevel:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   cooldownMax:
   - 10
   - 10
@@ -57,4 +65,5 @@ MonoBehaviour:
   - 3
   - 3
   - 3
+  enemyWindDown: []
   auraPrefab: {fileID: 11400000, guid: 7db0fe7e6a1d6b24bb74b9e8b480fc16, type: 2}

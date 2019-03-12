@@ -4,6 +4,10 @@ using UnityEngine;
 
 public abstract class Skill : ScriptableObject {
 
+    [Header("Descriptions")]
+    public string skillName = "";
+    [TextArea(4,8)]public List<string> descriptionByLevel = new List<string>();
+
     [Header("Cooldown")]
     [SerializeField] protected List<float> cooldownMax = new List<float>();
     protected float cooldownCurrent = 0;

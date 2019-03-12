@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 3cb84e6c8e70bfb4594a985651be7ebe
+timeCreated: 1552386737
+licenseType: Pro
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Haunting Attraction
+  fontNames:
+  - Haunting Attraction
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
