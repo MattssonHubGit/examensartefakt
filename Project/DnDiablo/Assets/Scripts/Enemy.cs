@@ -10,7 +10,7 @@ public class Enemy : Entity {
     [Header("initialization")]
     protected NavMeshAgent agent;
     protected Collider ownCollider;
-    [SerializeField] protected Transform target;
+    [SerializeField] public Transform target;
     [SerializeField] protected List<Skill> mySkills = new List<Skill>();
     protected List<Skill> skillsToUse = new List<Skill>();
     protected int currentSkillIndex = 0;

@@ -33,5 +33,5 @@ MonoBehaviour:
   moveSpeedBase: 3
   moveSpeedDisplay: 5
   timeBeforeAttack: 0
-  timeAfterAttack: 2
+  timeAfterAttack: 0
   experienceForKill: 50

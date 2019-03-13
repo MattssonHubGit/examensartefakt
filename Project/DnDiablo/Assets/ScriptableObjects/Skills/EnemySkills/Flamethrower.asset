@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cd8a27c26fda94687a6718722ea702, type: 3}
+  m_Name: Flamethrower
+  m_EditorClassIdentifier: 
+  skillName: Flamethrower
+  descriptionByLevel:
+  - 
+  cooldownMax:
+  - 10
+  resourceCost:
+  - 0
+  level: 0
+  range:
+  - 5
+  targetGround: 0
+  duration:
+  - 3
+  enemyWindDown:
+  - 1
+  firePrefab: {fileID: 1463179601737120, guid: 5de2bc470ca496a4e8ce9d3b06f44d98, type: 2}
+  speed: 5
+  flameAmount: 15
+  intervalSpeed: 0.02
+  intervals: 50
+  maxSpread: 0.203
+  damage: 0.5
+  rotationSpeed: 0.2

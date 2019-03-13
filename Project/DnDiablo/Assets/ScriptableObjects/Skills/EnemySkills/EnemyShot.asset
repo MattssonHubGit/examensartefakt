@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76281a6d1c148e4091aa100127b6d13, type: 3}
+  m_Name: EnemyShot
+  m_EditorClassIdentifier: 
+  skillName: EnemyShot
+  descriptionByLevel:
+  - 
+  cooldownMax:
+  - 0
+  resourceCost:
+  - 0
+  level: 0
+  range:
+  - 7
+  targetGround: 0
+  duration:
+  - 3
+  enemyWindDown:
+  - 0.5
+  arrowPrefab: {fileID: 1065563915304330, guid: 9ebfe6350db3885438943d102551f03d,
+    type: 2}
+  speed: 5
+  damage: 10
