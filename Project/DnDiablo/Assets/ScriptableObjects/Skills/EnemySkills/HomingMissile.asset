@@ -11,8 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599a142d84f9c2342965be17108607d4, type: 3}
   m_Name: HomingMissile
   m_EditorClassIdentifier: 
+  skillName: 
+  descriptionByLevel: []
   cooldownMax:
-  - 2
+  - 15
   resourceCost:
   - 0
   level: 0

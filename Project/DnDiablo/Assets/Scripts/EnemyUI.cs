@@ -31,7 +31,10 @@ public class EnemyUI : MonoBehaviour {
         if (healthBar != null)
         {
             healthBar.hardFill.fillAmount = (stats.healthCurrent / stats.healthMax);
-            healthBar.slowFill.fillAmount = (stats.healthCurrent / stats.healthMax); //temp
+            if (healthBar.slowFill.fillAmount != healthBar.hardFill.fillAmount)
+            {
+                healthBar.slowFill.fillAmount = Mathf.Lerp(healthBar.slowFill.fillAmount, healthBar.hardFill.fillAmount, Time.deltaTime * 5f);
+            }
         }
     }
 

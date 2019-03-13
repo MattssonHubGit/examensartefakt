@@ -1682,7 +1682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec8f6341b947b14298124d55106c67d, type: 3}
 --- !u!224 &1697230462 stripped
 RectTransform:
-  m_PrefabParentObject: {fileID: 224079511634834540, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+  m_PrefabParentObject: {fileID: 224734225846032340, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
     type: 2}
   m_PrefabInternal: {fileID: 709235417}
 --- !u!1 &1719909122
@@ -2333,7 +2333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2125840114
 Transform:
   m_ObjectHideFlags: 0
