@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 195762488242644412}
   - component: {fileID: 54779099818489952}
   m_Layer: 11
-  m_Name: MeleeSpearOne
+  m_Name: MeleeSpear1
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
