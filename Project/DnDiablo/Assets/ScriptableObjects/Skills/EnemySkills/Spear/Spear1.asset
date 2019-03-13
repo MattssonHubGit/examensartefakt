@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a173cdb516e154d836d63dfde42717, type: 3}
+  m_Name: Spear1
+  m_EditorClassIdentifier: 
+  skillName: Spear Stab
+  descriptionByLevel:
+  - 
+  cooldownMax:
+  - 1
+  resourceCost:
+  - 0
+  level: 0
+  range:
+  - 2
+  targetGround: 0
+  duration:
+  - 1.5
+  enemyWindDown:
+  - 1.5
+  damage: 10
+  stabSpeed: 1
+  stabGO: {fileID: 1658478620697744, guid: e7e48a1ccdddd7449988daa3bc161dd1, type: 2}
