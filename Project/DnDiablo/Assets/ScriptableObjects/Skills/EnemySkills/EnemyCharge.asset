@@ -11,6 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edbb267ab5293a849be9065aff59ba05, type: 3}
   m_Name: EnemyCharge
   m_EditorClassIdentifier: 
+  skillName: 
+  descriptionByLevel: []
   cooldownMax:
   - 5
   resourceCost:
@@ -22,11 +24,6 @@ MonoBehaviour:
   - 0
   level: 0
   range:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
   - 10
   targetGround: 0
   duration:

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 135067319129943836}
   - component: {fileID: 23322779049353688}
   - component: {fileID: 114206845925036170}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SelfDestructExplosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055e0b66cd7a0474b8bd5c610e1251f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  caster: {fileID: 0}
   damage: 0
   duration: 0
   expansionRate: {x: 0, y: 0, z: 0}
