@@ -214,7 +214,7 @@ public class Player : Entity {
             healthBar.hardFill.fillAmount = (myStats.healthCurrent / myStats.healthMax);
             if (healthBar.slowFill.fillAmount != healthBar.hardFill.fillAmount)
             {
-                healthBar.slowFill.fillAmount = Mathf.Lerp(healthBar.slowFill.fillAmount, healthBar.hardFill.fillAmount, Time.deltaTime);
+                healthBar.slowFill.fillAmount = Mathf.Lerp(healthBar.slowFill.fillAmount, healthBar.hardFill.fillAmount, Time.deltaTime * 5f);
             }
         }
 
@@ -224,7 +224,7 @@ public class Player : Entity {
             resourceBar.hardFill.fillAmount = (myStats.resourceCurrent / myStats.resourceMax);
             if (resourceBar.slowFill.fillAmount != resourceBar.hardFill.fillAmount)
             {
-                resourceBar.slowFill.fillAmount = Mathf.Lerp(resourceBar.slowFill.fillAmount, resourceBar.hardFill.fillAmount, Time.deltaTime);
+                resourceBar.slowFill.fillAmount = Mathf.Lerp(resourceBar.slowFill.fillAmount, resourceBar.hardFill.fillAmount, Time.deltaTime * 5f);
             }
         }
     }

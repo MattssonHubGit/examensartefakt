@@ -136,11 +136,11 @@ public class Enemy : Entity {
         myStatInUI = true;
     }
 
-    protected virtual void OnMouseExit()
+    /*protected virtual void OnMouseExit()
     {
         EnemyUI.Instance.Hide();
         myStatInUI = false;
-    }
+    }*/
 
     protected override void UseSkill(Skill skill)
     {
