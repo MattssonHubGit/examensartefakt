@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38667c30440d524f98bf95bb2e530a6, type: 3}
+  m_Name: MeleeSword4
+  m_EditorClassIdentifier: 
+  skillName: 
+  descriptionByLevel:
+  - 
+  cooldownMax:
+  - 0
+  resourceCost:
+  - 0
+  level: 0
+  range:
+  - 0
+  targetGround: 0
+  duration:
+  - 0
+  enemyWindDown:
+  - 0
+  swordGO: {fileID: 1809319637200184, guid: 9becc8826fc665f4e94a42dd741edcca, type: 2}
+  damage: 0
+  swingSpeed: 0

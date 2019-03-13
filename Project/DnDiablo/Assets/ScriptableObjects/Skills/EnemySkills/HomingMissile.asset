@@ -14,7 +14,7 @@ MonoBehaviour:
   skillName: 
   descriptionByLevel: []
   cooldownMax:
-  - 15
+  - 5
   resourceCost:
   - 0
   level: 0

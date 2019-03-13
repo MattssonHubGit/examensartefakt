@@ -13,7 +13,7 @@ public class Slash : Skill
     public override void Action(Vector3 targetPos, Entity caster)
     {
 
-        GameObject _sword = Instantiate(swordGO, caster.transform.position, (caster.transform.rotation *= Quaternion.Euler(0, 270, 0)));
+        GameObject _sword = Instantiate(swordGO, caster.transform.position, (caster.transform.rotation * Quaternion.Euler(0, 270, 0)));
         SlashBehaviour _slash = _sword.GetComponent<SlashBehaviour>();
 
         _slash.damage = damage;
