@@ -1578,6 +1578,7 @@ MonoBehaviour:
   target: {fileID: 0}
   mySkills:
   - {fileID: 11400000, guid: 99fd7154c27d6c04c9b065e53399b662, type: 2}
+  - {fileID: 11400000, guid: 7fdb68b0dffb3e44cada45419d9161bd, type: 2}
   spearGO: {fileID: 1176006896135492}
 --- !u!135 &135438870890567482
 SphereCollider:
