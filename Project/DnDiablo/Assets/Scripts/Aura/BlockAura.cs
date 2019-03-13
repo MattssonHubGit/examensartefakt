@@ -8,7 +8,7 @@ public class BlockAura : Aura {
     {
         target.GetComponent<Collider>().enabled = false;
         target.GetComponent<MeshRenderer>().enabled = false;
-        target.DisableMovement();
+        
     }
 
     public override void OnExpire()
@@ -20,5 +20,6 @@ public class BlockAura : Aura {
 
     public override void OnTick()
     {
+        target.DisableMovement();
     }
 }

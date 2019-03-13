@@ -11,13 +11,15 @@ public class SuicidingEnemy : Enemy {
 
     protected override void OnDeath()
     {
-        base.OnDeath();
 
         if (useSkillOnDeath && !hasDied)
         {
             hasDied = true;
             UseSkill(deathSkill);
         }
+
+        base.OnDeath();
+
     }
 
 

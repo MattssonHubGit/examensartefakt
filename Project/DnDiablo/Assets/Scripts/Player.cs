@@ -68,6 +68,9 @@ public class Player : Entity {
     protected override void Update()
     {
         base.Update();
+
+        CheckMovementStopper();
+
         MovementController();
 
         SkillCooldownManager();
@@ -247,6 +250,21 @@ public class Player : Entity {
     public override void EnableMovement()
     {
         agent.isStopped = false;
+    }
+
+    public void CheckMovementStopper()
+    {
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            DisableMovement();
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            EnableMovement();
+        }
+
     }
 
     protected override void Counter(Entity enemyToTarget, float amount)
