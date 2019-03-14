@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0022288b2a8b748a8b000d5aa1b961, type: 3}
+  m_Name: EnemyHealAOE 1
+  m_EditorClassIdentifier: 
+  skillName: 
+  descriptionByLevel: []
+  cooldownMax:
+  - 8
+  resourceCost:
+  - 0
+  level: 0
+  range:
+  - 10
+  targetGround: 0
+  duration:
+  - 2
+  enemyWindDown:
+  - 0
+  healAmount: 20
+  healGO: {fileID: 1291876112147080, guid: 31d11d7faac4dde428581d7ebc8a35f8, type: 2}
