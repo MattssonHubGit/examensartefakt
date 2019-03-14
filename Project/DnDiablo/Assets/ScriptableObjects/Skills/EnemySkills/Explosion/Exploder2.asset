@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c619e1db8cd6c4abb71dff95949f86, type: 3}
+  m_Name: Exploder2
+  m_EditorClassIdentifier: 
+  skillName: EXPLOSION
+  descriptionByLevel:
+  - EXPLODES!
+  cooldownMax:
+  - 1
+  resourceCost:
+  - 0
+  level: 0
+  range:
+  - 1.5
+  targetGround: 0
+  duration:
+  - 0
+  enemyWindDown:
+  - 0
+  damage: 1
+  explosionPrefab: {fileID: 1742931324543476, guid: 26589ddb28400f249a9d86e10135b265,
+    type: 2}
+  explosionDuration: 2
+  expansionRate: {x: 20, y: 20, z: 20}
