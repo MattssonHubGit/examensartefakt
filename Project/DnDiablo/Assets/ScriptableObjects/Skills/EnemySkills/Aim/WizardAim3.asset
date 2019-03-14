@@ -8,25 +8,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b76281a6d1c148e4091aa100127b6d13, type: 3}
-  m_Name: EnemyShot
+  m_Script: {fileID: 11500000, guid: b7a7ff35a3df48846bd146627315be38, type: 3}
+  m_Name: WizardAim3
   m_EditorClassIdentifier: 
-  skillName: EnemyShot
+  skillName: DeathLaser
   descriptionByLevel:
   - 
   cooldownMax:
-  - 0
+  - 5
   resourceCost:
   - 0
   level: 0
   range:
-  - 7
+  - 10
   targetGround: 0
   duration:
-  - 3
+  - 5
   enemyWindDown:
-  - 0.5
-  arrowPrefab: {fileID: 1589642004756450, guid: 67bfb395b46d36c45a87bf25ad71e2ec,
+  - 2
+  damagePerSecond: 2
+  firingDelay: 2
+  firingDuration: 3
+  laserObject: {fileID: 1110394149098942, guid: 2c28e182ade80b842a7d2df7d18956be,
     type: 2}
-  speed: 5
-  damage: 10
+  startSize: {x: 0.5, y: 50, z: 0.5}
+  firingSize: {x: 2, y: 50, z: 2}

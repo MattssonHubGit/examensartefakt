@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4384044603350810}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4740690932909946}
   - component: {fileID: 33483684954056038}
   - component: {fileID: 23420519140851568}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Hilt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1541343267539802
 GameObject:
   m_ObjectHideFlags: 1
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 4367323992986694}
   - component: {fileID: 33816456048563094}
   - component: {fileID: 23495445222452202}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Blade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 4118436409278374}
   - component: {fileID: 33080516743162794}
   - component: {fileID: 23774956279264744}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Crossguard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 4685365586447900}
   - component: {fileID: 33358754556215264}
   - component: {fileID: 23931361920754360}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}

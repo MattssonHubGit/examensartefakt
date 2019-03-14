@@ -8,25 +8,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b76281a6d1c148e4091aa100127b6d13, type: 3}
-  m_Name: EnemyShot
+  m_Script: {fileID: 11500000, guid: 4f12e3baa12a2094ea0f8b864aeac15e, type: 3}
+  m_Name: AimTeleport4
   m_EditorClassIdentifier: 
-  skillName: EnemyShot
+  skillName: AimTeleport
   descriptionByLevel:
   - 
   cooldownMax:
-  - 0
+  - 10
   resourceCost:
   - 0
   level: 0
   range:
-  - 7
+  - 5
   targetGround: 0
   duration:
-  - 3
+  - 0
   enemyWindDown:
-  - 0.5
-  arrowPrefab: {fileID: 1589642004756450, guid: 67bfb395b46d36c45a87bf25ad71e2ec,
-    type: 2}
-  speed: 5
-  damage: 10
+  - 1
+  teleportDistance: 5
