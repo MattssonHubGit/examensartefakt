@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 69c619e1db8cd6c4abb71dff95949f86, type: 3}
-  m_Name: Exploder3
+  m_Name: Exploder4
   m_EditorClassIdentifier: 
   skillName: EXPLOSION
   descriptionByLevel:

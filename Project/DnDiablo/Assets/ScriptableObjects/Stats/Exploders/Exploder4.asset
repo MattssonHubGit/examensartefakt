@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5da0a3afbd08a9d4481266405719ea09, type: 3}
-  m_Name: Exploder3
+  m_Name: Exploder4
   m_EditorClassIdentifier: 
   healthCurrent: 100
   healthBase: 100
