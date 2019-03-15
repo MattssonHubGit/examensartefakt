@@ -15,7 +15,7 @@ MonoBehaviour:
   descriptionByLevel:
   - 
   cooldownMax:
-  - 10
+  - 7
   resourceCost:
   - 0
   level: 0
@@ -26,4 +26,4 @@ MonoBehaviour:
   - 0
   enemyWindDown:
   - 1
-  teleportDistance: 5
+  teleportDistance: 7

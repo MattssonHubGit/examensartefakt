@@ -15,21 +15,21 @@ MonoBehaviour:
   descriptionByLevel:
   - 
   cooldownMax:
-  - 5
+  - 8
   resourceCost:
   - 0
   level: 0
   range:
-  - 10
+  - 15
   targetGround: 0
   duration:
   - 5
   enemyWindDown:
-  - 5
-  damagePerSecond: 2
+  - 6
+  damagePerSecond: 20
   firingDelay: 2
-  firingDuration: 3
+  firingDuration: 4
   laserObject: {fileID: 1110394149098942, guid: 2c28e182ade80b842a7d2df7d18956be,
     type: 2}
-  startSize: {x: 0.5, y: 50, z: 0.5}
-  firingSize: {x: 2, y: 50, z: 2}
+  startSize: {x: 0.1, y: 50, z: 0.1}
+  firingSize: {x: 1.5, y: 50, z: 1.5}

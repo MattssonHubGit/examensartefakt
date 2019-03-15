@@ -583,7 +583,7 @@ MonoBehaviour:
   canCast: 1
   target: {fileID: 0}
   mySkills:
-  - {fileID: 11400000, guid: 3ca9672f7bca76d4aa2dc06c3cb9aae5, type: 2}
+  - {fileID: 11400000, guid: a7a708f8096a09b4fbb25c7a149b276d, type: 2}
 --- !u!135 &135083890305026168
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -677,7 +677,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1690250867
+  randomSeed: -148294212
   InitialModule:
     serializedVersion: 3
     enabled: 1

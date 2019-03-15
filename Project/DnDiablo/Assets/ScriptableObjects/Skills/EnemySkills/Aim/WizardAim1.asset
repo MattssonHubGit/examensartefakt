@@ -15,12 +15,12 @@ MonoBehaviour:
   descriptionByLevel:
   - 
   cooldownMax:
-  - 2
+  - 2.5
   resourceCost:
   - 0
   level: 0
   range:
-  - 5
+  - 10
   targetGround: 0
   duration:
   - 3
@@ -28,5 +28,5 @@ MonoBehaviour:
   - 0
   arrowPrefab: {fileID: 1589642004756450, guid: 67bfb395b46d36c45a87bf25ad71e2ec,
     type: 2}
-  speed: 5
-  damage: 2
+  speed: 8
+  damage: 20

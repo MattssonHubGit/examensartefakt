@@ -14,6 +14,7 @@ public class EnemyChargeBehaviour : SpellBehaviour {
         if (_toDamage != null)
         {
             _toDamage.TakeDamage(damage, caster);
+            CameraController.Instance.AddShake(1.0f);
             caster.RemoveAura(auraToRemove);
             Destroy(this.gameObject);
         }

@@ -26,6 +26,6 @@ MonoBehaviour:
   - 2
   enemyWindDown:
   - 2
-  swordGO: {fileID: 1809319637200184, guid: 9becc8826fc665f4e94a42dd741edcca, type: 2}
-  damage: 10
+  swordGO: {fileID: 1151787341959840, guid: b3a8f0d69761a3e45ad378d7545f6f80, type: 2}
+  damage: 30
   swingSpeed: 90

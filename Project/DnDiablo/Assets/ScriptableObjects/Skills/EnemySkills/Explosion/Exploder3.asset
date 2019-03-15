@@ -20,14 +20,14 @@ MonoBehaviour:
   - 0
   level: 0
   range:
-  - 1.5
+  - 2
   targetGround: 0
   duration:
   - 0
   enemyWindDown:
   - 0
-  damage: 1
+  damage: 25
   explosionPrefab: {fileID: 1742931324543476, guid: 26589ddb28400f249a9d86e10135b265,
     type: 2}
   explosionDuration: 2
-  expansionRate: {x: 20, y: 20, z: 20}
+  expansionRate: {x: 15, y: 15, z: 15}
