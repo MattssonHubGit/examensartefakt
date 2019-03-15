@@ -27,3 +27,6 @@ MonoBehaviour:
   enemyWindDown:
   - 3
   teleportDistance: 15
+  teleportEffects: {fileID: 1221290295868620, guid: 1b1983145a2a9164ab5dadde45ddac5e,
+    type: 2}
+  effectsDuration: 2
