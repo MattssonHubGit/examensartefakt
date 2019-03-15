@@ -16,7 +16,7 @@ public class CloseReactionEnemy : Enemy {
 
         reactionSkill.CooldownManager(myStats);
 
-        if (distanceToPlayer <= reactionDistance)
+        if (distanceToPlayer <= reactionDistance && timeAfterAttack <= 0)
         {
             UseReactionalSkill();
         }
