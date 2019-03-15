@@ -15,7 +15,7 @@ MonoBehaviour:
   descriptionByLevel:
   - 
   cooldownMax:
-  - 2
+  - 4
   resourceCost:
   - 0
   level: 0
@@ -25,7 +25,7 @@ MonoBehaviour:
   duration:
   - 0
   enemyWindDown:
-  - 0
+  - 1
   chargeSpeed: 35
   chargeRange: 25
   damage: 20

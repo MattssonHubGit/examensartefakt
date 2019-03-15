@@ -51,8 +51,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4479863673821354}
+  - component: {fileID: 114591845004069090}
   - component: {fileID: 135805945711146092}
-  - component: {fileID: 114751524204431602}
   - component: {fileID: 195762488242644412}
   - component: {fileID: 54779099818489952}
   m_Layer: 11
@@ -1356,7 +1356,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114751524204431602
+--- !u!114 &114591845004069090
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1376,7 +1376,10 @@ MonoBehaviour:
   target: {fileID: 0}
   mySkills:
   - {fileID: 11400000, guid: 1b1b9e5498fb7c0438cda021b32c449c, type: 2}
-  spearGO: {fileID: 1695997068827062}
+  WeaponGO: {fileID: 1695997068827062}
+  hasCharge: 0
+  chargeSkill: {fileID: 0}
+  minimumChargeRange: 0
 --- !u!135 &135805945711146092
 SphereCollider:
   m_ObjectHideFlags: 1

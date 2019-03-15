@@ -153,8 +153,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4902933439890898}
+  - component: {fileID: 114631653865289470}
   - component: {fileID: 33085405802424734}
-  - component: {fileID: 114002467872403294}
   - component: {fileID: 136980497845430448}
   - component: {fileID: 23645630548426592}
   - component: {fileID: 195192056988273044}
@@ -1311,7 +1311,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &114002467872403294
+--- !u!114 &114631653865289470
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1319,7 +1319,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1504836344443300}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f31c71ca4dde3d949b9a794251ad97eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 7161d554220b6e3439035954411c1c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myStatsPrefab: {fileID: 11400000, guid: 2a3b9e6439e525047a86f48e555c1097, type: 2}
@@ -1331,7 +1331,10 @@ MonoBehaviour:
   target: {fileID: 0}
   mySkills:
   - {fileID: 11400000, guid: a0017670fb6cea24ab9809e9e9361d60, type: 2}
-  swordGO: {fileID: 1125060920457840}
+  WeaponGO: {fileID: 1125060920457840}
+  hasCharge: 0
+  chargeSkill: {fileID: 0}
+  minimumChargeRange: 0
 --- !u!136 &136980497845430448
 CapsuleCollider:
   m_ObjectHideFlags: 1

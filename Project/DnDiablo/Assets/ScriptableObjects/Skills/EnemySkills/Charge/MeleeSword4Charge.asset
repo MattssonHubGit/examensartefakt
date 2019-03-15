@@ -15,7 +15,7 @@ MonoBehaviour:
   descriptionByLevel:
   - 
   cooldownMax:
-  - 2
+  - 5
   resourceCost:
   - 0
   level: 0
@@ -26,7 +26,7 @@ MonoBehaviour:
   - 2
   enemyWindDown:
   - 2
-  chargeSpeed: 7.5
+  chargeSpeed: 15
   chargeRange: 15
   damage: 10
   chargeAura: {fileID: 11400000, guid: 9c53e74f7df8d5d4aa3adf31c24e5844, type: 2}

@@ -149,7 +149,7 @@ public class Enemy : Entity {
         {
             //Use my skill
             skill.Action(target.position, this);
-            timeAfterAttack = skillsToUse[currentSkillIndex].EnemyWindDown[0] + myStats.timeAfterAttack;
+            timeAfterAttack = skill.EnemyWindDown[0] + myStats.timeAfterAttack;
 
             //Give me a new skill. If I only have one it will always be the same
             SelectSkillToUse();
