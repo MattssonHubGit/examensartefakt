@@ -105,8 +105,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005474605634162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.22, y: 1.117, z: 2.68}
-  m_LocalScale: {x: 2.1023602, y: 2.1023595, z: 2.1023595}
+  m_LocalPosition: {x: -9, y: 0, z: 9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4898924959946336}
   m_Father: {fileID: 0}
@@ -133,7 +133,7 @@ Transform:
   m_GameObject: {fileID: 1375363131452514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4979945710547484}
   - {fileID: 4285432785017430}
@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 1933897851377652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.95131177, y: 0.951312, z: 0.951312}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4434802825338760}
   m_Father: {fileID: 4250271882124454}
@@ -252,10 +252,10 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1005474605634162}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.7
+  m_Radius: 3.67
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &195362439960595938
 NavMeshAgent:
@@ -265,7 +265,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1005474605634162}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 3.34
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
