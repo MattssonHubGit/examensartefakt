@@ -15,17 +15,17 @@ MonoBehaviour:
   descriptionByLevel:
   - 
   cooldownMax:
-  - 1
+  - 0.5
   resourceCost:
   - 0
   level: 0
   range:
-  - 2
+  - 4
   targetGround: 0
   duration:
-  - 1.5
+  - 0.4
   enemyWindDown:
-  - 1.5
-  damage: 10
-  stabSpeed: 1
+  - 0.2
+  damage: 15
+  stabSpeed: 4
   stabGO: {fileID: 1658478620697744, guid: e7e48a1ccdddd7449988daa3bc161dd1, type: 2}
