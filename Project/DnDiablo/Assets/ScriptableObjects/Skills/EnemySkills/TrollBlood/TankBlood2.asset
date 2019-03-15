@@ -14,58 +14,18 @@ MonoBehaviour:
   skillName: Troll Blood
   descriptionByLevel:
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
   cooldownMax:
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
+  - 15
   resourceCost:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
   - 0
   level: 0
   range:
   - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
   targetGround: 0
   duration:
-  - 3
-  - 3
-  - 3
-  - 3
-  - 3
-  - 3
-  - 3
-  - 3
-  - 3
-  - 3
-  enemyWindDown: []
+  - 5
+  enemyWindDown:
+  - 0
   bonusHealthRegen: 20
-  slowPercentage: 0.75
+  slowPercentage: 0.3
   trollBloodAura: {fileID: 11400000, guid: 5e7d258d07c7e084a991ed20d81e73c1, type: 2}
