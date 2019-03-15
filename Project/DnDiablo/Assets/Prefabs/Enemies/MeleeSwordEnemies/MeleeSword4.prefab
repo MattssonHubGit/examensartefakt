@@ -721,7 +721,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1135876799186782}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9, y: 0.62, z: -6}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_Children:
   - {fileID: 4968337639009162}
@@ -2026,7 +2026,7 @@ MonoBehaviour:
   WeaponGO: {fileID: 1907392838936502}
   hasCharge: 1
   chargeSkill: {fileID: 11400000, guid: 134e621e6f5d00144b0b3f34f0e9eab2, type: 2}
-  minimumChargeRange: 6
+  minimumChargeRange: 3
 --- !u!136 &136586044837366650
 CapsuleCollider:
   m_ObjectHideFlags: 1
