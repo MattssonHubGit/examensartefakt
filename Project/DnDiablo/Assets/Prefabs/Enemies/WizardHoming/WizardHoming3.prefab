@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 54815015127621028}
   - component: {fileID: 65167537252449338}
   m_Layer: 11
-  m_Name: EnemyWizard3
+  m_Name: WizardHoming3
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

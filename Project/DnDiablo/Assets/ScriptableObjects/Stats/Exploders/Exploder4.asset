@@ -11,11 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da0a3afbd08a9d4481266405719ea09, type: 3}
   m_Name: Exploder4
   m_EditorClassIdentifier: 
-  healthCurrent: 100
-  healthBase: 100
-  healthMax: 100
-  healthRegCurrent: 1
-  healthRegBase: 1
+  healthCurrent: 500
+  healthBase: 500
+  healthMax: 500
+  healthRegCurrent: 0
+  healthRegBase: 0
   healthDisplay: 5
   powerCurrent: 1
   powerBase: 1
@@ -29,9 +29,9 @@ MonoBehaviour:
   cooldownRedCurrent: 1
   cooldownRedBase: 1
   cooldownRedDisplay: 5
-  moveSpeedCurrent: 1
-  moveSpeedBase: 1
+  moveSpeedCurrent: 2
+  moveSpeedBase: 2
   moveSpeedDisplay: 5
   timeBeforeAttack: 0
   timeAfterAttack: 0
-  experienceForKill: 50
+  experienceForKill: 500

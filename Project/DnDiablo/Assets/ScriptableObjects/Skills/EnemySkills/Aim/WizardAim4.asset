@@ -25,7 +25,7 @@ MonoBehaviour:
   duration:
   - 5
   enemyWindDown:
-  - 2
+  - 5
   damagePerSecond: 2
   firingDelay: 2
   firingDuration: 3

@@ -340,7 +340,7 @@ GameObject:
   - component: {fileID: 54991401731100304}
   - component: {fileID: 65356558574221358}
   m_Layer: 11
-  m_Name: EnemyWizard4
+  m_Name: WizardHoming4
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
