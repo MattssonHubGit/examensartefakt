@@ -23,9 +23,9 @@ MonoBehaviour:
   - 2
   targetGround: 0
   duration:
-  - 1.5
+  - 0.4
   enemyWindDown:
-  - 1.5
-  damage: 10
-  stabSpeed: 1
+  - 0.5
+  damage: 8
+  stabSpeed: 3
   stabGO: {fileID: 1658478620697744, guid: e7e48a1ccdddd7449988daa3bc161dd1, type: 2}

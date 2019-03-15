@@ -12,7 +12,6 @@ public class HomingMissileBehaviour : SpellBehaviour
     [HideInInspector] public Transform target;
     [HideInInspector] public Collider casterCollider;
     [HideInInspector] public float maxDuration;
-    [HideInInspector] public Aura aura;
 
 
     // Use this for initialization
@@ -50,23 +49,6 @@ public class HomingMissileBehaviour : SpellBehaviour
                     _damagable.TakeDamage(damage, null);
                 }
                 CameraController.Instance.AddShake(0.1f);
-            }
-
-            //Did I hit an enitity (these can have auras)?
-            Entity targetEntity = other.GetComponent<Entity>();
-            if (targetEntity != null)
-            {
-                //Is the caster still alive?
-                if (caster != null)
-                {
-
-                    targetEntity.AddAura(aura, caster);
-                }
-                else
-                {
-
-                    targetEntity.AddAura(aura, null);
-                }
             }
 
 

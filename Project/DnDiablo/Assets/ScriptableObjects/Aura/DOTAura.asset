@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d2638fd784c7cf47aef67724787d0c5, type: 3}
   m_Name: DOTAura
   m_EditorClassIdentifier: 
-  duration: 2
+  duration: 0
   target: {fileID: 0}
-  damagePerSecond: 5
+  applier: {fileID: 0}
+  damagePerSecond: 0

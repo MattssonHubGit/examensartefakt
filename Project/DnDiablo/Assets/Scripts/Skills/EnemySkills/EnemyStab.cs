@@ -14,6 +14,7 @@ public class EnemyStab : Skill {
     public override void Action(Vector3 targetPos, Entity caster)
     {
         GameObject _stab = Instantiate(stabGO, caster.transform);
+        _stab.transform.LookAt(targetPos);
         EnemyStabBehaviour _ESB = _stab.GetComponent<EnemyStabBehaviour>();
 
         _ESB.damage = damage;
