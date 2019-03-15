@@ -34,7 +34,7 @@ public class FlamethrowerBehaviour : SpellBehaviour {
 
     private void RandomizeRotation()
     {
-        int rand = Random.Range(0, 1);
+        int rand = Random.Range(0, 2);
         if (rand == 0)
         {
             rotateSpeed *= -1f;
