@@ -13,8 +13,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Hack at Face
   descriptionByLevel:
-  - 
-  - 
+  - Deals 10 melee damage
+  - 'Increases damage a little
+
+
+    +5 Damage'
   - 
   - 
   - 
