@@ -11,8 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f12e3baa12a2094ea0f8b864aeac15e, type: 3}
   m_Name: HomingTeleport3
   m_EditorClassIdentifier: 
-  skillName: 
-  descriptionByLevel: []
+  skillName: ARGH!
+  descriptionByLevel:
+  - 
   cooldownMax:
   - 5
   resourceCost:
@@ -24,5 +25,5 @@ MonoBehaviour:
   duration:
   - 0
   enemyWindDown:
-  - 3
-  teleportDistance: 5
+  - 4
+  teleportDistance: 10

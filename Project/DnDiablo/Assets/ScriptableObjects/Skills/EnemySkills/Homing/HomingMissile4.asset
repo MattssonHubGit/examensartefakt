@@ -11,32 +11,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599a142d84f9c2342965be17108607d4, type: 3}
   m_Name: HomingMissile4
   m_EditorClassIdentifier: 
-  skillName: 
-  descriptionByLevel: []
+  skillName: Seeking Arcane Sphere
+  descriptionByLevel:
+  - 
   cooldownMax:
-  - 5
+  - 0.9
   resourceCost:
   - 0
   level: 0
   range:
-  - 10
+  - 32
   targetGround: 0
   duration:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
+  - 8
   enemyWindDown:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  projectilePrefab: {fileID: 1899451052250166, guid: 97ea54846bf037248afa1cb95eb1ab5c,
+  - 0.1
+  projectilePrefab: {fileID: 1899451052250166, guid: 3094dded4dba90a4e8abb94c4928c1ad,
     type: 2}
-  projectileSpeed: 0.1
-  projectileDamage: 10
-  aura: {fileID: 11400000, guid: c494a0eb2669a6247ada373985384b08, type: 2}
+  projectileSpeed: 0.2
+  projectileDamage: 3
