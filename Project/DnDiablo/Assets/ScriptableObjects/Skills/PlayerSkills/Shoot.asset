@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44da69126c67d12469d24c240ef9c8ec, type: 3}
-  m_Name: Shot
+  m_Name: Shoot
   m_EditorClassIdentifier: 
   skillName: Shoot
   descriptionByLevel:
@@ -59,7 +59,7 @@ MonoBehaviour:
   - 40
   - 40
   - 40
-  penetrateByLevel: 000001010101
+  penetrateByLevel: 010101010101
   damageByLevel:
   - 10
   - 10

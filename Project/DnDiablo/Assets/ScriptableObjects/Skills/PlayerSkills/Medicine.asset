@@ -49,7 +49,8 @@ MonoBehaviour:
   - 20
   - 20
   - 20
-  enemyWindDown: []
+  enemyWindDown:
+  - 0
   auraPrefab: {fileID: 11400000, guid: 88b98258852e45449a119b06eb69429b, type: 2}
   healthRegen:
   - 2

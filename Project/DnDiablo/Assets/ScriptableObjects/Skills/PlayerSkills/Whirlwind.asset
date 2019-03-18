@@ -65,7 +65,8 @@ MonoBehaviour:
   - 3
   - 3
   - 3
-  enemyWindDown: []
+  enemyWindDown:
+  - 0
   swordGO: {fileID: 1310976349847870, guid: 591252f74f8b7a64ea29e98d7febbf14, type: 2}
   damage: 10
   numberOfSpins: 10

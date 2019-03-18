@@ -67,7 +67,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4221616673954996}
   - component: {fileID: 33311382023651584}
-  - component: {fileID: 136743409319307544}
   - component: {fileID: 23687866349631820}
   m_Layer: 11
   m_Name: Body
@@ -3191,19 +3190,6 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &136743409319307544
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1049761709773522}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &195961109209732506
 NavMeshAgent:
