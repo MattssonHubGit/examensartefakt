@@ -49,7 +49,8 @@ MonoBehaviour:
   - 2
   - 2
   - 2
-  enemyWindDown: []
+  enemyWindDown:
+  - 0
   auraPrefab: {fileID: 11400000, guid: cdb629858eafc1943a25557db5c6568f, type: 2}
   arrowPrefab: {fileID: 1967720493659070, guid: ae368833535d84b4ba5703c92fdf955e,
     type: 2}

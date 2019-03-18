@@ -62,7 +62,7 @@ MonoBehaviour:
   penetrateByLevel: 000001010101
   slowByLevel: 010101010101
   slowPercantageByLevel:
-  - 0.1
+  - 0.5
   - 0.1
   - 0.3
   - 0.3
