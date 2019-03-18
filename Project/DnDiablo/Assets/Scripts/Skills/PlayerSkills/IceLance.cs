@@ -9,7 +9,7 @@ public class IceLance : Skill
     [SerializeField] private GameObject lancePrefab;
     [Header("Movement")]
     [SerializeField] private List<float> speedByLevel = new List<float>();
-    [SerializeField] private List<bool> penetrateByLevel = new List<bool>();
+    [SerializeField] private List<bool> pierceByLevel = new List<bool>();
     [Header("Slow")]
     [SerializeField] private List<bool> slowByLevel = new List<bool>();
     [SerializeField] [Range(0f, 1f)] private List<float> slowPercantageByLevel = new List<float>();
@@ -29,7 +29,7 @@ public class IceLance : Skill
         _dir.Normalize();
         _scrLance.direction = _dir;
         _scrLance.speed = speedByLevel[level];
-        _scrLance.penetrate = penetrateByLevel[level];
+        _scrLance.pierce = pierceByLevel[level];
         _objLance.transform.rotation = Quaternion.LookRotation(_dir);
 
         //Stats

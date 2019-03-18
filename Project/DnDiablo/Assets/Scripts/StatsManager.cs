@@ -7,17 +7,17 @@ using UnityEngine.UI;
 public class StatsManager : MonoBehaviour {
 
     [Header("Upgrade Amounts")]
-    [SerializeField] private float healthIncreasePerLevel = 50f;
-    [SerializeField] private float healthRegIncreasePerLevel = 0.5f;
+    [SerializeField] public float healthIncreasePerLevel = 50f;
+    [SerializeField] public float healthRegIncreasePerLevel = 0.5f;
     [Space]
-    [SerializeField] private float powerIncreasePerLevel = 0.5f;
+    [SerializeField] public float powerIncreasePerLevel = 0.5f;
     [Space]
-    [SerializeField] private float resourceIncreasePerLevel = 50f;
-    [SerializeField] private float resourceRegIncreasePerLevel = 0.5f;
+    [SerializeField] public float resourceIncreasePerLevel = 50f;
+    [SerializeField] public float resourceRegIncreasePerLevel = 0.5f;
     [Space]
-    [SerializeField] private float cooldownRedIncreasePerLevel = 0.3f;
+    [SerializeField] public float cooldownRedIncreasePerLevel = 0.3f;
     [Space]
-    [SerializeField] private float moveSpeedIncreasePerLevel = 2f;
+    [SerializeField] public float moveSpeedIncreasePerLevel = 2f;
 
     [Header("Stat Display Areas")]
     [SerializeField] private Text healthTxt;

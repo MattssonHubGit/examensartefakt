@@ -8,6 +8,7 @@ public class CripplingShotBehaviour : SpellBehaviour
     [Header("Movement")]
     [HideInInspector] public float speed;
     [HideInInspector] public Vector3 direction;
+    [HideInInspector] public bool pierce = false;
     [SerializeField] private float rotateSpeed;
 
     [Header("Stats")]
@@ -53,9 +54,16 @@ public class CripplingShotBehaviour : SpellBehaviour
                 _target.AddAura(_slow, caster);
             }
 
+
+            //Keep going if penetrating enemies
+            if (!pierce)
+            {
+                Destroy(this.gameObject);
+            }
         }
-
-
-        Destroy(this.gameObject);
+        else //Will not penetrate walls
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

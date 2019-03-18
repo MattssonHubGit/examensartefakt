@@ -8,7 +8,7 @@ public class IceLanceBehaviour : SpellBehaviour
     [Header("Movement")]
     [HideInInspector] public float speed;
     [HideInInspector] public Vector3 direction;
-    [HideInInspector] public bool penetrate = false;
+    [HideInInspector] public bool pierce = false;
 
     [Header("Stats")]
     [HideInInspector] public float damage;
@@ -48,7 +48,7 @@ public class IceLanceBehaviour : SpellBehaviour
 
 
             //Keep going if penetrating enemies
-            if (!penetrate) 
+            if (!pierce) 
             {
                 Destroy(this.gameObject);
             }
