@@ -16,7 +16,7 @@ public abstract class CounterAura : Aura
 
     public override void OnTick()
     {
-
+        target.lookingToCounter = true;
     }
 
     public abstract void Counter(Entity caster, Entity target, float damageTaken);

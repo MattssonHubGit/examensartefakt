@@ -28,8 +28,6 @@ public class CounterShotArua : CounterAura
         //Stats
         _scrArrow.damage = (damageMultiplier * damageMultiplier);
 
-        //Remove Aura from caster
-        target.RemoveAura(this);
 
 
         //Destroy object after duration is up              

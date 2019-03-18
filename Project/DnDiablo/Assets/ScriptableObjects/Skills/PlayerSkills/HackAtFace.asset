@@ -50,7 +50,25 @@ MonoBehaviour:
   targetGround: 0
   duration:
   - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
   enemyWindDown: []
   axeGO: {fileID: 1971436912878056, guid: 801a892be724f2b40a9ba04aadb268db, type: 2}
-  damage: 20
+  damageByLevel:
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
   swingSpeed: 360
+  scaleByLevel:
+  - 1
+  - 2
+  - 1
+  - 1
+  - 1
+  - 1

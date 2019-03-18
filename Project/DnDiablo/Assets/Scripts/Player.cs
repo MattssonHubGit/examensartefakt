@@ -285,6 +285,7 @@ public class Player : Entity {
             {
                 CounterAura _counter = auraList[i] as CounterAura;
                 _counter.Counter(this, enemyToTarget, amount);
+                auraList.Remove(_counter);
                 break;
             }
         }

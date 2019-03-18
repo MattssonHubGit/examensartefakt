@@ -43,7 +43,7 @@ MonoBehaviour:
   - 10
   targetGround: 0
   duration:
-  - 20
+  - 3
   - 20
   - 20
   - 20
@@ -51,7 +51,7 @@ MonoBehaviour:
   - 20
   enemyWindDown:
   - 0
-  auraPrefab: {fileID: 11400000, guid: 88b98258852e45449a119b06eb69429b, type: 2}
+  auraRegenPrefab: {fileID: 11400000, guid: 88b98258852e45449a119b06eb69429b, type: 2}
   healthRegen:
   - 2
   - 2
@@ -59,3 +59,8 @@ MonoBehaviour:
   - 2
   - 2
   - 2
+  increaseStatsByLevel: 010000000000
+  auraStatIncreasePrefab: {fileID: 11400000, guid: c1c7668981d38fa468aad565983dbb3a,
+    type: 2}
+  typesToIncrease: 0300000004000000
+  amountToIncreaseWith: 10
