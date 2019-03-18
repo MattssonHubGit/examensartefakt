@@ -33,7 +33,7 @@ public class IceLance : Skill
         _objLance.transform.rotation = Quaternion.LookRotation(_dir);
 
         //Stats
-        _scrLance.damage = (damageByLevel[level] * caster.myStats.powerCurrent);
+        _scrLance.damage = damageByLevel[level];
         _scrLance.slow = slowByLevel[level];
         _scrLance.slowDuration = slowDurationByLevel[level];
         _scrLance.slowPercentage = slowPercantageByLevel[level];

@@ -29,7 +29,7 @@ public class Shot : Skill
 
 
         //Stats
-        _scrArrow.damage = (damageByLevel[level] * caster.myStats.powerCurrent);
+        _scrArrow.damage = damageByLevel[level];
 
         //Destroy object after duration is up
         Destroy(_objArrow, duration[level]);

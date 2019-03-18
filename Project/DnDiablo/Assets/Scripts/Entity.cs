@@ -38,14 +38,15 @@ public abstract class Entity : MonoBehaviour, IDamageable {
 
     public virtual void TakeDamage(float amount, Entity damageDealer)
     {
+        float _damageToDeal = (amount * damageDealer.myStats.powerCurrent);
         if (lookingToCounter)
         {
             lookingToCounter = false;
-            Counter(damageDealer, amount);
+            Counter(damageDealer, _damageToDeal);
             return;
         }
 
-        myStats.healthCurrent -= amount;
+        myStats.healthCurrent -= _damageToDeal;
 
         if (myStats.healthCurrent <= 0)
         {

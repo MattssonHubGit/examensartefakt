@@ -34,7 +34,7 @@ public class ArcaneSphere : Skill
         _objSphere.transform.localScale *= radiusPercantageByLevel[level];
 
         //Stats
-        _scrSphere.damagePerSec = (damagePerSecByLevel[level] * caster.myStats.powerCurrent);
+        _scrSphere.damagePerSec = damagePerSecByLevel[level];
 
         //Destroy object after duration is up
         Destroy(_objSphere, duration[level]);

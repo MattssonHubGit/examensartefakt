@@ -50,7 +50,7 @@ public class Flamethrower : Skill {
                 _objFlame.transform.rotation = Quaternion.LookRotation(_dir);
                 
                 //Stats
-                _FB.damage = (damage * caster.myStats.powerCurrent);
+                _FB.damage = damage;
                 _FB.speed = speed;
 
                 //Destroy object after duration is up

@@ -13,6 +13,7 @@ public class FireballBehaviour : SpellBehaviour
     [HideInInspector] public float damage = 0;
     [HideInInspector] public float areaRadius = 2;
     [HideInInspector] public float explosionDuration = 0.3f;
+    [HideInInspector] public Vector3 expansionRate;
     [Space]
     [SerializeField] private GameObject explosionPrefab;
 
@@ -26,11 +27,11 @@ public class FireballBehaviour : SpellBehaviour
     {
         //Create explosion and set up stats
         GameObject _objExplosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-        SimpleDamageOnTriggerEnter _scrExplosion = _objExplosion.GetComponent<SimpleDamageOnTriggerEnter>();
+        FireballExplosionBehaviour _scrExplosion = _objExplosion.GetComponent<FireballExplosionBehaviour>();
 
-        _scrExplosion.damageAmount = damage;
+        _scrExplosion.damage = damage;
         _scrExplosion.caster = caster;
-        _objExplosion.transform.localScale = new Vector3(areaRadius, areaRadius, areaRadius);
+        _scrExplosion.startSize = transform.localScale;
 
         //Destroy self and explosion
         Destroy(_objExplosion, explosionDuration);

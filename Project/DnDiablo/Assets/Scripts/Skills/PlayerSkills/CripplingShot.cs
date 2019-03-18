@@ -30,7 +30,7 @@ public class CripplingShot : Skill
         _objArrow.transform.rotation = Quaternion.LookRotation(_dir);
 
         //Stats
-        _scrArrow.damage = (damageByLevel[level] * caster.myStats.powerCurrent);
+        _scrArrow.damage = damageByLevel[level];
         _scrArrow.slow = slowByLevel[level];
         _scrArrow.slowDuration = slowDurationByLevel[level];
         _scrArrow.slowPercentage = slowPercantageByLevel[level];

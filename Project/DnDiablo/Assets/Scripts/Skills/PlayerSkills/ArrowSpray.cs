@@ -57,7 +57,7 @@ public class ArrowSpray : Skill
                 }
 
                 //Stats
-                _scrArrow.damage = (damageByLevel[level] * caster.myStats.powerCurrent);
+                _scrArrow.damage = damageByLevel[level];
                 _scrArrow.speed = speedByLevel[level];
 
                 //Destroy object after duration is up

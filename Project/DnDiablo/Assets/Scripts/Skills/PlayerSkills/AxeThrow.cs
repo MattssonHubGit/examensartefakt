@@ -29,7 +29,7 @@ public class AxeThrow : Skill
         _objAxe.transform.rotation = Quaternion.LookRotation(_dir);
 
         //Stats
-        _scrAxe.damage = (damageByLevel[level] * caster.myStats.powerCurrent);
+        _scrAxe.damage = damageByLevel[level];
 
         //Destroy object after duration is up
         Destroy(_objAxe, duration[level]);

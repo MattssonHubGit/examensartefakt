@@ -11,6 +11,7 @@ public class Fireball : Skill {
 
     [SerializeField] private List<float> explosionDamageByLevel = new List<float>();
     [SerializeField] private List<float> explosionRadiusByLevel = new List<float>();
+    [SerializeField] private List<Vector3> explosionExpansionByLevel = new List<Vector3>();
 
     public override void Action(Vector3 targetPos, Entity caster)
     {
@@ -26,7 +27,7 @@ public class Fireball : Skill {
         _fireball.speed = moveSpeed;
 
         //Stats
-        _fireball.damage = (explosionDamageByLevel[level] * caster.myStats.powerCurrent);
+        _fireball.damage = explosionDamageByLevel[level];
         _fireball.areaRadius = explosionRadiusByLevel[level];
 
         //Destroy object after duration is up
