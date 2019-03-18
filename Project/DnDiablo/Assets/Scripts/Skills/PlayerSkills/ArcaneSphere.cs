@@ -10,7 +10,7 @@ public class ArcaneSphere : Skill
     [Space]
     [SerializeField] private List<float> damagePerSecByLevel = new List<float>();
     [Space]
-    [SerializeField] [Range(0, 3)] private List<float> radiusPercantageByLevel = new List<float>();
+    [SerializeField] [Range(0, 10)] private List<float> radiusPercantageByLevel = new List<float>();
 
     public override void Action(Vector3 targetPos, Entity caster)
     {

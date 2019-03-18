@@ -52,9 +52,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4479863673821354}
   - component: {fileID: 114591845004069090}
-  - component: {fileID: 135805945711146092}
   - component: {fileID: 195762488242644412}
   - component: {fileID: 54779099818489952}
+  - component: {fileID: 136959945539289832}
   m_Layer: 11
   m_Name: MeleeSpear1
   m_TagString: enemy
@@ -1358,6 +1358,7 @@ MonoBehaviour:
   lookingToCounter: 0
   canMove: 1
   canCast: 1
+  canTakeDamage: 1
   target: {fileID: 0}
   mySkills:
   - {fileID: 11400000, guid: 1b1b9e5498fb7c0438cda021b32c449c, type: 2}
@@ -1365,8 +1366,8 @@ MonoBehaviour:
   hasCharge: 0
   chargeSkill: {fileID: 0}
   minimumChargeRange: 0
---- !u!135 &135805945711146092
-SphereCollider:
+--- !u!136 &136959945539289832
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -1374,9 +1375,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_Height: 3.0640752
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0320376, z: 0}
 --- !u!195 &195762488242644412
 NavMeshAgent:
   m_ObjectHideFlags: 1

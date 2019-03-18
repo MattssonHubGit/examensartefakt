@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Hack at Face
   descriptionByLevel:
-  - Deals 10 melee damage
+  - Strike enemies in front of you for damage.
   - 'Increases damage a little
 
 
@@ -23,27 +23,19 @@ MonoBehaviour:
   - 
   - 
   cooldownMax:
-  - 0.1
-  - 0.1
-  - 0.1
-  - 0.1
-  - 0.1
-  - 0.1
-  - 0.1
-  - 0.1
-  - 0.1
-  - 0.1
+  - 0.5
+  - 0.5
+  - 0.25
+  - 0.25
+  - 0.25
+  - 0.25
   resourceCost:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
   level: 0
   range:
   - 0
@@ -55,20 +47,21 @@ MonoBehaviour:
   - 0.25
   - 0.25
   - 0.25
-  enemyWindDown: []
+  enemyWindDown:
+  - 0
   axeGO: {fileID: 1971436912878056, guid: 801a892be724f2b40a9ba04aadb268db, type: 2}
   damageByLevel:
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
+  - 25
+  - 30
+  - 35
+  - 40
+  - 45
+  - 50
   swingSpeed: 360
   scaleByLevel:
-  - 1
-  - 2
-  - 1
-  - 1
-  - 1
-  - 1
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  - 1.5
+  - 2.2

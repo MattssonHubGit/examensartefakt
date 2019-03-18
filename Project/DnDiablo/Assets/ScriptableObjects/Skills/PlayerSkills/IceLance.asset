@@ -13,22 +13,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Ice Lance
   descriptionByLevel:
-  - 
+  - Chuck a spear of ice forward, damaging and slowing the first enemy hit.
   - 
   - 
   - 
   - 
   - 
   cooldownMax:
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
+  - 2
   resourceCost:
-  - 10
-  - 10
+  - 20
+  - 20
   - 10
   - 10
   - 10
@@ -53,28 +53,28 @@ MonoBehaviour:
   lancePrefab: {fileID: 1718255711474218, guid: 8790cf7a9e59cca489dd9b43de4ad4c0,
     type: 2}
   speedByLevel:
-  - 25
-  - 25
-  - 25
-  - 25
-  - 25
-  - 25
+  - 40
+  - 40
+  - 40
+  - 40
+  - 40
+  - 40
   pierceByLevel: 000000000001
   slowByLevel: 010101010101
   slowPercantageByLevel:
+  - 0.3
+  - 0.4
   - 0.5
-  - 0.1
-  - 0.3
-  - 0.3
-  - 0.3
-  - 0.5
+  - 0.6
+  - 0.7
+  - 0.8
   slowDurationByLevel:
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
+  - 3
   damageByLevel:
   - 15
   - 15

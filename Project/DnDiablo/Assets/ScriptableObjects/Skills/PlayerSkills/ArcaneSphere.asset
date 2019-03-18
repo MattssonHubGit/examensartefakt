@@ -13,56 +13,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Arcane Sphere
   descriptionByLevel:
-  - 
+  - Creates a Sphere at target location that damages enemies walking into it.
   - 
   - 
   - 
   - 
   - 
   cooldownMax:
-  - 0.7
-  - 0.7
-  - 0.7
-  - 0.7
-  - 0.7
-  - 0.7
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
   resourceCost:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
   level: 0
   range:
-  - 4
-  - 4
-  - 4
-  - 4
-  - 4
-  - 4
+  - 12
+  - 12
+  - 12
+  - 12
+  - 12
+  - 12
   targetGround: 0
   duration:
-  - 2
-  - 2
-  - 2
-  - 2
-  - 2
-  - 2
-  enemyWindDown: []
+  - 3
+  - 3.5
+  - 4
+  - 4.5
+  - 5
+  - 5.5
+  enemyWindDown:
+  - 0
   spherePrefab: {fileID: 1244416713237818, guid: 3123f1ff43a4ae94cbed00d20d5b54af,
     type: 2}
   damagePerSecByLevel:
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 20
   radiusPercantageByLevel:
-  - 1
   - 2
-  - 3
-  - 1
-  - 1
-  - 1
+  - 2
+  - 6
+  - 6
+  - 6
+  - 6

@@ -15,7 +15,7 @@ MonoBehaviour:
   descriptionByLevel:
   - 
   cooldownMax:
-  - 15
+  - 35
   resourceCost:
   - 0
   level: 0

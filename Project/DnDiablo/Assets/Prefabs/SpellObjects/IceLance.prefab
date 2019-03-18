@@ -98,7 +98,7 @@ Transform:
   m_GameObject: {fileID: 1433560784463056}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.4, z: 0.1}
+  m_LocalScale: {x: 0.1, y: 0.98603266, z: 0.1}
   m_Children:
   - {fileID: 4221233710978806}
   m_Father: {fileID: 4663998081123296}
@@ -212,9 +212,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d14cff2373065a543aaa9caa49607060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  caster: {fileID: 0}
   speed: 0
   direction: {x: 0, y: 0, z: 0}
-  penetrate: 0
+  pierce: 0
   damage: 0
   slow: 0
   slowPercentage: 0
@@ -230,6 +231,6 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.15
-  m_Height: 1.12
+  m_Height: 2.14
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.06}

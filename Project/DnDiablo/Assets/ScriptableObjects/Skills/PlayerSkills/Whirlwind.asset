@@ -11,42 +11,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8afe1f6f7a8324cb8996c3dab14fb7, type: 3}
   m_Name: Whirlwind
   m_EditorClassIdentifier: 
-  skillName: Whirlwind
+  skillName: Bladestorm
   descriptionByLevel:
-  - 
+  - Spin a sword around you, dealing damage to any enemy coming too close.
   - 
   - 
   - 
   - 
   - 
   cooldownMax:
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
+  - 7
   resourceCost:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 50
+  - 50
+  - 50
+  - 50
+  - 50
+  - 50
   level: 0
   range:
-  - 0
-  - 0
-  - 0
-  - 0
   - 0
   - 0
   - 0
@@ -60,13 +48,21 @@ MonoBehaviour:
   - 3
   - 3
   - 3
-  - 3
-  - 3
-  - 3
-  - 3
-  - 3
+  - 5
   enemyWindDown:
   - 0
   swordGO: {fileID: 1310976349847870, guid: 591252f74f8b7a64ea29e98d7febbf14, type: 2}
-  damage: 10
-  numberOfSpins: 10
+  damageByLevel:
+  - 5
+  - 5.5
+  - 6
+  - 6.5
+  - 7
+  - 7.5
+  numberOfSpinsByLevel:
+  - 10
+  - 10
+  - 15
+  - 15
+  - 15
+  - 25

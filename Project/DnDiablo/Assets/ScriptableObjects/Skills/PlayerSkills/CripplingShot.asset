@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Crippling Shot
   descriptionByLevel:
-  - 
+  - Fire a low flying arrow, damaging the first enemy hit and slowing them based on
+    their current speed.
   - 
   - 
   - 
@@ -27,12 +28,12 @@ MonoBehaviour:
   - 2
   - 2
   resourceCost:
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
   level: 0
   range:
   - 10
@@ -49,7 +50,8 @@ MonoBehaviour:
   - 10
   - 10
   - 10
-  enemyWindDown: []
+  enemyWindDown:
+  - 0
   arrowPrefab: {fileID: 1733093221239654, guid: 4ee3f24889e8aae4197423e0dc496b4c,
     type: 2}
   speedByLevel:
@@ -59,21 +61,21 @@ MonoBehaviour:
   - 40
   - 40
   - 40
-  pierceByLevel: 010000000000
+  pierceByLevel: 000000000001
   slowByLevel: 010101010101
   slowPercantageByLevel:
-  - 2
-  - 2
+  - 0.7
+  - 0.7
   - 2
   - 2
   - 2
   - 2
   slowDurationByLevel:
-  - 4
-  - 4
-  - 4
-  - 4
-  - 4
+  - 1.5
+  - 2
+  - 2.5
+  - 3
+  - 3.5
   - 4
   damageByLevel:
   - 15

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Arrow Spray
   descriptionByLevel:
-  - 'I '
+  - Wildly fire a quick succession of arrows in a cone in front of you, damaging enemies.
   - am
   - level
   - 3
@@ -27,12 +27,12 @@ MonoBehaviour:
   - 5
   - 5
   resourceCost:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
+  - 40
+  - 40
+  - 40
+  - 40
+  - 40
+  - 40
   level: 0
   range:
   - 10
@@ -44,12 +44,13 @@ MonoBehaviour:
   targetGround: 0
   duration:
   - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  - 0.5
-  enemyWindDown: []
+  - 1
+  - 1.5
+  - 2
+  - 2.5
+  - 3
+  enemyWindDown:
+  - 0
   arrowPrefab: {fileID: 1534681985412958, guid: b279a816f1b77294194dc1b69f79e6e8,
     type: 2}
   speedByLevel:
@@ -59,7 +60,7 @@ MonoBehaviour:
   - 20
   - 20
   - 20
-  arrowsByLevel: 0f0000000f0000000f0000000f0000000f0000000f000000
+  arrowsByLevel: 0f0000000f0000001e0000001e0000001e0000001e000000
   intervalSpeed:
   - 0.1
   - 0.1
@@ -81,4 +82,4 @@ MonoBehaviour:
   - 2
   - 2
   - 2
-  - 2
+  - 4
