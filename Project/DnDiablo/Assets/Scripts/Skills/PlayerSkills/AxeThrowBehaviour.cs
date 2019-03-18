@@ -9,7 +9,7 @@ public class AxeThrowBehaviour : SpellBehaviour
     [HideInInspector] public float speed;
     [HideInInspector] public Vector3 direction;
     [HideInInspector] public bool penetrate = false;
-    [SerializeField] private float rotateSpeed;
+    [SerializeField] public float rotateSpeed;
 
     [Header("Stats")]
     [HideInInspector] public float damage;

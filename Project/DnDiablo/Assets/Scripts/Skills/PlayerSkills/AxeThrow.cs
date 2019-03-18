@@ -31,6 +31,7 @@ public class AxeThrow : Skill
 
             AxeThrowBehaviour _scrAxe = _objAxe.GetComponent<AxeThrowBehaviour>();
             _scrAxe.caster = caster;
+            float _randF = Random.Range(0.9f, 1.2f);
 
             //Movement
             Vector3 _dir = targetPos - caster.transform.position;
@@ -38,6 +39,7 @@ public class AxeThrow : Skill
             _scrAxe.direction = _dir;
             _scrAxe.speed = speedByLevel[level];
             _scrAxe.penetrate = penetrateByLevel[level];
+            _scrAxe.rotateSpeed *= _randF;
             _objAxe.transform.rotation = Quaternion.LookRotation(_dir);
 
             //Stats
