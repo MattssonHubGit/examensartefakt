@@ -50,3 +50,13 @@ MonoBehaviour:
   - 10
   - 10
   enemyWindDown: []
+  statAura: {fileID: 11400000, guid: c1c7668981d38fa468aad565983dbb3a, type: 2}
+  powerIncreasesByLevel: 000000000000000005000000050000000500000005000000
+  auraDurationByLevel:
+  - 0
+  - 0
+  - 5
+  - 5
+  - 5
+  - 5
+  increasePowerByLevel: 000001010101

@@ -59,7 +59,7 @@ MonoBehaviour:
   - 40
   - 40
   - 40
-  penetrateByLevel: 010101010101
+  penetrateByLevel: 000000010101
   damageByLevel:
   - 10
   - 10

@@ -36,7 +36,7 @@ public class ShotBehaviour : SpellBehaviour
         IDamageable _toDamage = other.gameObject.GetComponent<IDamageable>();
         if (_toDamage != null)
         {
-
+            Debug.Log(damage);
             Debug.Log("_toDamage != null");
             _toDamage.TakeDamage(damage, caster);
             if (!penetrate) //Keep going if penetrating enemies
