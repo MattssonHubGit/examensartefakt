@@ -13,6 +13,12 @@ public class LeapAura : Aura
     public float trajectoryHeight;
     private float incrementor;
 
+    public bool damageOnLand = false;
+    public GameObject damageObjectPrefab;
+    public float damage;
+    public float damageObjDuration = 0.3f;
+
+
     public override void OnApply()
     {
         agent = caster.GetComponent<NavMeshAgent>();
@@ -30,6 +36,11 @@ public class LeapAura : Aura
         agent.enabled = true;
         
         agent.Warp(caster.transform.position);
+
+        if (damageOnLand)
+        {
+            SpawnDamageObject();
+        }
     }
 
     public override void OnTick()
@@ -50,4 +61,16 @@ public class LeapAura : Aura
         // finally assign the computed position to our gameObject:
         caster.transform.position = currentPos;
     }
+
+    private void SpawnDamageObject()
+    {
+        GameObject _damObj = Instantiate(damageObjectPrefab, target.transform.position, Quaternion.identity);
+        SimpleDamageOnTriggerEnter _damScr = _damObj.GetComponent<SimpleDamageOnTriggerEnter>();
+
+        _damScr.damageAmount = damage;
+
+        Destroy(_damObj, damageObjDuration);
+
+    }
+
 }

@@ -6,8 +6,15 @@ using UnityEngine.AI;
 [CreateAssetMenu()]
 public class Leap : Skill
 {
+    [Header("Skill specific")]
     [SerializeField] private LeapAura leapAura;
     [SerializeField] private float trajectoryHeight;
+
+    [Header("DamageObject")]
+    [SerializeField] private List<bool> damageOnLandByLevel = new List<bool>();
+    [SerializeField] private GameObject damageObjectPrefab;
+    [SerializeField] private List<float> damageByLevel = new List<float>();
+    [SerializeField] private float damageObjectDuration = 0.3f;
 
     public override bool AttemptCast(Entity caster)
     {
@@ -55,6 +62,11 @@ public class Leap : Skill
         _aura.startPos = caster.transform.position;
         
         _aura.trajectoryHeight = trajectoryHeight;
+
+        _aura.damageObjectPrefab = damageObjectPrefab;
+        _aura.damageOnLand = damageOnLandByLevel[level];
+        _aura.damage = damageByLevel[level];
+        _aura.damageObjDuration = damageObjectDuration;
 
         caster.AddAura(_aura, caster);
             

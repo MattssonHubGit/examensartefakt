@@ -68,3 +68,14 @@ MonoBehaviour:
   enemyWindDown: []
   leapAura: {fileID: 11400000, guid: 5ca10cb6d4e0a984f955020737170fee, type: 2}
   trajectoryHeight: 5
+  damageOnLandByLevel: 000100000000
+  damageObjectPrefab: {fileID: 1582888041135780, guid: 7733c12ba52f226409d77e6c3e3b27b2,
+    type: 2}
+  damageByLevel:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  damageObjectDuration: 2

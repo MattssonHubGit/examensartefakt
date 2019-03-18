@@ -5,14 +5,26 @@ using UnityEngine;
 //[CreateAssetMenu()]
 public class Block : Skill {
 
-    [SerializeField] private BlockAura auraPrefab;
+    [Header("Skill Specific")]
+    [SerializeField] private BlockAura blockAuraPrefab;
+    [Space]
+    [SerializeField] private SlowAura slowAuraPrefab;
+    [SerializeField] [Range(0f, 3f)] private List<float> slowPercentageByLevel = new List<float>();
+
+
 
     public override void Action(Vector3 targetPos, Entity caster)
     {
-        BlockAura _aura = Instantiate(auraPrefab);
+        //Disable damage
+        BlockAura _block = Instantiate(blockAuraPrefab);
+        _block.Duration = duration[level];
+        caster.AddAura(_block, caster);
+        
+        //Slow
+        SlowAura _slow = Instantiate(slowAuraPrefab);
+        _slow.slowPercentage = slowPercentageByLevel[level];
+        _slow.Duration = duration[level];
+        caster.AddAura(_slow, caster);
 
-        _aura.Duration = duration[level];
-
-        caster.AddAura(_aura, caster);
     }
 }

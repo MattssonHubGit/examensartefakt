@@ -13,6 +13,7 @@ public abstract class Entity : MonoBehaviour, IDamageable {
 
     [HideInInspector] public bool canMove = true;
     [HideInInspector] public bool canCast = true;
+    [HideInInspector] public bool canTakeDamage = true;
 
 
     #region GetSetters
@@ -38,21 +39,25 @@ public abstract class Entity : MonoBehaviour, IDamageable {
 
     public virtual void TakeDamage(float amount, Entity damageDealer)
     {
-        float _damageToDeal = (amount * damageDealer.myStats.powerCurrent);
-        if (lookingToCounter)
+        if (canTakeDamage)
         {
-            lookingToCounter = false;
-            Counter(damageDealer, _damageToDeal);
-            return;
+            float _damageToDeal = (amount * damageDealer.myStats.powerCurrent);
+            if (lookingToCounter)
+            {
+                lookingToCounter = false;
+                Counter(damageDealer, _damageToDeal);
+                return;
+            }
+
+            myStats.healthCurrent -= _damageToDeal;
+
+            if (myStats.healthCurrent <= 0)
+            {
+                myStats.healthCurrent = 0;
+                OnDeath();
+            }
         }
 
-        myStats.healthCurrent -= _damageToDeal;
-
-        if (myStats.healthCurrent <= 0)
-        {
-            myStats.healthCurrent = 0;
-            OnDeath();
-        }
     }
 
     protected virtual void Counter(Entity enemyToTarget, float amount)

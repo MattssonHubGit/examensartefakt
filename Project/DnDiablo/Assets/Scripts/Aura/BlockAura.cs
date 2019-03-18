@@ -4,20 +4,20 @@ using UnityEngine;
 
 //[CreateAssetMenu()]
 public class BlockAura : Aura {
+
+
     public override void OnApply()
     {
-        target.GetComponent<Collider>().enabled = false;
         
     }
 
     public override void OnExpire()
     {
-        target.GetComponent<Collider>().enabled = true;
-        target.EnableMovement();
+        target.canTakeDamage = true;
     }
 
     public override void OnTick()
     {
-        target.DisableMovement();
+        target.canTakeDamage = false;
     }
 }

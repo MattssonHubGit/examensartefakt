@@ -77,14 +77,12 @@ public class Player : Entity {
         SkillInputController();
         
         UIManager();
-        if (Input.GetKeyDown(KeyCode.Keypad6))
-        {
-            TakeDamage(50f, this);
-        }
     }
 
     private void MovementController()
     {
+        agent.speed = myStats.moveSpeedCurrent;
+
         //If rooted/casting/whatever, can't move.
         if (!canMove)
             return;
@@ -94,7 +92,6 @@ public class Player : Entity {
         {
             int layerMask = 1 << 8;
             RaycastHit hit;
-            agent.speed = myStats.moveSpeedCurrent;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100, layerMask))
             {
                 if (agent.isActiveAndEnabled)

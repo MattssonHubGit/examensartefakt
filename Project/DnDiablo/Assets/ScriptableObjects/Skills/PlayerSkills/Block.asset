@@ -67,4 +67,12 @@ MonoBehaviour:
   - 3
   enemyWindDown:
   - 0
-  auraPrefab: {fileID: 11400000, guid: 7db0fe7e6a1d6b24bb74b9e8b480fc16, type: 2}
+  blockAuraPrefab: {fileID: 11400000, guid: 7db0fe7e6a1d6b24bb74b9e8b480fc16, type: 2}
+  slowAuraPrefab: {fileID: 11400000, guid: 57cd1e4c8d5c35c47bcb4d65e7a05214, type: 2}
+  slowPercentageByLevel:
+  - 2
+  - 0.5
+  - 2
+  - 2
+  - 2
+  - 2
