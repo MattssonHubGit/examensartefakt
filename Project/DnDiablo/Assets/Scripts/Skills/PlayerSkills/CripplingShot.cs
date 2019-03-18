@@ -9,6 +9,7 @@ public class CripplingShot : Skill
     [SerializeField] private GameObject arrowPrefab;
     [Header("Movement")]
     [SerializeField] private List<float> speedByLevel = new List<float>();
+    [SerializeField] private List<bool> pierceByLevel = new List<bool>();
     [Header("Slow")]
     [SerializeField] private List<bool> slowByLevel = new List<bool>();
     [SerializeField] [Range(0f, 3f)] private List<float> slowPercantageByLevel = new List<float>();
@@ -26,6 +27,7 @@ public class CripplingShot : Skill
         Vector3 _dir = targetPos - caster.transform.position;
         _dir.Normalize();
         _scrArrow.direction = _dir;
+        _scrArrow.pierce = pierceByLevel[level];
         _scrArrow.speed = speedByLevel[level];
         _objArrow.transform.rotation = Quaternion.LookRotation(_dir);
 

@@ -59,7 +59,7 @@ MonoBehaviour:
   - 25
   - 25
   - 25
-  penetrateByLevel: 000001010101
+  pierceByLevel: 000000000001
   slowByLevel: 010101010101
   slowPercantageByLevel:
   - 0.5
