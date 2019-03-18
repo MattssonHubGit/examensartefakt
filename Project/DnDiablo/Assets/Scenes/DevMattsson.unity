@@ -181,6 +181,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 195979704746458122, guid: 609e7639c227ac749bdb1b55bf656272,
+        type: 2}
+      propertyPath: m_Acceleration
+      value: 1e+16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 609e7639c227ac749bdb1b55bf656272, type: 2}
   m_IsPrefabParent: 0
@@ -2984,9 +2989,9 @@ Prefab:
       objectReference: {fileID: 112796366}
     - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
         type: 2}
-      propertyPath: statsUpgradeParent
+      propertyPath: pointsTxt
       value: 
-      objectReference: {fileID: 202168457}
+      objectReference: {fileID: 2085775913}
     - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
         type: 2}
       propertyPath: healthBtn
@@ -3014,19 +3019,14 @@ Prefab:
       objectReference: {fileID: 105366550}
     - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
         type: 2}
-      propertyPath: pointsTxt
-      value: 
-      objectReference: {fileID: 2085775913}
-    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
-        type: 2}
-      propertyPath: spendableStatPoints
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
-        type: 2}
       propertyPath: iconParent
       value: 
       objectReference: {fileID: 1922322981}
+    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
+        type: 2}
+      propertyPath: statsUpgradeParent
+      value: 
+      objectReference: {fileID: 202168457}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a021c9d25d24dd141ad0252d91c31906, type: 2}
   m_IsPrefabParent: 0

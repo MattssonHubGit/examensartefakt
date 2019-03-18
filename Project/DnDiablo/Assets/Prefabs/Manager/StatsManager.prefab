@@ -51,17 +51,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b095c7b1f5e1f44b6c23b98472d116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthIncreasePerLevel: 50
-  healthRegIncreasePerLevel: 0.5
-  powerIncreasePerLevel: 0.5
-  resourceIncreasePerLevel: 50
-  resourceRegIncreasePerLevel: 0.5
-  cooldownRedIncreasePerLevel: 0.3
-  moveSpeedIncreasePerLevel: 2
+  healthIncreasePerLevel: 20
+  healthRegIncreasePerLevel: 1.2
+  powerIncreasePerLevel: 0.1
+  resourceIncreasePerLevel: 20
+  resourceRegIncreasePerLevel: 1.5
+  cooldownRedIncreasePerLevel: 0.12
+  moveSpeedIncreasePerLevel: 1
   healthTxt: {fileID: 0}
   powerTxt: {fileID: 0}
   resourceTxt: {fileID: 0}
   cooldownTxt: {fileID: 0}
   speedTxt: {fileID: 0}
+  pointsTxt: {fileID: 0}
+  healthBtn: {fileID: 0}
+  powerBtn: {fileID: 0}
+  resourceBtn: {fileID: 0}
+  cooldownBtn: {fileID: 0}
+  speedBtn: {fileID: 0}
+  iconParent: {fileID: 0}
   statsUpgradeParent: {fileID: 0}
   toggleKey: 99
+  spendableStatPoints: 5

@@ -20,11 +20,11 @@ MonoBehaviour:
   powerCurrent: 1
   powerBase: 1
   powerDisplay: 5
-  resourceCurrent: 100
-  resourceBase: 100
-  resourceMax: 100
-  resourceRegCurrent: 1
-  resourceRegBase: 1
+  resourceCurrent: 200
+  resourceBase: 200
+  resourceMax: 200
+  resourceRegCurrent: 10
+  resourceRegBase: 10
   resourceDisplay: 5
   cooldownRedCurrent: 1
   cooldownRedBase: 1
@@ -32,4 +32,6 @@ MonoBehaviour:
   moveSpeedCurrent: 10
   moveSpeedBase: 10
   moveSpeedDisplay: 5
+  timeBeforeAttack: 0
+  timeAfterAttack: 0
   experienceForKill: 50
