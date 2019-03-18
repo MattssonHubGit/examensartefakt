@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4639083384366930}
   - component: {fileID: 135408411885787060}
-  - component: {fileID: 114800554933470464}
+  - component: {fileID: 114111082702708482}
   - component: {fileID: 23022227002997370}
   - component: {fileID: 33183095338179144}
   - component: {fileID: 54775563965338134}
@@ -100,7 +100,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &114800554933470464
+--- !u!114 &114111082702708482
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -108,10 +108,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1687278259926232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c538519886df8da4c9a53731a758e90f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d954d93e4c38fa428428cebede05467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
+  caster: {fileID: 0}
+  damage: 0
+  startSize: {x: 0, y: 0, z: 0}
+  expansionRate: {x: 0, y: 0, z: 0}
 --- !u!135 &135408411885787060
 SphereCollider:
   m_ObjectHideFlags: 1

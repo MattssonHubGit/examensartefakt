@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084a6f7f26d4ca6449419cedb534f200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  caster: {fileID: 0}
   speed: 0
   direction: {x: 0, y: 0, z: 0}
   penetrate: 0

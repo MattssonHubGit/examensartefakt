@@ -59,9 +59,17 @@ MonoBehaviour:
   - 50
   - 60
   - 70
-  explosionRadiusByLevel:
+  explosionExpansionByLevel:
+  - {x: 10, y: 10, z: 10}
+  - {x: 10, y: 10, z: 10}
+  - {x: 10, y: 10, z: 10}
+  - {x: 10, y: 10, z: 10}
+  - {x: 10, y: 10, z: 10}
+  - {x: 10, y: 10, z: 10}
+  explosionDurationByLevel:
   - 1
   - 1
   - 1
-  - 2
-  - 2
+  - 1
+  - 1
+  - 1

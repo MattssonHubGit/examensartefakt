@@ -5,7 +5,6 @@ using UnityEngine;
 public class FireballExplosionBehaviour : SpellBehaviour {
 
     public float damage;
-    public float duration;
     public Vector3 startSize;
     public Vector3 expansionRate;
 
@@ -20,11 +19,7 @@ public class FireballExplosionBehaviour : SpellBehaviour {
     void Update()
     {
         gameObject.transform.localScale += (expansionRate * Time.deltaTime);
-        duration -= Time.deltaTime;
-        if (duration <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+        
     }
 
     private void OnTriggerStay(Collider other)

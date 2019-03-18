@@ -11,7 +11,6 @@ public class FireballBehaviour : SpellBehaviour
 
     [Header("Fireball")]
     [HideInInspector] public float damage = 0;
-    [HideInInspector] public float areaRadius = 2;
     [HideInInspector] public float explosionDuration = 0.3f;
     [HideInInspector] public Vector3 expansionRate;
     [Space]
@@ -32,6 +31,7 @@ public class FireballBehaviour : SpellBehaviour
         _scrExplosion.damage = damage;
         _scrExplosion.caster = caster;
         _scrExplosion.startSize = transform.localScale;
+        _scrExplosion.expansionRate = expansionRate;
 
         //Destroy self and explosion
         Destroy(_objExplosion, explosionDuration);
