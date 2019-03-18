@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23644960168246190}
   - component: {fileID: 114269747891943714}
   - component: {fileID: 54691252443322736}
-  m_Layer: 12
+  m_Layer: 15
   m_Name: HomingMissile4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

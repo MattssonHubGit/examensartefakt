@@ -19,9 +19,9 @@ TagManager:
   - IgnorePlayer
   - Enemy
   - IgnoreEnemy
-  - IgnoreSpellobjects&Player
-  - Wall
   - 
+  - Wall
+  - IgnoreWall&Enemy
   - 
   - 
   - 

@@ -1096,6 +1096,7 @@ MonoBehaviour:
   lookingToCounter: 0
   canMove: 1
   canCast: 1
+  canTakeDamage: 1
   target: {fileID: 0}
   mySkills:
   - {fileID: 11400000, guid: 45759d407ddff374f96598162517534b, type: 2}

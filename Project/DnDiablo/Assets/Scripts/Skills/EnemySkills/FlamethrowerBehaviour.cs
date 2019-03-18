@@ -55,6 +55,7 @@ public class FlamethrowerBehaviour : SpellBehaviour {
         }
         else //Will not penetrate walls
         {
+
             if (other.GetComponent<FlamethrowerBehaviour>() == null) //Also does not hit self
             {
                 Destroy(this.gameObject);
