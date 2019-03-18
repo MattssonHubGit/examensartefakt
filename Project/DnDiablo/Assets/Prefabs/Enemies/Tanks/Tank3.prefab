@@ -369,7 +369,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4559544070485272}
   - component: {fileID: 33993375837332164}
-  - component: {fileID: 64999947213412810}
   - component: {fileID: 23961791989708264}
   m_Layer: 11
   m_Name: Plane
@@ -4239,20 +4238,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!64 &64999947213412810
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1309645180790058}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &114150204003377048
 MonoBehaviour:
   m_ObjectHideFlags: 1
