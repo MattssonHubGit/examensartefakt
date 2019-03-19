@@ -270,6 +270,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114624461970538942, guid: d7265e4e537bb234198364166f84d34e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7265e4e537bb234198364166f84d34e, type: 2}
   m_IsPrefabParent: 0
@@ -459,7 +464,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1317998816217506, guid: ca243d3f88ab0c7479f1b4c34bdaedcf, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1264728628268958, guid: ca243d3f88ab0c7479f1b4c34bdaedcf, type: 2}
       propertyPath: m_IsActive
@@ -743,6 +748,10 @@ Prefab:
         type: 2}
       propertyPath: m_ObstacleAvoidanceType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818201752818906, guid: 609e7639c227ac749bdb1b55bf656272, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 609e7639c227ac749bdb1b55bf656272, type: 2}
