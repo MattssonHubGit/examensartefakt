@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TalentManager : MonoBehaviour
 {
-
     public List<Skill> allSkills = new List<Skill>();
     public Dictionary<Skill, int> skillData = new Dictionary<Skill, int>();
 
@@ -33,6 +32,9 @@ public class TalentManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] public Transform skillButtonParent;
     [SerializeField] public GameObject skillButtonPrefab;
+
+    [Header("Level up State")]
+    [SerializeField] private List<GameObject> objectsToDisable = new List<GameObject>();
 
     private void Awake()
     {
@@ -138,7 +140,10 @@ public class TalentManager : MonoBehaviour
     public void ToggleTalentSun()
     {
         talentSunParent.SetActive(!talentSunParent.active);
+
+        //Disable other UI elements
         OnHovoerUI.Instance.StopDisplayOnHover();
+
     }
 
 }

@@ -51,5 +51,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 576cc2f7fbf67ee41b5c472df0316327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amountOfLevels: 2
+  currentlyLeveling: 0
+  continueButton: {fileID: 0}
+  playerUI: {fileID: 0}
+  waveUI: {fileID: 0}
   sceneName: MainMenu
   key: 263

@@ -12,6 +12,16 @@ public class LevelManager : MonoBehaviour {
     private List<string> allLevelScenes = new List<string>();
     [SerializeField] private int amountOfLevels = 2;
 
+    [Header("Level up state")]
+    [HideInInspector] public bool currentlyLeveling = false;
+    private bool doneTalent = false;
+    private bool doneStats = false;
+
+    [SerializeField] private Button continueButton;
+    [Space]
+    [SerializeField] private GameObject playerUI;
+    [SerializeField] private GameObject waveUI;
+
     [Header("Debug")]
     [SerializeField] private string sceneName = "";
     [SerializeField] private KeyCode key = KeyCode.Keypad7;
@@ -41,27 +51,28 @@ public class LevelManager : MonoBehaviour {
             Destroy(this.gameObject);
         }
         #endregion
+
+
+        continueButton.onClick.AddListener(delegate { ContinueLevelUpProcess(); });
     }
 
     void Update()
     {
         LoadDebugScene();
+
+        if (currentlyLeveling)
+        {
+            //Player can't move
+            Player.Instance.canMove = false;
+            Player.Instance.canTakeDamage = false;
+            Player.Instance.canMove = false;
+        }
     }
 
-    public void LoadNextLevel()
+    public void StartGame()
     {
-        currentLevel++;
-       
-        //Is there not another level to load?
-        if (currentLevel >= allLevelScenes.Count)
-        {
-            currentLevel = -1;
-            SceneManager.LoadScene("MainMenu");
-            return;
-        }
-
-        string _nextLevelName = allLevelScenes[currentLevel];
-        SceneManager.LoadScene(_nextLevelName);
+        SceneManager.LoadScene("Level_1");
+        StartLevelUpProcess();
 
     }
 
@@ -70,7 +81,7 @@ public class LevelManager : MonoBehaviour {
         if (Input.GetKeyDown(key))
         {
             //SceneManager.LoadScene(sceneName);
-            LoadNextLevel();
+            StartGame();
         }
     }
 
@@ -81,4 +92,72 @@ public class LevelManager : MonoBehaviour {
         Application.Quit();
     }
 
+    public void StartLevelUpProcess()
+    {
+        //Currently leveling, but have not done either talents or stats
+        currentlyLeveling = true;
+        doneTalent = false;
+        doneStats = false;
+
+        //Deactive other UI
+        playerUI.SetActive(false);
+        waveUI.SetActive(false);
+
+        //Player can't move
+        Player.Instance.Respawn();
+
+        Player.Instance.canMove = false;
+        Player.Instance.canTakeDamage = false;
+        Player.Instance.canMove = false;
+
+        continueButton.transform.parent.gameObject.SetActive(true);
+
+        TalentManager.Instance.ToggleTalentSun();
+    }
+
+    private void ContinueLevelUpProcess()
+    {
+        if (doneTalent == false)
+        {
+            doneTalent = true;
+            TalentManager.Instance.ToggleTalentSun();
+            StatsManager.Instance.ToggleStatsWindow();
+        }
+        else if (doneStats == false)
+        {
+            doneStats = true;
+            StatsManager.Instance.ToggleStatsWindow();            
+        }
+        else
+        {
+            FinishLevelUpProcess();
+        }
+    }
+
+    private void FinishLevelUpProcess()
+    {
+        //No longer leveling, reset it all
+        currentlyLeveling = false;
+        doneTalent = false;
+        doneStats = false;
+
+
+        continueButton.transform.parent.gameObject.SetActive(false);
+
+        //Activate other ui
+        playerUI.SetActive(true);
+        waveUI.SetActive(true);
+
+        //Player can move
+        Player.Instance.canMove = true;
+        Player.Instance.canTakeDamage = true;
+        Player.Instance.canMove = true;
+
+    }
+
+    public void LoadVictoryLevel()
+    {
+        //Change this to another scene (want)
+        SceneManager.LoadScene("MainMenu");
+    }
 }

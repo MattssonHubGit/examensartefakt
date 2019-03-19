@@ -41,6 +41,7 @@ public class StatsManager : MonoBehaviour {
     [SerializeField] private GameObject statsUpgradeParent;
     [SerializeField] private KeyCode toggleKey = KeyCode.C;
 
+
     public int spendableStatPoints = 0;
     
 
@@ -66,10 +67,10 @@ public class StatsManager : MonoBehaviour {
 
     public void Update()
     {
-        if (Input.GetKeyDown(toggleKey))
+        /*if (Input.GetKeyDown(toggleKey))
         {
             ToggleStatsWindow();
-        }
+        }*/
 
     }
 
