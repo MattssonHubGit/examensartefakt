@@ -13,40 +13,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Troll Blood
   descriptionByLevel:
-  - 
+  - Activate latent troll genes to wastly increase health regen for a short period
+    of time, however this significantly lowers the users movement speed.
   - 
   - 
   - 
   - 
   - 
   cooldownMax:
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
+  - 18
+  - 16
+  - 14
+  - 12
+  - 10
+  - 8
   resourceCost:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 30
+  - 30
+  - 30
+  - 30
+  - 30
+  - 30
   level: 0
   range:
-  - 0
-  - 0
-  - 0
-  - 0
   - 0
   - 0
   - 0
@@ -61,11 +50,20 @@ MonoBehaviour:
   - 3
   - 3
   - 3
-  - 3
-  - 3
-  - 3
-  - 3
-  enemyWindDown: []
-  bonusHealthRegen: 20
-  slowPercentage: 0.75
+  enemyWindDown:
+  - 0
+  bonusHealthRegenByLevel:
+  - 40
+  - 40
+  - 80
+  - 80
+  - 80
+  - 80
+  slowPercentageByLevel:
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.8
+  - 0.5
   trollBloodAura: {fileID: 11400000, guid: 5e7d258d07c7e084a991ed20d81e73c1, type: 2}

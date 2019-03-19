@@ -1235,6 +1235,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageAmount: 0
   caster: {fileID: 0}
+  disableSelf: 1
+  disableCooldown: 0.3
 --- !u!135 &135295713089447254
 SphereCollider:
   m_ObjectHideFlags: 1

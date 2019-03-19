@@ -10,6 +10,11 @@ public class Block : Skill {
     [Space]
     [SerializeField] private SlowAura slowAuraPrefab;
     [SerializeField] [Range(0f, 3f)] private List<float> slowPercentageByLevel = new List<float>();
+    [Space]
+    [SerializeField] private List<bool> increasePowerByLevel = new List<bool>();
+    [SerializeField] private int powerAmount;
+    [SerializeField] private StatIncreaseAura statIncreaseAuraPrefab;
+
 
 
 
@@ -26,5 +31,11 @@ public class Block : Skill {
         _slow.Duration = duration[level];
         caster.AddAura(_slow, caster);
 
+        //Power
+        StatIncreaseAura _power = Instantiate(statIncreaseAuraPrefab);
+        _power.amount = powerAmount;
+        _power.statToIncrease = StatIncreaseAura.StatTypes.POWER;
+        _power.Duration = duration[level];
+        caster.AddAura(_power, caster);
     }
 }

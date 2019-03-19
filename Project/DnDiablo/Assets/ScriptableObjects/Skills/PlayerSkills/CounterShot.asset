@@ -13,26 +13,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Counter Shot
   descriptionByLevel:
-  - 
+  - Keen your senses, immidiatley avoid and retaliate the next attack inflicted upon
+    you.
   - 
   - 
   - 
   - 
   - 
   cooldownMax:
-  - 6
-  - 6
-  - 6
-  - 6
-  - 6
-  - 6
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
   resourceCost:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
+  - 25
+  - 25
+  - 25
+  - 25
+  - 25
+  - 25
   level: 0
   range:
   - 10
@@ -43,12 +44,12 @@ MonoBehaviour:
   - 10
   targetGround: 0
   duration:
-  - 2
-  - 2
-  - 2
-  - 2
-  - 2
-  - 2
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
+  - 5
   enemyWindDown:
   - 0
   auraPrefab: {fileID: 11400000, guid: cdb629858eafc1943a25557db5c6568f, type: 2}
@@ -56,10 +57,10 @@ MonoBehaviour:
     type: 2}
   speed: 25
   damageMultiplierByLevel:
+  - 0.5
+  - 1
+  - 1.5
   - 2
-  - 2
-  - 2
-  - 2
-  - 2
-  - 2
-  stacksByLevel: 050000000100000001000000010000000100000001000000
+  - 2.5
+  - 3
+  stacksByLevel: 01000000010000000500000005000000050000000a000000

@@ -13,34 +13,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Blink
   descriptionByLevel:
-  - 
+  - Stride across the aethereal realm, displacing your current location. (Teleport
+    a short distance).
   - 
   - 
   - 
   - 
   - 
   cooldownMax:
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
-  - 1
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 3
   resourceCost:
-  - 2
-  - 2
-  - 2
-  - 2
-  - 2
-  - 2
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
   level: 0
   range:
-  - 2
-  - 4
-  - 6
-  - 8
-  - 10
-  - 12
+  - 5
+  - 7
+  - 9
+  - 11
+  - 13
+  - 15
   targetGround: 0
   duration:
   - 10
@@ -49,14 +50,15 @@ MonoBehaviour:
   - 10
   - 10
   - 10
-  enemyWindDown: []
+  enemyWindDown:
+  - 0
   statAura: {fileID: 11400000, guid: c1c7668981d38fa468aad565983dbb3a, type: 2}
   powerIncreasesByLevel: 000000000000000005000000050000000500000005000000
   auraDurationByLevel:
   - 0
   - 0
-  - 5
-  - 5
-  - 5
-  - 5
+  - 3
+  - 3
+  - 3
+  - 3
   increasePowerByLevel: 000001010101

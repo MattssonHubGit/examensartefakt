@@ -13,45 +13,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Leap
   descriptionByLevel:
-  - 
+  - Jump to a new location within a certain range.
   - 
   - 
   - 
   - 
   - 
   cooldownMax:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
+  - 8
+  - 8
+  - 8
+  - 8
+  - 8
+  - 4
   resourceCost:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
+  - 20
   level: 0
   range:
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
+  - 10
+  - 12
+  - 14
+  - 16
+  - 18
   - 20
   targetGround: 0
   duration:
@@ -61,21 +49,18 @@ MonoBehaviour:
   - 10
   - 10
   - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  enemyWindDown: []
+  enemyWindDown:
+  - 0
   leapAura: {fileID: 11400000, guid: 5ca10cb6d4e0a984f955020737170fee, type: 2}
-  trajectoryHeight: 5
-  damageOnLandByLevel: 000100000000
+  trajectoryHeight: 20
+  damageOnLandByLevel: 000001010101
   damageObjectPrefab: {fileID: 1582888041135780, guid: 7733c12ba52f226409d77e6c3e3b27b2,
     type: 2}
   damageByLevel:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  damageObjectDuration: 2
+  - 0
+  - 0
+  - 30
+  - 30
+  - 30
+  - 30
+  damageObjectDuration: 1

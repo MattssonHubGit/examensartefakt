@@ -13,26 +13,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Phase Out
   descriptionByLevel:
-  - 
+  - Slip into another realm, making attacks phase through you, however you cannot
+    use skills during this time.
   - 
   - 
   - 
   - 
   - 
   cooldownMax:
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
+  - 25
+  - 25
+  - 25
+  - 25
+  - 25
+  - 25
   resourceCost:
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
+  - 15
+  - 15
+  - 15
+  - 15
+  - 15
+  - 15
   level: 0
   range:
   - 0
@@ -43,12 +44,12 @@ MonoBehaviour:
   - 0
   targetGround: 0
   duration:
+  - 1
   - 2
-  - 2
-  - 2
-  - 2
-  - 2
-  - 2
+  - 3
+  - 4
+  - 5
+  - 6
   enemyWindDown:
   - 0
   auraPrefab: {fileID: 11400000, guid: ce6f07ab7b2c59b4887688f26dae957c, type: 2}

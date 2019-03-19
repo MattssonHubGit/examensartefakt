@@ -26,6 +26,8 @@ MonoBehaviour:
   - 5
   enemyWindDown:
   - 0
-  bonusHealthRegen: 20
-  slowPercentage: 0.3
+  bonusHealthRegenByLevel:
+  - 20
+  slowPercentageByLevel:
+  - 0.3
   trollBloodAura: {fileID: 11400000, guid: 5e7d258d07c7e084a991ed20d81e73c1, type: 2}

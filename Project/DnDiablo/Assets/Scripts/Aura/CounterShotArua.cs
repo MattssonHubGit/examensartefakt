@@ -26,7 +26,7 @@ public class CounterShotArua : CounterAura
 
 
         //Stats
-        _scrArrow.damage = (damageMultiplier * damageMultiplier);
+        _scrArrow.damage = (damageTaken * damageMultiplier);
 
 
 

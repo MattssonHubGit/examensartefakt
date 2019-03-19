@@ -31,6 +31,7 @@ public class CounterShotBehaviour : SpellBehaviour
         if (target == null)
         {
             Destroy(this.gameObject);
+            return;
         }
         transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
         RotationController();

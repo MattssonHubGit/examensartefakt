@@ -13,26 +13,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Medicine
   descriptionByLevel:
-  - 
+  - Healer consumes natural herbs, increasing health regeneration by a small amount
+    for a long time.
   - 
   - 
   - 
   - 
   - 
   cooldownMax:
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
+  - 25
+  - 25
+  - 25
+  - 25
+  - 25
+  - 25
   resourceCost:
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
   level: 0
   range:
   - 10
@@ -43,24 +44,24 @@ MonoBehaviour:
   - 10
   targetGround: 0
   duration:
-  - 3
-  - 20
-  - 20
-  - 20
-  - 20
-  - 20
+  - 15
+  - 15
+  - 30
+  - 30
+  - 30
+  - 30
   enemyWindDown:
   - 0
   auraRegenPrefab: {fileID: 11400000, guid: 88b98258852e45449a119b06eb69429b, type: 2}
   healthRegen:
+  - 1
   - 2
-  - 2
-  - 2
-  - 2
-  - 2
-  - 2
-  increaseStatsByLevel: 010000000000
+  - 3
+  - 4
+  - 5
+  - 6
+  increaseStatsByLevel: 000000000001
   auraStatIncreasePrefab: {fileID: 11400000, guid: c1c7668981d38fa468aad565983dbb3a,
     type: 2}
-  typesToIncrease: 0300000004000000
-  amountToIncreaseWith: 10
+  typesToIncrease: 0100000002000000
+  amountToIncreaseWith: 5

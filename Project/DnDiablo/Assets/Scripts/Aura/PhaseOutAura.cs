@@ -12,7 +12,8 @@ public class PhaseOutAura : Aura
     {
         //Initialization
         target.GetComponent<Collider>().enabled = false;
-        target.GetComponent<MeshRenderer>().enabled = false;
+        Player.Instance.GFXDefault.SetActive(false);
+        Player.Instance.GFXTransparent.SetActive(true);
 
         //Check if we are allowed to use skills during the duration
         if (!enableCasting)
@@ -30,7 +31,8 @@ public class PhaseOutAura : Aura
     {
         //Reverse everything
         target.GetComponent<Collider>().enabled = true;
-        target.GetComponent<MeshRenderer>().enabled = true;
+        Player.Instance.GFXDefault.SetActive(true);
+        Player.Instance.GFXTransparent.SetActive(false);
         target.canCast = true;
 
         target.myStats.moveSpeedCurrent -= speedChange;

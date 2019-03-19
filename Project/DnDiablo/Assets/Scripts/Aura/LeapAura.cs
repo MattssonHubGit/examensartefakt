@@ -23,6 +23,7 @@ public class LeapAura : Aura
     {
         agent = caster.GetComponent<NavMeshAgent>();
         agent.enabled = false;
+        target.canTakeDamage = false;
         incrementor = 0;
 
     }
@@ -41,6 +42,8 @@ public class LeapAura : Aura
         {
             SpawnDamageObject();
         }
+
+        target.canTakeDamage = true;
     }
 
     public override void OnTick()
@@ -68,6 +71,7 @@ public class LeapAura : Aura
         SimpleDamageOnTriggerEnter _damScr = _damObj.GetComponent<SimpleDamageOnTriggerEnter>();
 
         _damScr.damageAmount = damage;
+        _damScr.caster = caster;
 
         Destroy(_damObj, damageObjDuration);
 

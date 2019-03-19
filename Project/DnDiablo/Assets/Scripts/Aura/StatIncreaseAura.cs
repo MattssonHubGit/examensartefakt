@@ -16,6 +16,7 @@ public class StatIncreaseAura : Aura
     {
         for (int i = 0; i < amount; i++)
         {
+            //Decide what stat to add
             switch (statToIncrease)
             {
                 case StatTypes.HEALTH:
@@ -44,6 +45,7 @@ public class StatIncreaseAura : Aura
     {
         for (int i = 0; i < amount; i++)
         {
+            //Remove the added stat
             switch (statToIncrease)
             {
                 case StatTypes.HEALTH:
@@ -78,20 +80,16 @@ public class StatIncreaseAura : Aura
         if (up)
         {
             target.myStats.healthMax += StatsManager.Instance.healthIncreasePerLevel;
-            target.myStats.healthBase += StatsManager.Instance.healthIncreasePerLevel;
             target.myStats.healthCurrent += StatsManager.Instance.healthIncreasePerLevel;
 
             target.myStats.healthRegCurrent += StatsManager.Instance.healthRegIncreasePerLevel;
-            target.myStats.healthRegBase += StatsManager.Instance.healthRegIncreasePerLevel;
         }
         else
         {
+            //Don't remove current that has been given
             target.myStats.healthMax -= StatsManager.Instance.healthIncreasePerLevel;
-            target.myStats.healthBase -= StatsManager.Instance.healthIncreasePerLevel;
-            target.myStats.healthCurrent -= StatsManager.Instance.healthIncreasePerLevel;
 
             target.myStats.healthRegCurrent -= StatsManager.Instance.healthRegIncreasePerLevel;
-            target.myStats.healthRegBase -= StatsManager.Instance.healthRegIncreasePerLevel;
         }      
     }
 
@@ -100,12 +98,10 @@ public class StatIncreaseAura : Aura
 
         if (up)
         {
-            target.myStats.powerBase += StatsManager.Instance.powerIncreasePerLevel;
             target.myStats.powerCurrent += StatsManager.Instance.powerIncreasePerLevel;
         }
         else
         {
-            target.myStats.powerBase -= StatsManager.Instance.powerIncreasePerLevel;
             target.myStats.powerCurrent -= StatsManager.Instance.powerIncreasePerLevel;
         }
 
@@ -118,19 +114,14 @@ public class StatIncreaseAura : Aura
         if (up)
         {
             target.myStats.resourceMax += StatsManager.Instance.resourceIncreasePerLevel;
-            target.myStats.resourceBase += StatsManager.Instance.resourceIncreasePerLevel;
             target.myStats.resourceCurrent += StatsManager.Instance.resourceIncreasePerLevel;
-
-            target.myStats.resourceRegBase += StatsManager.Instance.resourceRegIncreasePerLevel;
+            
             target.myStats.resourceRegCurrent += StatsManager.Instance.resourceRegIncreasePerLevel;
         }
         else
         {
             target.myStats.resourceMax -= StatsManager.Instance.resourceIncreasePerLevel;
-            target.myStats.resourceBase -= StatsManager.Instance.resourceIncreasePerLevel;
-            target.myStats.resourceCurrent -= StatsManager.Instance.resourceIncreasePerLevel;
-
-            target.myStats.resourceRegBase -= StatsManager.Instance.resourceRegIncreasePerLevel;
+            
             target.myStats.resourceRegCurrent -= StatsManager.Instance.resourceRegIncreasePerLevel;
         }
         
@@ -142,12 +133,10 @@ public class StatIncreaseAura : Aura
 
         if (up)
         {
-            target.myStats.cooldownRedBase += StatsManager.Instance.cooldownRedIncreasePerLevel;
             target.myStats.cooldownRedCurrent += StatsManager.Instance.cooldownRedIncreasePerLevel;
         }
         else
         {
-            target.myStats.cooldownRedBase -= StatsManager.Instance.cooldownRedIncreasePerLevel;
             target.myStats.cooldownRedCurrent -= StatsManager.Instance.cooldownRedIncreasePerLevel;
         }
         
@@ -158,7 +147,6 @@ public class StatIncreaseAura : Aura
     {
         if(up)
         {
-            target.myStats.moveSpeedBase += StatsManager.Instance.moveSpeedIncreasePerLevel;
             target.myStats.moveSpeedCurrent += StatsManager.Instance.moveSpeedIncreasePerLevel;
 
 
@@ -166,7 +154,6 @@ public class StatIncreaseAura : Aura
         }
         else
         {
-            target.myStats.moveSpeedBase -= StatsManager.Instance.moveSpeedIncreasePerLevel;
             target.myStats.moveSpeedCurrent -= StatsManager.Instance.moveSpeedIncreasePerLevel;
 
 

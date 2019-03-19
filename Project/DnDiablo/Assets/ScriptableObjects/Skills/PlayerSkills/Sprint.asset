@@ -13,41 +13,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Sprint
   descriptionByLevel:
-  - 
+  - Powerwalking really does pay off. Increase your movement speed for a while.
   - 
   - 
   - 
   - 
   - 
   cooldownMax:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
+  - 12
+  - 12
+  - 12
+  - 12
+  - 12
+  - 6
   resourceCost:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
+  - 15
+  - 15
+  - 15
+  - 15
+  - 15
+  - 15
   level: 0
   range:
   - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
   targetGround: 0
   duration:
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
-  - 5
+  - 3
+  - 3
   - 5
   - 5
   - 5
@@ -55,14 +52,10 @@ MonoBehaviour:
   enemyWindDown:
   - 0
   speedBonusPercentage:
-  - 1.5
-  - 1.5
-  - 1.5
-  - 1.5
-  - 1.5
-  - 1.5
-  - 1.5
-  - 1.5
-  - 1.5
+  - 0.5
+  - 0.7
+  - 0.9
+  - 1.1
+  - 1.3
   - 1.5
   sprintAura: {fileID: 11400000, guid: cb1dbae6c0677424184b3a44137fb7f7, type: 2}

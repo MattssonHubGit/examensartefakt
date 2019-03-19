@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Animations;
 
 public class Player : Entity {
 
@@ -18,7 +17,8 @@ public class Player : Entity {
     public static Player Instance;
     private NavMeshAgent agent;
     [SerializeField] private Transform groundPoint;
-    [SerializeField] private Animator myAni;
+    [SerializeField] public GameObject GFXDefault;
+    [SerializeField] public GameObject GFXTransparent;
 
     [Header("Respawn")]
     [SerializeField] private Transform spawnPoint;
@@ -35,13 +35,7 @@ public class Player : Entity {
         }
     }
 
-    public Animator MyAni
-    {
-        get
-        {
-            return myAni;
-        }
-    }
+
     #endregion
 
     private void Awake()
@@ -60,7 +54,6 @@ public class Player : Entity {
         InitializeStats();
         agent = this.GetComponent<NavMeshAgent>();
         agent.Warp(transform.position);
-        myAni.SetBool("Fly", true);
 
         StartCoroutine(FindSpawnPoint());
     }
@@ -135,7 +128,6 @@ public class Player : Entity {
         {
             Debug.Log("Casting skill: " + skill.name);
             transform.LookAt(GetPositionFromMouse(false));
-            myAni.Play("Breath_Fs");
             skill.Action(GetPositionFromMouse(skill.TargetGround), this);
         }
     }

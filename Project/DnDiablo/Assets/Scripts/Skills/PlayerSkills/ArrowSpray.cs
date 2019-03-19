@@ -45,16 +45,7 @@ public class ArrowSpray : Skill
                 _objArrow.transform.rotation = Quaternion.LookRotation(_dir);
                 caster.transform.rotation = Quaternion.LookRotation(_dir);
 
-                //Useless animation
-                if (caster.GetType() == typeof(Player))
-                {
-                    Player player = caster as Player;
-
-                    if (player.MyAni != null)
-                    {
-                        player.MyAni.Play("Breath_Fw");
-                    }
-                }
+               
 
                 //Stats
                 _scrArrow.damage = damageByLevel[level];
