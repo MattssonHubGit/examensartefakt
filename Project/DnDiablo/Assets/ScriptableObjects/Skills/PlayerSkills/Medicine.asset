@@ -13,13 +13,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Medicine
   descriptionByLevel:
-  - Healer consumes natural herbs, increasing health regeneration by a small amount
+  - 'Healer consumes natural herbs, increasing health regeneration by a small amount
     for a long time.
-  - 
-  - 
-  - 
-  - 
-  - 
+
+    Health regeneration: 1/s
+
+    Duration: 15s
+
+    Cooldown: 25
+
+    Cost 10'
+  - 'Increases the health regeneration.
+
+
+    + 1 health per second'
+  - 'Increases the health regeneration. Also doubles the duration.
+
+
+    + 1 health per second
+
+    + 15s duration'
+  - 'Increases the health regeneration.
+
+
+    + 1 health per second'
+  - 'Increases the health regeneration.
+
+
+    + 1 health per second'
+  - 'Increases the health regeneration. Also increases your Power and Resources for
+    the duration.
+
+
+    + 1 health per second
+
+    + 5 Power for the duration
+
+    + 5 Resources for the duration'
   cooldownMax:
   - 25
   - 25

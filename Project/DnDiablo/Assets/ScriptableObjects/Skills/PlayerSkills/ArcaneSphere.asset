@@ -13,12 +13,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Arcane Sphere
   descriptionByLevel:
-  - Creates a Sphere at target location that damages enemies walking into it.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - "Creates a Sphere at target location that damages enemies walking into it.\nDamage/Second:
+    10 \nRange: 12\nDuration: 3s\nCooldown: 1s\nCost: 10"
+  - 'Increases the duration of the orb.
+
+
+    + 0.5s'
+  - 'Increases the duration of the orb. Also increases the size of the orb.
+
+
+    + 0.5s
+
+    + Size X 2'
+  - 'Increases the duration of the orb.
+
+
+    + 0.5s'
+  - 'Increases the duration of the orb.
+
+
+    + 0.5s'
+  - 'Increases the duration of the orb. Also Increases the damage of the orb.
+
+
+    + 0.5s
+
+    + 10 damage'
   cooldownMax:
   - 1
   - 1

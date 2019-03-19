@@ -13,12 +13,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Heal
   descriptionByLevel:
-  - Caster infuses themselves with new life, healing them for a certain amount.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'The caster infuses themselves with new life, healing them for a certain amount.
+
+    Healing: 50
+
+    Cooldown: 10s
+
+    Cost: 80'
+  - 'Increases the healing done.
+
+
+    + 10 healing'
+  - 'Increases the healing done. Also halves the resource cost.
+
+
+    + 10 healing
+
+    - 40 cost'
+  - 'Increases the healing done.
+
+
+    + 10 healing'
+  - 'Increases the healing done.
+
+
+    + 10 healing'
+  - 'Increases the healing done. Also halves the cooldown.
+
+
+    + 10 healing
+
+    - 5s cooldown'
   cooldownMax:
   - 10
   - 10

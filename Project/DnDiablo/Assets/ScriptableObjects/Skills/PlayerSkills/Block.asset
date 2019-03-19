@@ -13,13 +13,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Stalwart
   descriptionByLevel:
-  - Steel yourself, stand your ground, and ignore incoming damage for a short amount
-    of time. However, you cannot move.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'Steel yourself, stand your ground, and ignore all incoming damage for a short
+    amount of time. However, you cannot move.
+
+    Duration: 4s
+
+    Cooldown: 40s
+
+    Cost: 20'
+  - 'Decreases the cooldown of Stalwart.
+
+
+    - 5s cooldown'
+  - 'Decreases the cooldown of Stalwart. Also gives a boost to Power for the duration.
+
+
+    - 5s cooldown
+
+    + 5 power for the duration'
+  - 'Decreases the cooldown of Stalwart.
+
+
+    - 5s cooldown'
+  - 'Decreases the cooldown of Stalwart.
+
+
+    - 5s cooldown'
+  - 'Decreases the cooldown of Stalwart. You can now move at half speed while stalwart
+    is active.
+
+
+    - 5s cooldown
+
+    + move during Stalwart'
   cooldownMax:
   - 40
   - 35
@@ -60,7 +86,7 @@ MonoBehaviour:
   - 3
   - 3
   - 3
-  - 2
+  - 0.5
   increasePowerByLevel: 000001010101
   powerAmount: 5
   statIncreaseAuraPrefab: {fileID: 11400000, guid: c1c7668981d38fa468aad565983dbb3a,

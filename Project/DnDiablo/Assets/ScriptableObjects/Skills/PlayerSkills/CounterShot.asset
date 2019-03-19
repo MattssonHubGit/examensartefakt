@@ -13,13 +13,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Counter Shot
   descriptionByLevel:
-  - Keen your senses, immidiatley avoid and retaliate the next attack inflicted upon
-    you.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'Keen your senses to immediately avoid and retaliate the next attack inflicted
+    upon you.
+
+    Counter duration: 5s
+
+    Counter damage: 50% of incoming damage
+
+    Cooldown: 20s
+
+    Cost: 25'
+  - 'Increases the damage dealt by the counter attack.
+
+
+    + 50% counter damage'
+  - 'Increases the damage dealt by the counter attack. Also allows you to counter
+    the next five attacks for the duration.
+
+
+    + 50% counter damage
+
+    + counter next 5 instead of 1'
+  - 'Increases the damage dealt by the counter attack.
+
+
+    + 50% counter damage'
+  - 'Increases the damage dealt by the counter attack.
+
+
+    + 50% counter damage'
+  - 'Increases the damage dealt by the counter attack. Also allows you to counter
+    the next ten attacks for the duration.
+
+
+    + 50% counter damage
+
+    + counter next 10 instead of 5'
   cooldownMax:
   - 20
   - 20

@@ -13,13 +13,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Crippling Shot
   descriptionByLevel:
-  - Fire a low flying arrow, damaging the first enemy hit and slowing them based on
-    their current speed.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'Fire a low flying arrow, damaging the first enemy hit and slowing them based
+    on their current speed.
+
+    Damage: 15
+
+    Slow amount: 70%
+
+    Slow duration: 1.5s
+
+    Cooldown: 2s
+
+    Cost: 20'
+  - 'Increases the duration of the slow.
+
+
+    + 0.5s slow'
+  - 'Increases the duration of the slow. Also increases the slow amount by a large
+    amount.
+
+
+    + 0.5s slow
+
+    + 130% slow amount'
+  - 'Increases the duration of the slow.
+
+
+    + 0.5s slow'
+  - 'Increases the duration of the slow.
+
+
+    + 0.5s slow'
+  - 'Increases the duration of the slow. Also causes the arrow to pierce it''s targets
+    to hit more enemies in a line.
+
+
+    + 0.5s slow
+
+    + pierce'
   cooldownMax:
   - 2
   - 2

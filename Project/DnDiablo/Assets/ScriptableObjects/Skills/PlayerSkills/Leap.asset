@@ -13,12 +13,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Leap
   descriptionByLevel:
-  - Jump to a new location within a certain range.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'Jump to a new location within a certain range.
+
+    Range: 10
+
+    Cooldown: 8
+
+    Cost: 20'
+  - 'Increases the range of Leap.
+
+
+    +2 range'
+  - 'Increases the range of Leap. Also causes the earth to erupt upon landing, dealing
+    damage to nearby enemies.
+
+
+    +2 range
+
+    + 30 damage to nearby enemies upon landing'
+  - 'Increases the range of Leap.
+
+
+    +2 range'
+  - 'Increases the range of Leap.
+
+
+    +2 range'
+  - 'Increases the range of Leap. Also halve the cooldown of Leap.
+
+
+    +2 range
+
+    - 4 s cooldown'
   cooldownMax:
   - 8
   - 8

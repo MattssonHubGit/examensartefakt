@@ -13,15 +13,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Hack at Face
   descriptionByLevel:
-  - Strike enemies in front of you for damage.
-  - 'Increases damage a little
+  - 'Strike enemies in front of you with a mighty axe, dealing heavy damage.
+
+    Damage: 25
+
+    Cooldown: 0.5s
+
+    Cost: 5'
+  - 'Increases the damage of the mighty axe.
 
 
     +5 Damage'
-  - 
-  - 
-  - 
-  - 
+  - 'Increases the damage of the mighty axe. Also reduces the cooldown for faster
+    chopping.
+
+
+    +5 Damage
+
+    - 0.25s cooldown'
+  - 'Increases the damage of the mighty axe.
+
+
+    +5 Damage'
+  - 'Increases the damage of the mighty axe.
+
+
+    +5 Damage'
+  - 'Increases the damage of the mighty axe. Also makes the axe even mightier by doubling
+    its size.
+
+
+    +5 Damage'
   cooldownMax:
   - 0.5
   - 0.5

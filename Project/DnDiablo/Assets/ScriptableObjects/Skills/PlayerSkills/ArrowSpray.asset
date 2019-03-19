@@ -13,12 +13,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Arrow Spray
   descriptionByLevel:
-  - Wildly fire a quick succession of arrows in a cone in front of you, damaging enemies.
-  - am
-  - level
-  - 3
-  - jk
-  - 5
+  - 'Wildly fire a quick succession of arrows in a cone in front of you, damaging
+    enemies.
+
+    Number of Arrows: 75
+
+    Damage/Arrow: 2
+
+    Cooldown: 5
+
+    Cost: 40'
+  - Increases how far each arrow can travel.
+  - 'Increases how far each arrow can travel. Also increases the number of arrows
+    fired.
+
+
+    + 75 arrows'
+  - Increases how far each arrow can travel.
+  - Increases how far each arrow can travel.
+  - 'Increases how far each arrow can travel. Also increases the damage each arrow
+    deals.
+
+
+    + 2 Damage/Arrow'
   cooldownMax:
   - 5
   - 5

@@ -13,13 +13,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Fireball
   descriptionByLevel:
-  - Hurl a ball of fire that explodes upon impact, dealing damage the longer a enemy
-    stays in the explosion.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'Hurl a ball of fire that explodes upon impact, dealing damage the longer an enemy
+    stays in the explosion area.
+
+    Max damage: 60
+
+    Cooldown: 5
+
+    Cost: 40'
+  - 'Increases the maximum damage of the explosion.
+
+
+    + 20 max damage'
+  - 'Increases the maximum damage of the explosion. Also increases the maximum size
+    of the explosion.
+
+
+    + 20 max damage
+
+    + 50% explosion area'
+  - 'Increases the maximum damage of the explosion.
+
+
+    + 20 max damage'
+  - 'Increases the maximum damage of the explosion.
+
+
+    + 20 max damage'
+  - 'Increases the maximum damage of the explosion. Also increases the maximum size
+    of the explosion.
+
+
+    + 20 max damage
+
+    + 50% explosion area'
   cooldownMax:
   - 5
   - 5

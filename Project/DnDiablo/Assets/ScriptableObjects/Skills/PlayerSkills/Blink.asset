@@ -13,13 +13,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Blink
   descriptionByLevel:
-  - Stride across the aethereal realm, displacing your current location. (Teleport
+  - 'Stride across the aethereal realm, displacing your current location. (Teleport
     a short distance).
-  - 
-  - 
-  - 
-  - 
-  - 
+
+    Range: 5
+
+    Cooldown: 6s
+
+    Cost: 10'
+  - 'Increases the displacement range.
+
+
+    + 2 range'
+  - 'Increases the displacement range. Also gives a boost to Power for a short while.
+
+
+    + 2 range
+
+    + 5 power for 3 seconds after displacement'
+  - 'Increases the displacement range.
+
+
+    + 2 range'
+  - 'Increases the displacement range.
+
+
+    + 2 range'
+  - 'Increases the displacement range. Also halves the cooldown.
+
+
+    + 2 range
+
+    - 3s cooldown'
   cooldownMax:
   - 6
   - 6

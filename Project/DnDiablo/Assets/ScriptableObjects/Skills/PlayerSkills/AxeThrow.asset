@@ -13,12 +13,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Throw Axe
   descriptionByLevel:
-  - Throw an axe forward, dealing damage to the first enemy hit.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'Throw an axe forward, dealing damage to the first enemy hit.
+
+    Damage: 25
+
+    Cooldown: 1.3s
+
+    Cost: 20'
+  - 'Increases the damage of the axe.
+
+
+    + 5 damage'
+  - 'Increases the damage of the axe. Also causes the axe to deal damage to all enemies
+    in a line, instead of just the first.
+
+
+    + 5 damage
+
+    + pierce'
+  - 'Increases the damage of the axe.
+
+
+    + 5 damage'
+  - 'Increases the damage of the axe.
+
+
+    + 5 damage'
+  - 'Throw two axes instead of one! Each dealing a little less damage than before.
+
+
+    + additional axe
+
+    - 15 damage'
   cooldownMax:
   - 1.3
   - 1.3

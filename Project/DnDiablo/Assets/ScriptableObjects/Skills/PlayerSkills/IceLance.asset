@@ -13,12 +13,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Ice Lance
   descriptionByLevel:
-  - Chuck a spear of ice forward, damaging and slowing the first enemy hit.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'Chuck a spear of ice forward, damaging and slowing the first enemy hit.
+
+    Damage: 15
+
+    Slow amount: 30%
+
+    Slow duration: 3
+
+    Cooldown: 2
+
+    Cost: 20'
+  - 'Increases the slow amount of the  Ice Lance.
+
+
+    + 10% slow amount'
+  - 'Increases the slow amount of the  Ice Lance. Alsow reduces the resource cost
+    by half.
+
+
+    + 10% slow amount
+
+    - 10 cost'
+  - 'Increases the slow amount of the  Ice Lance.
+
+
+    + 10% slow amount'
+  - 'Increases the slow amount of the  Ice Lance.
+
+
+    + 10% slow amount'
+  - 'Increases the slow amount of the  Ice Lance. Also causes the arrow to pierce
+    it''s targets to hit more enemies in a line.
+
+
+    + 10% slow amount
+
+    + Pierce'
   cooldownMax:
   - 2
   - 2
