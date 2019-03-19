@@ -13,12 +13,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Sprint
   descriptionByLevel:
-  - Powerwalking really does pay off. Increase your movement speed for a while.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'Powerwalking really does pay off. Increase your movement speed for a while.
+
+    Movement boost: 50%
+
+    Duration: 3s
+
+    Cooldown: 12s
+
+    Cost: 15'
+  - "Increases the bonus to movement. \n\n+ 20% movement speed"
+  - 'Increases the bonus to movement. Also increses the duration.
+
+
+    + 20% movement speed
+
+    + 2s duration'
+  - "Increases the bonus to movement. \n\n+ 20% movement speed"
+  - "Increases the bonus to movement. \n\n+ 20% movement speed"
+  - 'Increases the bonus to movement. Also halves the cooldown. Powerwalking is not
+    a form of excercise for you, it''s your way of life!
+
+
+    + 20% movement speed
+
+    - 6s cooldown'
   cooldownMax:
   - 12
   - 12

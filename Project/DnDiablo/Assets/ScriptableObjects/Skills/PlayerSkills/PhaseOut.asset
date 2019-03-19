@@ -13,13 +13,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Phase Out
   descriptionByLevel:
-  - Slip into another realm, making attacks phase through you, however you cannot
+  - 'Slip into another realm, making attacks phase through you. However, you cannot
     use skills during this time.
-  - 
-  - 
-  - 
-  - 
-  - 
+
+    Invulnerability duration: 1s
+
+    Cooldown: 25s
+
+    Cost 15'
+  - 'Increases the duration of the invulnerability.
+
+
+    +1s duration'
+  - 'Increases the duration of the invulnerability. Also increases Movement speed
+    for the duration.
+
+
+    +1s duration
+
+    + 50% movement speed'
+  - 'Increases the duration of the invulnerability.
+
+
+    +1s duration'
+  - 'Increases the duration of the invulnerability.
+
+
+    +1s duration'
+  - 'Increases the duration of the invulnerability. You can now use skills while phased
+    out.
+
+
+    +1s duration'
   cooldownMax:
   - 25
   - 25
