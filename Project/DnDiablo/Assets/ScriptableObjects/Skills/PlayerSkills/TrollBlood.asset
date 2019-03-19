@@ -13,13 +13,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Troll Blood
   descriptionByLevel:
-  - Activate latent troll genes to wastly increase health regen for a short period
-    of time, however this significantly lowers the users movement speed.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'Activate latent troll genes to wastly increase health regeneration for a short
+    period of time. However, this significantly lowers the users movement speed.
+
+    Health regeneration: 40/s
+
+    Slow amount: 80%
+
+    Duration: 3s
+
+    Cooldown: 18s
+
+    Cost: 30'
+  - "Reduces the cooldown. \n\n- 2s cooldown"
+  - 'Reduces the cooldown. Also increases the health regenerated.
+
+
+    - 2s cooldown
+
+    + 40 health/s'
+  - "Reduces the cooldown. \n\n- 2s cooldown"
+  - "Reduces the cooldown. \n\n- 2s cooldown"
+  - 'Reduces the cooldown. Reduces the severity of the slow.
+
+
+    - 2s cooldown
+
+    - 30% slow'
   cooldownMax:
   - 18
   - 16

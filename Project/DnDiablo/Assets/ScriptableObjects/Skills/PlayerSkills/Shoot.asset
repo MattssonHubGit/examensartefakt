@@ -13,12 +13,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Shoot
   descriptionByLevel:
-  - Shoot a projectile in a straight line, damaging the first enemy hit.
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 'Shoot a projectile in a straight line, damaging the first enemy hit.
+
+    Damage: 15
+
+    Cooldown: 0.8s
+
+    Cost: 5'
+  - 'Reduces the cooldown of Shoot.
+
+
+    - 0.1s cooldown'
+  - 'Reduces the cooldown of Shoot. Also increases its damage.
+
+
+    - 0.1s cooldown
+
+    + 15 damage'
+  - 'Reduces the cooldown of Shoot.
+
+
+    - 0.1s cooldown'
+  - 'Reduces the cooldown of Shoot.
+
+
+    - 0.1s cooldown'
+  - 'Reduces the cooldown of Shoot. The arrow will now penetrate enemies, hitting
+    all enemies in a line
+
+
+    - 0.1s cooldown
+
+    + Pierce'
   cooldownMax:
   - 0.8
   - 0.7
