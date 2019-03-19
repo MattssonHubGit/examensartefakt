@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour {
 
-    public static SpawnPoint Instance;
+    public static SpawnPoint Pseuedo;
 
 
 	// Use this for initialization
-	void Start () {
-        #region SingleTon
+	void Awake () {
+      /*  #region SingleTon
         if (Instance == null)
         {
             Instance = this;
@@ -18,9 +18,9 @@ public class SpawnPoint : MonoBehaviour {
         {
             Destroy(this.gameObject);
         }
-        #endregion
+        #endregion*/
 
-
+        Pseuedo = this;
 
     }
 

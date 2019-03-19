@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allSkills: []
   player: {fileID: 0}
+  spendableTalentPoints: 5
   nodePrefab: {fileID: 1066810381382168, guid: d9801fd63df154d4eb7f228148f29eea, type: 2}
   skillToAffect: {fileID: 11400000, guid: b093ac5fd7ab09c47a4caa126c81a2ba, type: 2}
   talentSunParent: {fileID: 0}
@@ -61,3 +62,9 @@ MonoBehaviour:
   icon: {fileID: 0}
   changeButtonColor: 1
   buttonColor: {r: 0.74264705, g: 0.43157884, b: 0.098291524, a: 1}
+  specialLevels: 
+  defaultFrame: {fileID: 0}
+  specialFrame: {fileID: 0}
+  skillButtonParent: {fileID: 0}
+  skillButtonPrefab: {fileID: 1459670321654458, guid: 9ce83afd9cbc3d24680cc36e03524f40,
+    type: 2}

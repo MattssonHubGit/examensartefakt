@@ -44,6 +44,7 @@ public class Player : Entity {
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
         else
         {
@@ -55,6 +56,11 @@ public class Player : Entity {
         agent = this.GetComponent<NavMeshAgent>();
         agent.Warp(transform.position);
 
+        FindSpawnPointFunc();
+    }
+
+    public void FindSpawnPointFunc()
+    {
         StartCoroutine(FindSpawnPoint());
     }
 
@@ -126,7 +132,7 @@ public class Player : Entity {
     {
         if (skill.AttemptCast(this))
         {
-            Debug.Log("Casting skill: " + skill.name);
+            Debug.Log("Casting skill: " + skill.name + " || Skill level: " + skill.level.ToString());
             transform.LookAt(GetPositionFromMouse(false));
             skill.Action(GetPositionFromMouse(skill.TargetGround), this);
         }
@@ -231,7 +237,7 @@ public class Player : Entity {
 
         yield return new WaitForEndOfFrame();
 
-        spawnPoint = SpawnPoint.Instance.GetComponent<Transform>();
+        spawnPoint = SpawnPoint.Pseuedo.GetComponent<Transform>();
 
     }
 

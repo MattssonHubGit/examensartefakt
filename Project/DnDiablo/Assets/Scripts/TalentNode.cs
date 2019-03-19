@@ -102,6 +102,7 @@ public class TalentNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void AttemptToLevel()
     {
+
         //--------------------This first node adds a skill to the player
         if (isFirst)
         {
@@ -119,8 +120,7 @@ public class TalentNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
                 _scrButton.mySkill = _skillToAdd;
                 if(myButton.image.sprite != null) _scrButton.buttonIcon.sprite = icon.sprite;
-
-                TalentManager.Instance.spendableTalentPoints--; //Remove a talentpoint
+                
 
                 //Disable this button and enable the next one
                 isUnlocked = true;
@@ -142,7 +142,6 @@ public class TalentNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             {
                 if (TalentManager.Instance.player.mySkills[i].GetType() == skillToLevel.GetType())
                 {
-                    TalentManager.Instance.spendableTalentPoints--; //Remove a talentpoint
 
                     //Ready next button
                     isUnlocked = true;
@@ -157,6 +156,10 @@ public class TalentNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                 }
             }
         }
+
+
+        TalentManager.Instance.spendableTalentPoints--; //Remove a talentpoint
+        TalentManager.Instance.UpdateTalentUI();
     }
 
     public void OnPointerEnter(PointerEventData eventData)

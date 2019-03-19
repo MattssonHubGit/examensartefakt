@@ -72,7 +72,7 @@ public class LevelManager : MonoBehaviour {
     public void StartGame()
     {
         SceneManager.LoadScene("Level_1");
-        StartLevelUpProcess();
+        //StartLevelUpProcess();
 
     }
 

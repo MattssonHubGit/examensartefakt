@@ -13,6 +13,8 @@ public class TalentManager : MonoBehaviour
 
     /*[HideInInspector] */public int spendableTalentPoints = 5;
 
+    [SerializeField] private Text amountText;
+
     [Header("Stem generation")]
     [SerializeField] private GameObject nodePrefab;
     [SerializeField] private Skill skillToAffect;
@@ -32,9 +34,7 @@ public class TalentManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] public Transform skillButtonParent;
     [SerializeField] public GameObject skillButtonPrefab;
-
-    [Header("Level up State")]
-    [SerializeField] private List<GameObject> objectsToDisable = new List<GameObject>();
+    
 
     private void Awake()
     {
@@ -139,11 +139,17 @@ public class TalentManager : MonoBehaviour
 
     public void ToggleTalentSun()
     {
+        UpdateTalentUI();
         talentSunParent.SetActive(!talentSunParent.active);
-
         //Disable other UI elements
         OnHovoerUI.Instance.StopDisplayOnHover();
 
+    }
+
+    public void UpdateTalentUI()
+    {
+
+        amountText.text = spendableTalentPoints.ToString();
     }
 
 }
