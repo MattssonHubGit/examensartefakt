@@ -96,10 +96,12 @@ public class WaveSpawner : MonoBehaviour {
         {
             if (currentState != SpawnStateWave.SPAWNING)
             {
+                if (LevelManager.Instance.currentlyLeveling == false)
+                {
+                    currentWaveCounter++; //Increase counter
 
-                currentWaveCounter++; //Increase counter
-
-                StartCoroutine(SpawnWave(waves[nextWave])); //Start Spawning the next wave
+                    StartCoroutine(SpawnWave(waves[nextWave])); //Start Spawning the next wave
+                }
 
             }
         }
@@ -121,16 +123,19 @@ public class WaveSpawner : MonoBehaviour {
         if (nextWave + 1 > waves.Length - 1) //Change the code in here for when all waves of a level is completed
         {
             Debug.Log("All waves complete - Complete Victory!");
-            //Give level up benefits
-            TalentManager.Instance.spendableTalentPoints++;
-            StatsManager.Instance.spendableStatPoints++;
 
             //Load next level
-            LevelManager.Instance.LoadNextLevel();
+            LevelManager.Instance.LoadVictoryLevel();
 
         }
         else
         {
+            //Give level up benefits
+            TalentManager.Instance.spendableTalentPoints++;
+            StatsManager.Instance.spendableStatPoints++;
+
+            LevelManager.Instance.StartLevelUpProcess();
+
             nextWave++;
         }
     }

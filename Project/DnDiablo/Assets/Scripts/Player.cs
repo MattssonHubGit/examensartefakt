@@ -172,6 +172,11 @@ public class Player : Entity {
 
     protected override void OnDeath()
     {
+        Respawn();
+    }
+
+    public void Respawn()
+    {
         //Remove all auras
         auraList.RemoveRange(0, auraList.Count);
 
@@ -180,7 +185,7 @@ public class Player : Entity {
         myStats.resourceCurrent = myStats.resourceMax;
 
         //Reset all cooldowns
-        foreach(Skill skill in mySkills)
+        foreach (Skill skill in mySkills)
         {
             skill.ResetCooldown();
         }
