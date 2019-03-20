@@ -11,29 +11,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a878bf496d6845442bf468a08c9c5976, type: 3}
   m_Name: ArcaneSphere
   m_EditorClassIdentifier: 
-  skillName: Arcane Sphere
+  skillName: Arcane Cloud
   descriptionByLevel:
-  - "Creates a Sphere at target location that damages enemies walking into it.\nDamage/Second:
-    10 \nRange: 12\nDuration: 3s\nCooldown: 1s\nCost: 10"
-  - 'Increases the duration of the orb.
+  - "Creates a cloud of noxious arcane energy at a target location that damages enemies
+    walking into it.\nDamage/Second: 10 \nRange: 12\nDuration: 3s\nCooldown: 1s\nCost:
+    10"
+  - 'Increases the duration of the cloud.
 
 
     + 0.5s'
-  - 'Increases the duration of the orb. Also increases the size of the orb.
+  - 'Increases the duration of the cloud. Also increases the size of the cloud.
 
 
     + 0.5s
 
     + Size X 2'
-  - 'Increases the duration of the orb.
+  - 'Increases the duration of the cloud.
 
 
     + 0.5s'
-  - 'Increases the duration of the orb.
+  - 'Increases the duration of the cloud.
 
 
     + 0.5s'
-  - 'Increases the duration of the orb. Also Increases the damage of the orb.
+  - 'Increases the duration of the cloud. Also Increases the damage of the orb.
 
 
     + 0.5s
@@ -81,9 +82,9 @@ MonoBehaviour:
   - 10
   - 20
   radiusPercantageByLevel:
-  - 2
-  - 2
-  - 6
-  - 6
-  - 6
-  - 6
+  - 4
+  - 4
+  - 8
+  - 8
+  - 8
+  - 8
