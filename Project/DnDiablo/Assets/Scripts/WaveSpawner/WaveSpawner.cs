@@ -130,7 +130,7 @@ public class WaveSpawner : MonoBehaviour {
         {
             //Give level up benefits
             TalentManager.Instance.spendableTalentPoints++;
-            StatsManager.Instance.spendableStatPoints++;
+            StatsManager.Instance.spendableStatPoints += 3;
 
             LevelManager.Instance.StartLevelUpProcess();
 
