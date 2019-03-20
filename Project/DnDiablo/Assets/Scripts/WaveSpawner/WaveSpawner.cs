@@ -28,9 +28,6 @@ public class WaveSpawner : MonoBehaviour {
     private float xpGainFromWave = 0;
     [HideInInspector] public float xpGained = 0;
 
-    [Header("Debug")]
-    [SerializeField] private bool debugMode = true;
-
     [Header("Misc")]
     private float scanFrequency = 0.5f;
     private float waveTimeToSpawn;
@@ -71,6 +68,7 @@ public class WaveSpawner : MonoBehaviour {
     private void Start()
     {
         waveCountdown = timeBetweenWaves;
+        progressBar = SimpleFindMeProgressBar.PartInstance.gameObject.GetComponent<FillingBar>();
     }
 
     private void Update()
