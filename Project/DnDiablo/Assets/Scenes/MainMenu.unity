@@ -310,6 +310,41 @@ Prefab:
       propertyPath: statsUpgradeParent
       value: 
       objectReference: {fileID: 1056963987}
+    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
+        type: 2}
+      propertyPath: healthIncreasePerLevel
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
+        type: 2}
+      propertyPath: healthRegIncreasePerLevel
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
+        type: 2}
+      propertyPath: powerIncreasePerLevel
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
+        type: 2}
+      propertyPath: resourceIncreasePerLevel
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
+        type: 2}
+      propertyPath: resourceRegIncreasePerLevel
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
+        type: 2}
+      propertyPath: cooldownRedIncreasePerLevel
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
+        type: 2}
+      propertyPath: moveSpeedIncreasePerLevel
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a021c9d25d24dd141ad0252d91c31906, type: 2}
   m_IsPrefabParent: 0

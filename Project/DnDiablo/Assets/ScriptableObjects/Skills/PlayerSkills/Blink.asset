@@ -30,7 +30,7 @@ MonoBehaviour:
 
     + 2 range
 
-    + 5 power for 3 seconds after displacement'
+    + 10 power for 3 seconds after displacement'
   - 'Increases the displacement range.
 
 
@@ -78,7 +78,7 @@ MonoBehaviour:
   enemyWindDown:
   - 0
   statAura: {fileID: 11400000, guid: c1c7668981d38fa468aad565983dbb3a, type: 2}
-  powerIncreasesByLevel: 000000000000000005000000050000000500000005000000
+  powerIncreasesByLevel: 00000000000000000a0000000a0000000a0000000a000000
   auraDurationByLevel:
   - 0
   - 0

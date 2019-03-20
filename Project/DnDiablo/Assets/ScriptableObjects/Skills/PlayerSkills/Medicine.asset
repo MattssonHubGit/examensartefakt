@@ -47,9 +47,9 @@ MonoBehaviour:
 
     + 1 health per second
 
-    + 5 Power for the duration
+    + 10 Power for the duration
 
-    + 5 Resources for the duration'
+    + 10 Resources for the duration'
   cooldownMax:
   - 25
   - 25
@@ -94,4 +94,4 @@ MonoBehaviour:
   auraStatIncreasePrefab: {fileID: 11400000, guid: c1c7668981d38fa468aad565983dbb3a,
     type: 2}
   typesToIncrease: 0100000002000000
-  amountToIncreaseWith: 5
+  amountToIncreaseWith: 10

@@ -30,7 +30,7 @@ MonoBehaviour:
 
     - 5s cooldown
 
-    + 5 power for the duration'
+    + 10 power for the duration'
   - 'Decreases the cooldown of Stalwart.
 
 
@@ -88,6 +88,6 @@ MonoBehaviour:
   - 3
   - 0.5
   increasePowerByLevel: 000001010101
-  powerAmount: 5
+  powerAmount: 10
   statIncreaseAuraPrefab: {fileID: 11400000, guid: c1c7668981d38fa468aad565983dbb3a,
     type: 2}
