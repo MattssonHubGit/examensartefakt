@@ -72,4 +72,4 @@ MonoBehaviour:
   iconParent: {fileID: 0}
   statsUpgradeParent: {fileID: 0}
   toggleKey: 99
-  spendableStatPoints: 5
+  spendableStatPoints: 3
