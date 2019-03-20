@@ -12,7 +12,27 @@ MonoBehaviour:
   m_Name: Test Wave 2
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 1188984464206644, guid: ba740f535ce7a4341bddf05a8ffcb34c, type: 2}
-  areasToSpawnIn: 0000000001000000
+  - {fileID: 1090139136775222, guid: e20eb433f03fab2429816559599cd9a1, type: 2}
+  - {fileID: 1090139136775222, guid: e20eb433f03fab2429816559599cd9a1, type: 2}
+  - {fileID: 1090139136775222, guid: e20eb433f03fab2429816559599cd9a1, type: 2}
+  - {fileID: 1090139136775222, guid: e20eb433f03fab2429816559599cd9a1, type: 2}
+  - {fileID: 1090139136775222, guid: e20eb433f03fab2429816559599cd9a1, type: 2}
+  - {fileID: 1090139136775222, guid: e20eb433f03fab2429816559599cd9a1, type: 2}
+  - {fileID: 1090139136775222, guid: e20eb433f03fab2429816559599cd9a1, type: 2}
+  - {fileID: 1090139136775222, guid: e20eb433f03fab2429816559599cd9a1, type: 2}
+  - {fileID: 1090139136775222, guid: e20eb433f03fab2429816559599cd9a1, type: 2}
+  - {fileID: 1090139136775222, guid: e20eb433f03fab2429816559599cd9a1, type: 2}
+  - {fileID: 1504836344443300, guid: f1f3636d4bedb444daacf8abd811112a, type: 2}
+  - {fileID: 1504836344443300, guid: f1f3636d4bedb444daacf8abd811112a, type: 2}
+  - {fileID: 1504836344443300, guid: f1f3636d4bedb444daacf8abd811112a, type: 2}
+  - {fileID: 1504836344443300, guid: f1f3636d4bedb444daacf8abd811112a, type: 2}
+  - {fileID: 1504836344443300, guid: f1f3636d4bedb444daacf8abd811112a, type: 2}
+  - {fileID: 1504836344443300, guid: f1f3636d4bedb444daacf8abd811112a, type: 2}
+  - {fileID: 1504836344443300, guid: f1f3636d4bedb444daacf8abd811112a, type: 2}
+  - {fileID: 1504836344443300, guid: f1f3636d4bedb444daacf8abd811112a, type: 2}
+  - {fileID: 1504836344443300, guid: f1f3636d4bedb444daacf8abd811112a, type: 2}
+  - {fileID: 1504836344443300, guid: f1f3636d4bedb444daacf8abd811112a, type: 2}
+  - {fileID: 1671996568317602, guid: d9ac07d389c486142b781489dff7ce3d, type: 2}
+  areasToSpawnIn: 00000000
   spawnAfterSecondsFromLatestMin: 0
   spawnAfterSecondsFromLatestMax: 0.17

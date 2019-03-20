@@ -9,11 +9,10 @@ public class Player : Entity {
     public List<Skill> mySkills = new List<Skill>();
     private KeyCode[] skillKeys = new KeyCode[18]
     {
-        KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4,
-        KeyCode.Q,      KeyCode.W,      KeyCode.E,      KeyCode.R,
-        KeyCode.A,      KeyCode.S,      KeyCode.D,      KeyCode.F,
-        KeyCode.Z,      KeyCode.X,      KeyCode.C,      KeyCode.V,
-        KeyCode.B,      KeyCode.N
+        KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5,
+        KeyCode.Q,      KeyCode.W,      KeyCode.E,      KeyCode.R,      KeyCode.T, 
+        KeyCode.A,      KeyCode.S,      KeyCode.D,      KeyCode.F,      KeyCode.G,
+        KeyCode.Z,      KeyCode.X,      KeyCode.C,     
     };
 
     [Header("UI")]

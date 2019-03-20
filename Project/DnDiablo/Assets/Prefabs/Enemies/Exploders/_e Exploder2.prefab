@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 195288429076299534}
   m_Layer: 11
   m_Name: _e Exploder2
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
