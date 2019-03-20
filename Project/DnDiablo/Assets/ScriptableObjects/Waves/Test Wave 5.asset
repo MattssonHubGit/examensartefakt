@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3e2d9a39c262fa49b53fb44fcf00522, type: 3}
-  m_Name: Test Wave 1
+  m_Name: Test Wave 5
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 1687278259926232, guid: 779e9ebb2c5c91c4fb2ee34eedb407c4, type: 2}
+  - {fileID: 1889308766490218, guid: 589dd1c37ef1ffa4b9884021745d69bb, type: 2}
   areasToSpawnIn: 0000000001000000
   spawnAfterSecondsFromLatestMin: 0
   spawnAfterSecondsFromLatestMax: 0.17

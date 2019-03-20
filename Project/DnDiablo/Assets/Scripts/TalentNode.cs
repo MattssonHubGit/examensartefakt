@@ -131,6 +131,11 @@ public class TalentNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                     nextNode.icon.color = new Color(1, 1, 1, 1);
                 }
                 icon.color = new Color(1, 1, 1, 0.3f);
+
+
+                TalentManager.Instance.spendableTalentPoints--; //Remove a talentpoint
+                TalentManager.Instance.UpdateTalentUI();
+                return;
             }
         }
 
@@ -153,13 +158,15 @@ public class TalentNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
                     }
                     icon.color = new Color(1, 1, 1, 0.3f);
                     TalentManager.Instance.player.mySkills[i].level = levelToSet;
+
+                    TalentManager.Instance.spendableTalentPoints--; //Remove a talentpoint
+                    TalentManager.Instance.UpdateTalentUI();
+                    return;
                 }
             }
         }
 
 
-        TalentManager.Instance.spendableTalentPoints--; //Remove a talentpoint
-        TalentManager.Instance.UpdateTalentUI();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
