@@ -7,8 +7,15 @@ public class Player : Entity {
 
     [Header("Skills")]
     public List<Skill> mySkills = new List<Skill>();
-    private KeyCode[] skillKeys = new KeyCode[8] { KeyCode.Q, KeyCode.W, KeyCode.E, KeyCode.R, KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4 };
-    
+    private KeyCode[] skillKeys = new KeyCode[18]
+    {
+        KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4,
+        KeyCode.Q,      KeyCode.W,      KeyCode.E,      KeyCode.R,
+        KeyCode.A,      KeyCode.S,      KeyCode.D,      KeyCode.F,
+        KeyCode.Z,      KeyCode.X,      KeyCode.C,      KeyCode.V,
+        KeyCode.B,      KeyCode.N
+    };
+
     [Header("UI")]
     [SerializeField] private FillingBar healthBar;
     [SerializeField] private FillingBar resourceBar;
