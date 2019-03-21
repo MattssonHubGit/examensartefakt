@@ -1100,6 +1100,8 @@ MonoBehaviour:
   target: {fileID: 0}
   mySkills:
   - {fileID: 11400000, guid: 45759d407ddff374f96598162517534b, type: 2}
+  deathParticles: {fileID: 1155568125022484, guid: 0961d1853a8dd754e9caef94a60fe807,
+    type: 2}
 --- !u!195 &195029091968726348
 NavMeshAgent:
   m_ObjectHideFlags: 1

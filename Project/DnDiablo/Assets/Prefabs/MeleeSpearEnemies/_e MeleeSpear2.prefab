@@ -1564,7 +1564,8 @@ MonoBehaviour:
   target: {fileID: 0}
   mySkills:
   - {fileID: 11400000, guid: eb8542b8a26d1d447b1dae7940a53842, type: 2}
-  WeaponGO: {fileID: 1087842774230312}
+  deathParticles: {fileID: 0}
+  WeaponGO: {fileID: 1155568125022484, guid: 0961d1853a8dd754e9caef94a60fe807, type: 2}
   hasCharge: 0
   chargeSkill: {fileID: 0}
   minimumChargeRange: 0

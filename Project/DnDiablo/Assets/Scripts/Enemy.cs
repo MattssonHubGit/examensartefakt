@@ -24,6 +24,9 @@ public class Enemy : Entity {
     [Header("Bools")]
     protected bool hasStopped = false;
     protected bool myStatInUI;
+
+    [Header("Effects and such")]
+    [SerializeField] private GameObject deathParticles;
     
     // Use this for initialization
     protected virtual void Start()
@@ -124,6 +127,12 @@ public class Enemy : Entity {
         if (WaveSpawner.Instance != null)
         {
             WaveSpawner.Instance.xpGained += myStats.experienceForKill;
+        }
+
+        //Spawn DeathParticles
+        if (deathParticles != null)
+        {
+            GameObject _deathParticles = Instantiate(deathParticles, this.transform.position, Quaternion.identity);
         }
 
         //REMOVE ME!!

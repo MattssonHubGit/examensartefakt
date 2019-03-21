@@ -4259,6 +4259,8 @@ MonoBehaviour:
   target: {fileID: 0}
   mySkills:
   - {fileID: 11400000, guid: ac31202d62bdfc64e81b155df66ba2d0, type: 2}
+  deathParticles: {fileID: 1155568125022484, guid: 0961d1853a8dd754e9caef94a60fe807,
+    type: 2}
   reactionSkillPrefab: {fileID: 11400000, guid: e982d1796b5a8024ca6a840795281682,
     type: 2}
   healthPercentageToReact: 0.35
