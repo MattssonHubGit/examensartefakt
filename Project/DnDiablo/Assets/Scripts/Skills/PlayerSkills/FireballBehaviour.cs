@@ -35,6 +35,7 @@ public class FireballBehaviour : SpellBehaviour
 
         //Destroy self and explosion
         Destroy(_objExplosion, explosionDuration);
+        CameraController.Instance.AddShake(0.7f);
         Destroy(this.gameObject);
 
     }

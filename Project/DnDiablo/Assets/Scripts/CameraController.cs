@@ -14,6 +14,8 @@ public class CameraController : MonoBehaviour {
     [SerializeField] private float maxShake;
     [SerializeField] private float severity;
     private float shakeSeverity = 0;
+    [Space]
+    [SerializeField] private float debugShakeAmount = 0.5f;
 
     private Vector3 originalPos;
 
@@ -53,6 +55,11 @@ public class CameraController : MonoBehaviour {
 	void Update () {
         FollowTarget();
         ShakeCamera();
+
+        /*if (Input.GetKeyDown(KeyCode.L))
+        {
+            AddShake(debugShakeAmount);
+        }*/
 	}
 
     private void FollowTarget()

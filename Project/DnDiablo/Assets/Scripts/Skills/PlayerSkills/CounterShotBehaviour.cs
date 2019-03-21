@@ -54,6 +54,7 @@ public class CounterShotBehaviour : SpellBehaviour
                 if (_entTarget == target)
                 {
                     _entTarget.TakeDamage(damage, caster);
+                    CameraController.Instance.AddShake(0.5f);
                     Destroy(this.gameObject);
                 }
             }
