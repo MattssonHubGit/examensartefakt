@@ -31,7 +31,6 @@ public class ShotBehaviour : SpellBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
         //Did I hit something damagable?
         IDamageable _toDamage = other.gameObject.GetComponent<IDamageable>();
         if (_toDamage != null)
