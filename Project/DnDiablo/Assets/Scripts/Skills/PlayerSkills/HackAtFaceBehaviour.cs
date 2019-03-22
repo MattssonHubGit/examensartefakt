@@ -29,6 +29,7 @@ public class HackAtFaceBehaviour : SpellBehaviour
         IDamageable _toDamage = other.gameObject.GetComponent<IDamageable>();
         if (_toDamage != null)
         {
+            caster.TakeDamage((-2f * damage), caster);
             _toDamage.TakeDamage(damage, caster);
         }
     }

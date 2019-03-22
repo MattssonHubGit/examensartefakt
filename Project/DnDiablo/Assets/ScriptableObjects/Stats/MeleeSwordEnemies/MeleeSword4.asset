@@ -29,8 +29,8 @@ MonoBehaviour:
   cooldownRedCurrent: 1
   cooldownRedBase: 1
   cooldownRedDisplay: 5
-  moveSpeedCurrent: 2
-  moveSpeedBase: 2
+  moveSpeedCurrent: 8
+  moveSpeedBase: 8
   moveSpeedDisplay: 2
   timeBeforeAttack: 0
   timeAfterAttack: 0

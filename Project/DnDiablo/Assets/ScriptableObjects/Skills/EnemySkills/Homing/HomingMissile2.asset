@@ -23,7 +23,7 @@ MonoBehaviour:
   - 25
   targetGround: 0
   duration:
-  - 8
+  - 3
   enemyWindDown:
   - 1
   projectilePrefab: {fileID: 1899451052250166, guid: 97ea54846bf037248afa1cb95eb1ab5c,

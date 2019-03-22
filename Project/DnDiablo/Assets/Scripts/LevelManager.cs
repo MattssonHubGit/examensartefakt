@@ -104,7 +104,7 @@ public class LevelManager : MonoBehaviour {
         waveUI.SetActive(false);
 
         //Player can't move
-        Player.Instance.Respawn();
+        Player.Instance.RespawnFromLevelComplete();
 
         Player.Instance.canMove = false;
         Player.Instance.canTakeDamage = false;

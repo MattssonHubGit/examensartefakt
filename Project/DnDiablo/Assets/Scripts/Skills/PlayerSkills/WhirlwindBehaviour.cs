@@ -27,6 +27,7 @@ public class WhirlwindBehaviour : SpellBehaviour
         IDamageable _toDamage = other.gameObject.GetComponent<IDamageable>();
         if (_toDamage != null)
         {
+            caster.TakeDamage((-1.5f * damage), caster);
             _toDamage.TakeDamage(damage, caster);
         }
     }

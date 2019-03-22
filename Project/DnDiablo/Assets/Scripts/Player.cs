@@ -29,7 +29,6 @@ public class Player : Entity {
     [Header("Respawn")]
     [SerializeField] private Transform spawnPoint;
 
-
     [HideInInspector] private Vector3 savedPosition;
 
     #region GetSetters
@@ -184,14 +183,17 @@ public class Player : Entity {
 
     protected override void OnDeath()
     {
-        Respawn();
+        RespawnFromDeath();
     }
 
-    public void Respawn()
+    private void RespawnFromDeath()
     {
         //Remove all auras
-        auraList.RemoveRange(0, auraList.Count);
-
+        for (int i = 0; i < auraList.Count; i++)
+        {
+            RemoveAura(auraList[i]);
+        }
+     
         //Reset health and resources
         myStats.healthCurrent = myStats.healthMax;
         myStats.resourceCurrent = myStats.resourceMax;
@@ -205,6 +207,29 @@ public class Player : Entity {
         //Move to spawnPoint
         agent.destination = spawnPoint.position;
         agent.Warp(spawnPoint.position);
+    }
+
+    public void RespawnFromLevelComplete()
+    {
+        //Remove all auras
+        for (int i = 0; i < auraList.Count; i++)
+        {
+            RemoveAura(auraList[i]);
+        }
+
+        //Reset health and resources
+        myStats.healthCurrent = myStats.healthMax;
+        myStats.resourceCurrent = myStats.resourceMax;
+
+        //Reset all cooldowns
+        foreach (Skill skill in mySkills)
+        {
+            skill.ResetCooldown();
+        }
+
+        //Move to spawnPoint
+        agent.destination = OneWayTeleport.InstancePart.endPoint.position;
+        agent.Warp(OneWayTeleport.InstancePart.endPoint.position);
     }
 
     public override void InitializeStats()

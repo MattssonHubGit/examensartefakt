@@ -310,6 +310,11 @@ Prefab:
       propertyPath: statsUpgradeParent
       value: 
       objectReference: {fileID: 1056963987}
+    - target: {fileID: 114553096827708562, guid: a021c9d25d24dd141ad0252d91c31906,
+        type: 2}
+      propertyPath: spendableStatPoints
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a021c9d25d24dd141ad0252d91c31906, type: 2}
   m_IsPrefabParent: 0
@@ -727,6 +732,15 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1108965990106062, guid: ca243d3f88ab0c7479f1b4c34bdaedcf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224532499877243310, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 78
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca243d3f88ab0c7479f1b4c34bdaedcf, type: 2}
   m_IsPrefabParent: 0
@@ -1111,6 +1125,11 @@ Prefab:
       propertyPath: amountText
       value: 
       objectReference: {fileID: 632982162}
+    - target: {fileID: 114275640729336892, guid: 54c1eecb3fc8f704294a9edc4a47f1ae,
+        type: 2}
+      propertyPath: spendableTalentPoints
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 54c1eecb3fc8f704294a9edc4a47f1ae, type: 2}
   m_IsPrefabParent: 0

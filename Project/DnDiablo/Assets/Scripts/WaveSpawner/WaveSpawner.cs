@@ -69,6 +69,7 @@ public class WaveSpawner : MonoBehaviour {
     {
         waveCountdown = timeBetweenWaves;
         progressBar = SimpleFindMeProgressBar.PartInstance.gameObject.GetComponent<FillingBar>();
+        progressBar.gameObject.SetActive(true);
     }
 
     private void Update()
@@ -149,6 +150,7 @@ public class WaveSpawner : MonoBehaviour {
             scanFrequency = 5f;
             if (GameObject.FindGameObjectWithTag("enemy") == null) 
             {
+                Debug.LogError("GameObject.FindGameObjectWithTag(enemy) == null");
                 return false;
             }
         }

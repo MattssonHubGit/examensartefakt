@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edbb267ab5293a849be9065aff59ba05, type: 3}
   m_Name: MeleeSword4Charge
   m_EditorClassIdentifier: 
-  skillName: 
+  skillName: Charge!
   descriptionByLevel:
   - 
   cooldownMax:

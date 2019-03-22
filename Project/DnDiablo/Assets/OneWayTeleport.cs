@@ -5,15 +5,19 @@ using UnityEngine.AI;
 
 public class OneWayTeleport : MonoBehaviour {
 
-    [SerializeField] private Transform endPoint;
+    [SerializeField] public Transform endPoint;
     [HideInInspector] private Entity entityToMove;
     [HideInInspector] private NavMeshAgent agentToMove;
     [SerializeField] private bool isStartingTeleporter = true;
 
+    public static OneWayTeleport InstancePart;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Awake () {
+        if (InstancePart == null)
+        {
+            InstancePart = this;
+        }
 	}
 	
 	// Update is called once per frame
