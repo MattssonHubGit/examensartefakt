@@ -244,6 +244,8 @@ MonoBehaviour:
   target: {fileID: 0}
   mySkills:
   - {fileID: 11400000, guid: fa178d35beacd5a4c9e7f87607625a8d, type: 2}
+  deathParticles: {fileID: 1155568125022484, guid: 0961d1853a8dd754e9caef94a60fe807,
+    type: 2}
   useSkillOnDeath: 1
   deathSkill: {fileID: 11400000, guid: fa178d35beacd5a4c9e7f87607625a8d, type: 2}
 --- !u!135 &135438191293751978

@@ -31,6 +31,8 @@ public class HackAtFaceBehaviour : SpellBehaviour
         {
             caster.TakeDamage((-2f * damage), caster);
             _toDamage.TakeDamage(damage, caster);
+
+            CameraController.Instance.AddShake(0.01f);
         }
     }
 }

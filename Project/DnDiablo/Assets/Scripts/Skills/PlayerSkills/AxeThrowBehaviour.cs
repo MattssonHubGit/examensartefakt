@@ -37,7 +37,12 @@ public class AxeThrowBehaviour : SpellBehaviour
             _toDamage.TakeDamage(damage, caster);
             if (!penetrate) //Keep going if penetrating enemies
             {
+                CameraController.Instance.AddShake(0.5f);
                 Destroy(this.gameObject);
+            }
+            else
+            {
+                CameraController.Instance.AddShake(0.1f);
             }
         }
         else //Will not penetrate walls

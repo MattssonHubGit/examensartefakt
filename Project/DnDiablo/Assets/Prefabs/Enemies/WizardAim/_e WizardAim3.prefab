@@ -931,6 +931,8 @@ MonoBehaviour:
   target: {fileID: 0}
   mySkills:
   - {fileID: 11400000, guid: e46df6e08ef327f4187bb94258dcdef9, type: 2}
+  deathParticles: {fileID: 1155568125022484, guid: 0961d1853a8dd754e9caef94a60fe807,
+    type: 2}
 --- !u!135 &135130283250010592
 SphereCollider:
   m_ObjectHideFlags: 1

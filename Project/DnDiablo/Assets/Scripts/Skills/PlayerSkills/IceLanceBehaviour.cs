@@ -47,10 +47,16 @@ public class IceLanceBehaviour : SpellBehaviour
             }
 
 
+
             //Keep going if penetrating enemies
-            if (!pierce) 
+            if (!pierce)
             {
+                CameraController.Instance.AddShake(0.5f);
                 Destroy(this.gameObject);
+            }
+            else
+            {
+                CameraController.Instance.AddShake(0.1f);
             }
         }
         else //Will not penetrate walls

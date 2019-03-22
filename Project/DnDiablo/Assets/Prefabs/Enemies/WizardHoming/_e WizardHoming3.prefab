@@ -1388,6 +1388,8 @@ MonoBehaviour:
   target: {fileID: 0}
   mySkills:
   - {fileID: 11400000, guid: 4e19aa8d146673b4d9900da3faf7d6ca, type: 2}
+  deathParticles: {fileID: 1155568125022484, guid: 0961d1853a8dd754e9caef94a60fe807,
+    type: 2}
   reactionDistance: 3
   reactionSkillPrefab: {fileID: 11400000, guid: b7215bfd2106c5148a7d43324ffec070,
     type: 2}

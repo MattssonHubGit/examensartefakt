@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f12e3baa12a2094ea0f8b864aeac15e, type: 3}
   m_Name: HealerTeleport1
   m_EditorClassIdentifier: 
-  skillName: HealerEscape
+  skillName: Healer escapes!
   descriptionByLevel:
   - 
   cooldownMax:
@@ -28,5 +28,7 @@ MonoBehaviour:
   - 0
   teleportDistance: 10
   teleportEffects: {fileID: 1221290295868620, guid: 1b1983145a2a9164ab5dadde45ddac5e,
+    type: 2}
+  teleportTrail: {fileID: 1630319259257474, guid: 4ad04e99d5305ad4c8aea6b8ba0b1fbe,
     type: 2}
   effectsDuration: 2

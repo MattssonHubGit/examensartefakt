@@ -59,6 +59,11 @@ public class CripplingShotBehaviour : SpellBehaviour
             if (!pierce)
             {
                 Destroy(this.gameObject);
+                CameraController.Instance.AddShake(0.5f);
+            }
+            else
+            {
+                CameraController.Instance.AddShake(0.1f);
             }
         }
         else //Will not penetrate walls

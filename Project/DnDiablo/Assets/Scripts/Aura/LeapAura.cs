@@ -41,6 +41,11 @@ public class LeapAura : Aura
         if (damageOnLand)
         {
             SpawnDamageObject();
+            CameraController.Instance.AddShake(0.7f);
+        }
+        else
+        {
+            CameraController.Instance.AddShake(0.5f);
         }
 
         target.canTakeDamage = true;
