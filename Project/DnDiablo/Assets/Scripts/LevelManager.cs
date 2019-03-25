@@ -95,6 +95,7 @@ public class LevelManager : MonoBehaviour {
 
     public void StartLevelUpProcess()
     {
+        TextWriter.Instance.AddLineToDocument(" ");
         TextWriter.Instance.AddLineToDocument("- New Level -");
         for (int i = 0; i < Player.Instance.mySkills.Count; i++)
         {
