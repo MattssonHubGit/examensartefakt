@@ -1,0 +1,15 @@
+-------
+ArrowSpray 0
+Whirlwind 0
+Whirlwind 1
+Health + 1
+Power + 1
+Movement Speed + 1
+-------
+-------
+AxeThrow 0
+AxeThrow 1
+AxeThrow 2
+Health + 1
+Power + 1
+Resource + 1

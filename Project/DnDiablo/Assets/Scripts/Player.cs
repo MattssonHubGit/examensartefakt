@@ -81,6 +81,11 @@ public class Player : Entity {
         SkillInputController();
         
         UIManager();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void MovementController()

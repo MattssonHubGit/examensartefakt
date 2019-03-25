@@ -1,0 +1,65 @@
+-------
+--New Session--
+------- New Level ------- 
+ Current set-up: 
+Health: 5
+Power: 5
+Resource: 5
+Cooldown Reduction: 5
+Movement Speed: 5
+- Choices -
+AxeThrow 0
+AxeThrow 1
+AxeThrow 2
+-
+Cooldown Reduction + 1
+Cooldown Reduction + 1
+Cooldown Reduction + 1
+------- New Level ------- 
+ Current set-up: 
+Throw Axe 2
+Health: 5
+Power: 5
+Resource: 5
+Cooldown Reduction: 8
+Movement Speed: 5
+- Choices -
+Shoot 0
+CripplingShot 0
+-
+Movement Speed + 1
+Power + 1
+Cooldown Reduction + 1
+Health + 1
+Power + 1
+*******New Session*******
+- New Level -
+Health: 5
+Power: 5
+Resource: 5
+Cooldown Reduction: 5
+Movement Speed: 5
+- Choices -
+Fireball 0
+Fireball 1
+Fireball 2
+-
+Power + 1
+Power + 1
+Resource + 1
+- New Level -
+Fireball 2
+Health: 5
+Power: 7
+Resource: 6
+Cooldown Reduction: 5
+Movement Speed: 5
+- Choices -
+Fireball 3
+Sprint 0
+-
+Movement Speed + 1
+Movement Speed + 1
+Movement Speed + 1
+Movement Speed + 1
+Movement Speed + 1

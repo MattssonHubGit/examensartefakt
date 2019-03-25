@@ -125,6 +125,8 @@ public class StatsManager : MonoBehaviour {
         Player.Instance.myStats.healthDisplay++;
         spendableStatPoints--;
 
+
+        TextWriter.Instance.AddLineToDocument("Health + 1");
         UpdateStatsDisplay();
     }
 
@@ -137,6 +139,7 @@ public class StatsManager : MonoBehaviour {
         spendableStatPoints--;
 
 
+        TextWriter.Instance.AddLineToDocument("Power + 1");
         UpdateStatsDisplay();
     }
 
@@ -152,6 +155,8 @@ public class StatsManager : MonoBehaviour {
         Player.Instance.myStats.resourceDisplay++;
         spendableStatPoints--;
 
+
+        TextWriter.Instance.AddLineToDocument("Resource + 1");
         UpdateStatsDisplay();
     }
 
@@ -163,6 +168,7 @@ public class StatsManager : MonoBehaviour {
         Player.Instance.myStats.cooldownRedDisplay++;
         spendableStatPoints--;
 
+        TextWriter.Instance.AddLineToDocument("Cooldown Reduction + 1");
         UpdateStatsDisplay();
     }
 
@@ -176,6 +182,8 @@ public class StatsManager : MonoBehaviour {
         Player.Instance.Agent.speed = Player.Instance.myStats.moveSpeedCurrent;
         spendableStatPoints--;
 
+
+        TextWriter.Instance.AddLineToDocument("Movement Speed + 1");
         UpdateStatsDisplay();
     }
 }
