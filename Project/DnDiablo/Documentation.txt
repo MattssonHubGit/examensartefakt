@@ -1,1 +1,35 @@
 
+*******New Session*******
+ 
+- New Level -
+ 
+- Current Abilities -
+ 
+- Current Stats -
+Health: 5
+Power: 5
+Resource: 5
+Cooldown Reduction: 5
+Movement Speed: 5
+ 
+- Choices -
+Fireball 0
+Whirlwind 0
+Fireball 1
+ 
+-
+ 
+Movement Speed + 1
+Cooldown Reduction + 1
+Movement Speed + 1
+- Current Abilities -
+Fireball 1
+Bladestorm 0
+ 
+- Current Stats -
+Health: 5
+Power: 5
+Resource: 5
+Cooldown Reduction: 6
+Movement Speed: 7
+ 

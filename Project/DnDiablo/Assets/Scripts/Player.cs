@@ -84,7 +84,12 @@ public class Player : Entity {
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            TextWriter.Instance.AddLineToDocument(" ");
+            TextWriter.Instance.AddLineToDocument("Final Setup");
+            TextWriter.Instance.AddLineToDocument(" ");
+            LevelManager.Instance.PrintFullStats();
             Application.Quit();
+
         }
     }
 
