@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class StatUpgradeButton : MonoBehaviour {
+public class StatUpgradeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+{
 
     [Header("Stat to Upgrade")]
     [SerializeField] private Stats statToUpgrade;
     public enum Stats { HEALTH, POWER, RESOURCE, COOLDOWN_RED, MOVE_SPEED };
-
+    [SerializeField] private string statName;
+    [SerializeField] [TextArea(1, 8)] private string description;
     public void AttemptToUpgrade()
     {
         if (StatsManager.Instance.spendableStatPoints > 0) //Check if upgradepoints are available
@@ -52,5 +56,14 @@ public class StatUpgradeButton : MonoBehaviour {
                     }
             }
         }
+    }
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        OnHovoerUI.Instance.DisplayOnHover(statName, description);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        OnHovoerUI.Instance.StopDisplayOnHover();
     }
 }

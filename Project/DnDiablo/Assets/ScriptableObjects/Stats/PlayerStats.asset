@@ -16,22 +16,22 @@ MonoBehaviour:
   healthMax: 100
   healthRegCurrent: 1
   healthRegBase: 1
-  healthDisplay: 5
+  healthDisplay: 0
   powerCurrent: 1
   powerBase: 1
-  powerDisplay: 5
+  powerDisplay: 0
   resourceCurrent: 200
   resourceBase: 200
   resourceMax: 200
   resourceRegCurrent: 10
   resourceRegBase: 10
-  resourceDisplay: 5
+  resourceDisplay: 0
   cooldownRedCurrent: 1
   cooldownRedBase: 1
-  cooldownRedDisplay: 5
+  cooldownRedDisplay: 0
   moveSpeedCurrent: 10
   moveSpeedBase: 10
-  moveSpeedDisplay: 5
+  moveSpeedDisplay: 0
   timeBeforeAttack: 0
   timeAfterAttack: 0
   experienceForKill: 50

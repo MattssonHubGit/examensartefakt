@@ -33,3 +33,74 @@ Resource: 5
 Cooldown Reduction: 6
 Movement Speed: 7
  
+*******New Session*******
+ 
+- New Level -
+ 
+- Current Abilities -
+ 
+- Current Stats -
+Health: 5
+Power: 5
+Resource: 5
+Cooldown Reduction: 5
+Movement Speed: 5
+ 
+- Choices -
+ 
+-
+ 
+*******New Session*******
+ 
+- New Level -
+ 
+- Current Abilities -
+ 
+- Current Stats -
+Health: 5
+Power: 5
+Resource: 5
+Cooldown Reduction: 5
+Movement Speed: 5
+ 
+- Choices -
+ 
+-
+ 
+*******New Session*******
+ 
+- New Level -
+ 
+- Current Abilities -
+ 
+- Current Stats -
+Health: 5
+Power: 5
+Resource: 5
+Cooldown Reduction: 5
+Movement Speed: 5
+ 
+- Choices -
+ 
+-
+ 
+*******New Session*******
+ 
+- New Level -
+ 
+- Current Abilities -
+ 
+- Current Stats -
+Health: 0
+Power: 0
+Resource: 0
+Cooldown Reduction: 0
+Movement Speed: 0
+ 
+- Choices -
+ 
+-
+ 
+Health + 1
+Resource + 1
+Cooldown Reduction + 1

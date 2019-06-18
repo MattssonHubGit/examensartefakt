@@ -790,6 +790,80 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1264728628268958, guid: ca243d3f88ab0c7479f1b4c34bdaedcf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114829965420703966, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: description
+      value: 'Increases your maximum health and increases the rate at which your health
+        regenerates.
+
+
+        Each point added increases your health by 10 and health regeneration by 0.6
+        health/second'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114684802275204992, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: description
+      value: 'Increases the damage you deal with all attacks
+
+
+        Each point invested increases your damage dealt by 5%'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114534718199086938, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: description
+      value: 'Increases your maximum amount of resources and the amount of resources
+        regenerated
+
+
+        Each point increases maximum resources by 10 and resource regeneration by
+        0.75 resources/second'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114829965420703966, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: statName
+      value: Health
+      objectReference: {fileID: 0}
+    - target: {fileID: 114684802275204992, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: statName
+      value: Power
+      objectReference: {fileID: 0}
+    - target: {fileID: 114534718199086938, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: statName
+      value: Resources
+      objectReference: {fileID: 0}
+    - target: {fileID: 114528119093206200, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: statName
+      value: Cooldown Reduction
+      objectReference: {fileID: 0}
+    - target: {fileID: 114496946408107990, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: statName
+      value: Movement Speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 114528119093206200, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: description
+      value: 'Increases the speed at which your skills refreshes
+
+
+        Each point invested increases the speed at which your skills refreshes by
+        6%'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114496946408107990, guid: ca243d3f88ab0c7479f1b4c34bdaedcf,
+        type: 2}
+      propertyPath: description
+      value: 'Increases the movement speed of the character
+
+
+        Each point invested increases the characters movement speed by 5%'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca243d3f88ab0c7479f1b4c34bdaedcf, type: 2}
   m_IsPrefabParent: 0

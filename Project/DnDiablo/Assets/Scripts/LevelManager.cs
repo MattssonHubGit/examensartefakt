@@ -71,7 +71,6 @@ public class LevelManager : MonoBehaviour {
 
     public void StartGame()
     {
-        TextWriter.Instance.AddLineToDocument("*******New Session*******");
         SceneManager.LoadScene("Level_1");
         //StartLevelUpProcess();
 
@@ -95,12 +94,6 @@ public class LevelManager : MonoBehaviour {
 
     public void StartLevelUpProcess()
     {
-        TextWriter.Instance.AddLineToDocument(" ");
-        TextWriter.Instance.AddLineToDocument("- New Level -");
-        TextWriter.Instance.AddLineToDocument(" ");
-        PrintFullStats();
-        TextWriter.Instance.AddLineToDocument("- Choices -");
-
         //Currently leveling, but have not done either talents or stats
         currentlyLeveling = true;
         doneTalent = false;
@@ -122,23 +115,6 @@ public class LevelManager : MonoBehaviour {
         TalentManager.Instance.ToggleTalentSun();
     }
 
-    public void PrintFullStats()
-    {
-        TextWriter.Instance.AddLineToDocument("- Current Abilities -");
-        for (int i = 0; i < Player.Instance.mySkills.Count; i++)
-        {
-            TextWriter.Instance.AddLineToDocument(Player.Instance.mySkills[i].skillName + " " + Player.Instance.mySkills[i].level);
-        }
-        TextWriter.Instance.AddLineToDocument(" ");
-        TextWriter.Instance.AddLineToDocument("- Current Stats -");
-        TextWriter.Instance.AddLineToDocument("Health: " + Player.Instance.myStats.healthDisplay.ToString());
-        TextWriter.Instance.AddLineToDocument("Power: " + Player.Instance.myStats.powerDisplay.ToString());
-        TextWriter.Instance.AddLineToDocument("Resource: " + Player.Instance.myStats.resourceDisplay.ToString());
-        TextWriter.Instance.AddLineToDocument("Cooldown Reduction: " + Player.Instance.myStats.cooldownRedDisplay.ToString());
-        TextWriter.Instance.AddLineToDocument("Movement Speed: " + Player.Instance.myStats.moveSpeedDisplay.ToString());
-        TextWriter.Instance.AddLineToDocument(" ");
-    }
-
     private void ContinueLevelUpProcess()
     {
         if (doneTalent == false)
@@ -146,10 +122,7 @@ public class LevelManager : MonoBehaviour {
             doneTalent = true;
             TalentManager.Instance.ToggleTalentSun();
             StatsManager.Instance.ToggleStatsWindow();
-
-            TextWriter.Instance.AddLineToDocument(" ");
-            TextWriter.Instance.AddLineToDocument("-");
-            TextWriter.Instance.AddLineToDocument(" ");
+            
         }
         else if (doneStats == false)
         {

@@ -135,8 +135,7 @@ public class TalentNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
                 TalentManager.Instance.spendableTalentPoints--; //Remove a talentpoint
                 TalentManager.Instance.UpdateTalentUI();
-
-                TextWriter.Instance.AddLineToDocument(skillToLevel.name + " " + levelToSet);
+                
 
                 return;
             }
@@ -164,7 +163,6 @@ public class TalentNode : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
                     TalentManager.Instance.spendableTalentPoints--; //Remove a talentpoint
                     TalentManager.Instance.UpdateTalentUI();
-                    TextWriter.Instance.AddLineToDocument(skillToLevel.name + " " + levelToSet);
                     return;
                 }
             }
