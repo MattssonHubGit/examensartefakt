@@ -34,6 +34,8 @@ public class WaveSpawner : MonoBehaviour {
     private float waveTimeToSpawnTimeStamp;
     private SpawnStateWave currentState = SpawnStateWave.COUNTING;
 
+    private int difficultyMultiplier = 0;
+
 
     
     [HideInInspector] private int currentWaveCounter = 0;
@@ -99,6 +101,12 @@ public class WaveSpawner : MonoBehaviour {
                 {
                     currentWaveCounter++; //Increase counter
 
+                    //Spawn a copy of the last wave for each level of difficultymultiplier
+                    for (int i = 0; i < difficultyMultiplier; i++)
+                    {
+                        StartCoroutine(SpawnWave(waves[(waves.Length - 1)]));
+                    }
+
                     StartCoroutine(SpawnWave(waves[nextWave])); //Start Spawning the next wave
                 }
 
@@ -124,7 +132,11 @@ public class WaveSpawner : MonoBehaviour {
             Debug.Log("All waves complete - Complete Victory!");
 
             //Load next level
-            LevelManager.Instance.LoadVictoryLevel();
+            //LevelManager.Instance.LoadVictoryLevel();
+
+            //increase difficulty and start wavespawning from the start again
+            difficultyMultiplier++;
+            currentWaveCounter = 0;
 
         }
         else
